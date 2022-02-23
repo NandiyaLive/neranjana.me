@@ -1,4 +1,3 @@
-import "../styles/utilities.css";
 import "../styles/styles.scss";
 import Layout from "../components/Layout";
 import { ThemeProvider } from "next-themes";
