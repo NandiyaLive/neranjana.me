@@ -19,7 +19,7 @@ const Uses = () => {
       <Head>
         <title>Uses | Neranjana Prasad</title>
       </Head>
-      <section className="uses pt-20">
+      <section className="uses pt-10">
         <div className="container">
           <div className="grid">
             <div className="pb-10">
