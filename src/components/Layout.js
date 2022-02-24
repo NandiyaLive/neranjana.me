@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
     <div>
       <MetaTags />
       <Navbar />
-      {children}
+      <main>{children}</main>
     </div>
   );
 };
