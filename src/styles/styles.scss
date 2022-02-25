@@ -9,8 +9,7 @@
 }
 
 html {
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden;
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
 }
@@ -404,6 +403,8 @@ section {
 }
 
 .uses {
+  overflow-y: auto;
+
   .container {
     position: relative;
     min-height: 70vh;
@@ -429,7 +430,7 @@ section {
     text-align: center;
     line-height: 18px;
     position: absolute;
-    margin: 15px auto 10px auto;
+    margin: 10px auto 10px auto;
     padding-bottom: 20px;
     left: 0;
     right: 0;
@@ -510,6 +511,9 @@ section {
 }
 
 @media (max-width: 480px) {
+  html {
+    overflow: auto;
+  }
   .nav-bar {
     justify-content: center;
     .logo svg {
