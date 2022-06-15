@@ -12,7 +12,7 @@ const Projects = () => {
           <div className="project-cards grid grid-3">
             <div className="card">
               <p className="is-text-18 text-500">Instagram Downloader Bot</p>
-              <p className="pt-10 is-text-14 text-400">A bot that can help you to download media from Instagram over Telegram.</p>
+              <p className="pt-10 text-400" style={{lineHeight: 1.4}}>A bot that can help you to download media from Instagram over Telegram.</p>
               <p className="ref">
                 <a href="https://github.com/NandiyaLive/xIGDLBot" title="View on GitHub" target="_blank" rel="noreferrer">
                   <svg viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -28,7 +28,7 @@ const Projects = () => {
             </div>
             <div className="card">
               <p className="is-text-18 text-500">IGStoryDL-Automated</p>
-              <p className="pt-10 is-text-14 text-400">A script that automates downloading stories and uploading to Telegram.</p>
+              <p className="pt-10 text-400" style={{lineHeight: 1.4}}>A script that automates downloading stories and uploading to Telegram.</p>
               <p className="ref">
                 <a href="https://github.com/NandiyaLive/IGStoryDL-Automated" title="View on GitHub" target="_blank" rel="noreferrer">
                   <svg viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -39,7 +39,7 @@ const Projects = () => {
             </div>
             <div className="card">
               <p className="is-text-18 text-500">News API</p>
-              <p className="pt-10 is-text-14 text-400">API to fetch news from AdaDerana, a major news network in Sri Lanka.</p>
+              <p className="pt-10 text-400" style={{lineHeight: 1.4}}>API to fetch news from AdaDerana, a major news network in Sri Lanka.</p>
               <p className="ref">
                 <a href="https://github.com/NandiyaLive/NewsAPI" title="View on GitHub" target="_blank" rel="noreferrer">
                   <svg viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -56,7 +56,7 @@ const Projects = () => {
           </div>
           <div className="other pt-10">
             <p className="is-text-20 text-600 pt-10 pb-10">Other Noteworthy Projects</p>
-            <ul className="is-text-14 text-500">
+            <ul className="text-500">
               <li>
                 <span>
                   <svg aria-hidden="true" viewBox="0 0 384 512">

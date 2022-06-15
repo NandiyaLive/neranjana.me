@@ -125,7 +125,7 @@ const Home = () => {
             <br />
             Prasad
           </p>
-          <p className="text-300 pt-1 subtitle">Tech Enthusiast • Web Dev • Linux Addict</p>
+          <p className="text-300 pt-5 subtitle">Computer Nerd • Web Dev • Linux Addict</p>
           <hr />
           <ul className="social-icons">
             <li>
