@@ -27,7 +27,7 @@ const Uses = () => {
                 <p className="is-text-20 text-600 py-5">Primary</p>
                 <ul>
                   <li>
-                    <span>Hardware - </span>HP Compaq Elite 8300
+                    <span>Hardware - </span>Acer TravelMate P446
                   </li>
                   <li>
                     <span>OS - </span>Manjaro Linux (XFCE)

@@ -48,7 +48,7 @@ a:active {
 .emoji {
   svg {
     height: 1rem;
-    transform: translateY(2px);
+    transform: translateY(3px);
     margin-right: 2px;
   }
 }
@@ -263,9 +263,9 @@ section {
 
 .about {
   .container {
-  	.greeting {
-  		font-family: serif;
-  	}
+    .greeting {
+      font-family: serif;
+    }
     .greeting-emoji {
       animation-name: none;
       animation-duration: 2.5s;
@@ -274,7 +274,7 @@ section {
       display: inline-block;
 
       svg {
-      	height:36px;
+        height: 36px;
         transform: translateY(5px);
       }
     }
@@ -296,6 +296,7 @@ section {
     .grid {
       grid-template-columns: 1.25fr 1fr;
       align-items: flex-start;
+      gap: 1.5rem;
     }
 
     .flex {
