@@ -272,7 +272,7 @@ const About = () => {
 
               <p className="achivement pt-8">
                 {tickIcon}{" "}
-                <a href="" target="_blank" rel="noreferrer">
+                <a href="https://drive.google.com/file/d/1vFg-YekQ-_wNCP53EEIAKMqPXyk5Vfn6/view?usp=sharing" target="_blank" rel="noreferrer">
                   Fundamentals of Digital Marketing @Google
                 </a>
               </p>
