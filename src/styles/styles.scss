@@ -73,7 +73,7 @@ section {
 }
 
 .container {
-  margin: 10px auto;
+  margin: auto;
 }
 
 .text-linear-gradient {
@@ -98,7 +98,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 20px;
+  height: 4rem;
 
   .logo svg {
     height: 30px;
@@ -117,7 +117,7 @@ section {
     display: flex;
     list-style: none;
     align-items: center;
-    gap: 15px;
+    gap: 1rem;
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 500;
@@ -279,9 +279,7 @@ section {
         transform: translateY(5px);
       }
     }
-    .is-text-32 {
-      line-height: 50px;
-    }
+
     .bio {
       line-height: 1.45;
 
@@ -308,7 +306,7 @@ section {
     }
     .work-with {
       svg {
-        height: 38px;
+        height: 2.25rem;
       }
     }
     .achivements {
@@ -326,7 +324,7 @@ section {
     }
     .ent {
       svg {
-        height: 38px;
+        height: 2.25rem;
       }
     }
 
@@ -346,6 +344,7 @@ section {
 
         a {
           opacity: 0.8;
+          cursor: pointer;
 
           &:hover {
             opacity: 1;
@@ -362,10 +361,12 @@ section {
     .card {
       background-color: var(--card-color);
       color: var(--text-color);
-      border-radius: 15px;
-      border-top-left-radius: 0;
+      border-radius: 0;
+      // border: 0.5px solid var(--text-color);
+
       .ref {
         padding-top: 10px;
+
         svg {
           height: 20px;
           fill: var(--text-color);
