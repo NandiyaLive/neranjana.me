@@ -151,18 +151,12 @@ section {
 
     .grid {
       grid-template-columns: 1.5fr 1.25fr;
-    }
-
-    .avatar {
-      svg {
-        max-height: 350px;
-        width: 450px;
-        max-width: 100%;
-        transition: fill 250ms ease-in-out;
-
-        .colored-fill {
-          fill: var(--primary-color);
-        }
+      
+      .avatar {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
 
