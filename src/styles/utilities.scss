@@ -66,55 +66,54 @@
   border-radius: 10px;
   box-shadow: 0 5px 10px #00000033;
   padding: 1.25rem;
-  margin: 0.625rem 0;
+  margin: 0;
 }
-
 
 /*================================================= | Typography | =================================================*/
 
-.is-text-12	{
+.is-text-12 {
   font-size: 0.8rem;
 }
-.is-text-14	{
+.is-text-14 {
   font-size: 0.9rem;
 }
-.is-text-16	{
+.is-text-16 {
   font-size: 1rem;
 }
-.is-text-18	{
+.is-text-18 {
   font-size: 1.1rem;
 }
-.is-text-20	{
+.is-text-20 {
   font-size: 1.3rem;
 }
-.is-text-24	{
+.is-text-24 {
   font-size: 1.5rem;
 }
-.is-text-28	{
+.is-text-28 {
   font-size: 1.8rem;
 }
-.is-text-32	{
+.is-text-32 {
   font-size: 2rem;
 }
-.is-text-36	{
+.is-text-36 {
   font-size: 2.25rem;
 }
-.is-text-40	{
+.is-text-40 {
   font-size: 2.5rem;
 }
-.is-text-44	{
+.is-text-44 {
   font-size: 2.75rem;
 }
-.is-text-48	{
+.is-text-48 {
   font-size: 3rem;
 }
-.is-text-50	{
+.is-text-50 {
   font-size: 3.125rem;
 }
-.is-text-56	{
+.is-text-56 {
   font-size: 3.5rem;
 }
-.is-text-64	{
+.is-text-64 {
   font-size: 4rem;
 }
 
@@ -566,6 +565,69 @@
 .pb-64 {
   padding-bottom: 4rem;
 }
+
+/*================================================= | Opacity | =================================================*/
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-5 {
+  opacity: 0.05;
+}
+
+.opacity-10 {
+  opacity: 0.1;
+}
+
+.opacity-20 {
+  opacity: 0.2;
+}
+
+.opacity-25 {
+  opacity: 0.25;
+}
+
+.opacity-30 {
+  opacity: 0.3;
+}
+
+.opacity-40 {
+  opacity: 0.4;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.opacity-60 {
+  opacity: 0.6;
+}
+
+.opacity-70 {
+  opacity: 0.7;
+}
+
+.opacity-75 {
+  opacity: 0.75;
+}
+
+.opacity-80 {
+  opacity: 0.8;
+}
+
+.opacity-90 {
+  opacity: 0.9;
+}
+
+.opacity-95 {
+  opacity: 0.95;
+}
+
+.opacity-100 {
+  opacity: 1;
+}
+
 
 /*================================================= | Media Queries | =================================================*/
 
