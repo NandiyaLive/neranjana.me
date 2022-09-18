@@ -19,12 +19,12 @@ const Uses = () => {
       <Head>
         <title>Uses | Neranjana Prasad</title>
       </Head>
-      <section className="uses pt-5">
+      <section className="uses">
         <div className="container">
           <div className="grid">
             <div className="pb-10">
               <div>
-                <p className="is-text-20 text-600 py-5">Primary</p>
+                <p className="is-text-20 text-600 pb-5">Primary</p>
                 <ul>
                   <li>
                     <span>Hardware - </span>Acer TravelMate P446
@@ -35,7 +35,7 @@ const Uses = () => {
                 </ul>
               </div>
               <div>
-                <p className="is-text-20 text-600 py-5 pt-10">Development</p>
+                <p className="is-text-20 text-600 pb-5 pt-10">Development</p>
                 <ul>
                   <li>
                     <span>IDE - </span>VSCode
