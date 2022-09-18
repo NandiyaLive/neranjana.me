@@ -11,7 +11,7 @@ const Home = () => {
             <div className="circle"></div>
           </div>
           <div className="avatar-img">
-            <Image src="/avatar.webp" layout="responsive" width={400} height={400} />
+            <Image src="/avatar.webp" layout="responsive" width={400} height={400} alt="Avatar Image" />
 
             {/* <Image src="/avatar2.webp" layout="fill" /> */}
           </div>
