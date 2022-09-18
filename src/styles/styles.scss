@@ -26,7 +26,7 @@ html {
   --bg-color: #0b0b0b;
   --text-color: #ffffff;
   --primary-color: #ffe900;
-  --primary-color2: #ff5300;
+  --primary-color2: #b4c9e2;
   --card-color: #131313;
   --logo-text-color: var(--bg-color);
 }
@@ -35,7 +35,7 @@ html {
   --bg-color: #eeeeee;
   --text-color: #0b0b0b;
   --primary-color: #3730a3;
-  --primary-color2: #0093e9;
+  --primary-color2: #213e5d;
   --card-color: #e0e0e0;
   --logo-text-color: #ffffff;
 }
@@ -184,19 +184,23 @@ section {
   justify-content: space-between;
   height: 3rem;
 
-  .logo svg {
-    height: 1.8rem;
+  .logo {
+    cursor: pointer;
 
-    .logo-bg {
-      fill: var(--text-color);
-    }
+    svg {
+      height: 1.75rem;
 
-    .logo-text {
-      fill: var(--logo-text-color);
-    }
+      .logo-bg {
+        fill: var(--text-color);
+      }
 
-    .dot {
-      fill: var(--primary-color2);
+      .logo-text {
+        fill: var(--logo-text-color);
+      }
+
+      .dot {
+        fill: var(--primary-color2);
+      }
     }
   }
 
@@ -234,46 +238,21 @@ section {
     align-items: center;
     justify-items: center;
     margin: auto;
-    height: 85vh;
 
     .grid {
       grid-template-columns: 1.5fr 1fr;
     }
 
     .avatar {
-      position: relative;
-
-      .backdrop {
-        margin-top: -6rem;
-
-        .circle {
-          width: 18rem;
-          height: 18rem;
-          border-radius: 100%;
-          background: linear-gradient(220deg, var(--primary-color) 0%, var(--primary-color2) 48%);
-          backdrop-filter: blur(20px);
-          -webkit-backdrop-filter: blur(20px);
-          -moz-filter: blur(20px);
-          filter: blur(20px);
-        }
-      }
-
-      .avatar-img {
-        width: 26rem;
-        height: 26rem;
-        position: absolute;
-        inset: 50%;
-        transform: translate(-50%, -54%);
-      }
+      width: 100%;
+      max-width: 30rem;
+      max-height: 30rem;
     }
 
     .intro-text {
       span {
         .svg {
           height: 40px;
-          .star-path {
-            fill: var(--primary-color);
-          }
         }
       }
       .name {
@@ -297,11 +276,16 @@ section {
       }
 
       hr {
-        background-color: var(--primary-color);
+        background-color: var(--primary-color2);
         height: 2px;
         width: 60%;
         margin: 15px 0;
         border: none;
+      }
+
+      button {
+        background-color: var(--primary-color2);
+        color: var(--bg-color);
       }
     }
   }
@@ -328,6 +312,7 @@ section {
     .is-text-32 {
       line-height: 50px;
     }
+
     .bio {
       line-height: 1.6;
 
@@ -493,6 +478,7 @@ section {
       ul {
         padding-left: 18px;
         list-style-type: disc;
+        
         li {
           line-height: 25px;
 
@@ -503,6 +489,7 @@ section {
       }
     }
   }
+  
   footer {
     font-size: 14px;
     text-align: center;
@@ -512,6 +499,7 @@ section {
     padding-bottom: 20px;
     left: 0;
     right: 0;
+    bottom: 0;
 
     svg {
       height: 14px;
@@ -625,16 +613,6 @@ section {
         grid-template-columns: 1fr;
       }
 
-      .avatar {
-        .backdrop {
-          margin-top: -5rem;
-        }
-
-        .avatar-img {
-          transform: translate(-50%, -52%);
-        }
-      }
-
       .intro-text {
         span {
           display: none;
@@ -684,25 +662,25 @@ section {
     height: 100%;
   }
 
-  .home {
-    padding-top: 0;
+  // .home {
+  //   padding-top: 0;
 
-    .intro {
-      height: 100%;
-      .avatar {
-        .backdrop {
-          margin-top: 2.5rem;
-        }
+  //   .intro {
+  //     height: 100%;
+  //     .avatar {
+  //       .backdrop {
+  //         margin-top: 2.5rem;
+  //       }
 
-        .avatar-img {
-          transform: translate(-50%, -44%);
-        }
-      }
+  //       .avatar-img {
+  //         transform: translate(-50%, -44%);
+  //       }
+  //     }
 
-      .intro-text {
-        margin-top: 5.5rem;
-        margin-bottom: 1rem;
-      }
-    }
-  }
+  //     .intro-text {
+  //       margin-top: 5.5rem;
+  //       margin-bottom: 1rem;
+  //     }
+  //   }
+  // }
 }
