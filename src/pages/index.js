@@ -1,29 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import avatarImg from "../../public/avatar.webp";
 
 const Home = () => {
   return (
     <section className="home">
       <div className="container grid intro">
         <div className="avatar">
-          <div className="backdrop">
-            <div className="circle"></div>
-          </div>
-          <div className="avatar-img">
-            <Image src="/avatar.webp" layout="responsive" width={400} height={400} alt="Avatar Image" priority/>
-
-            {/* <Image src="/avatar2.webp" layout="fill" /> */}
-          </div>
+          <Image src={avatarImg} layout="responsive" width={400} height={400} alt="Avatar Image" placeholder="blur" priority />
         </div>
 
         <div className="intro-text">
-          <p className="is-text-44 text-500">
-            Hi, I’m
-            <br />
-            Neranjana Prasad.
-            <br />
-          </p>
+          <p className="is-text-28 text-500">Hey there!, I'm</p>
+          <p className="is-text-44 text-500">Neranjana Prasad.</p>
           <p className="is-text-36 text-500 opacity-90">Web Developer</p>
           <hr />
           <ul className="social-icons mt-24 mb-10">
@@ -77,7 +67,7 @@ const Home = () => {
             </li>
           </ul>
           <Link href="/contact">
-            <button className="btn mt-10 is-text-16 text-500">Lets's Talk</button>
+            <button className="btn mt-10 is-text-16 text-500">Let's Talk</button>
           </Link>
         </div>
       </div>

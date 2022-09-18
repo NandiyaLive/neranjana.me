@@ -75,7 +75,7 @@ const Uses = () => {
             </div>
 
             <div>
-              <p className="is-text-20 text-600 py-5">Other</p>
+              <p className="is-text-20 text-600 pb-5">Other</p>
               <ul>
                 <li>
                   <span>Music Streaming - </span>Spotify
