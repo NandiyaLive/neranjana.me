@@ -51,10 +51,10 @@ const About = () => {
               direction. I do believe that anyone can master coding, But the passion can&apos;t be gained that easy.
             </p>
             <p className="pt-5">
-              Outside of coding, I enjoy spending time reading novels, listening into music and podcasts or binge watching TV Series and Movies. I occasionally update my
-              <a href="https://blog.neranjana.tk" target="_blank" rel="noopener noreferrer" className="text-500">
+              Outside of coding, I enjoy spending time reading novels, listening into music and podcasts or binge watching TV Series and Movies. I occasionally update 
+              <a href="https://blog.neranjana.tk" target="_blank" rel="noopener noreferrer" className="text-600">
                 {" "}
-                blog
+                my blog
               </a>{" "}
               too.
             </p>

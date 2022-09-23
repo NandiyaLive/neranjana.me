@@ -25,8 +25,7 @@ html {
 :root {
   --bg-color: #0b0b0b;
   --text-color: #ffffff;
-  // --primary-color: #ffe900;
-  --primary-color: #fff89a;
+  --primary-color: #ffee93;
   --card-color: #131313;
   --logo-text-color: var(--bg-color);
 }
@@ -34,8 +33,7 @@ html {
 [data-theme="light"] {
   --bg-color: #eeeeee;
   --text-color: #0b0b0b;
-  // --primary-color: #3730a3;
-  --primary-color: #554994;
+  --primary-color: #711a47;
   --card-color: #e0e0e0;
   --logo-text-color: #ffffff;
 }
@@ -109,70 +107,21 @@ section {
     background-color: transparent;
     margin: 25vh auto;
 
-    .configure-border-1 {
-      width: 115px;
-      height: 115px;
-      padding: 3px;
-      position: absolute;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #fb5b53;
-      animation: configure-clockwise 3s ease-in-out 0s infinite alternate;
+    .three-quarter-spinner {
+      width: 5rem;
+      height: 5rem;
+      border: 3px solid #be0f06;
+      border-top: 3px solid transparent;
+      border-radius: 50%;
+      animation: spin .5s linear 0s infinite;
     }
-
-    .configure-border-2 {
-      width: 115px;
-      height: 115px;
-      padding: 3px;
-      left: -115px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: rgb(63, 249, 220);
-      transform: rotate(45deg);
-      animation: configure-xclockwise 3s ease-in-out 0s infinite alternate;
-    }
-
-    .configure-core {
-      width: 100%;
-      height: 100%;
-      background-color: #1d2630;
-    }
-
-    @keyframes configure-clockwise {
-      0% {
+      
+    @keyframes spin {
+      from {
         transform: rotate(0);
       }
-      25% {
-        transform: rotate(90deg);
-      }
-      50% {
-        transform: rotate(180deg);
-      }
-      75% {
-        transform: rotate(270deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-
-    @keyframes configure-xclockwise {
-      0% {
-        transform: rotate(45deg);
-      }
-      25% {
-        transform: rotate(-45deg);
-      }
-      50% {
-        transform: rotate(-135deg);
-      }
-      75% {
-        transform: rotate(-225deg);
-      }
-      100% {
-        transform: rotate(-315deg);
+      to{
+        transform: rotate(359deg);
       }
     }
   }
@@ -234,6 +183,8 @@ section {
 }
 
 .home {
+  height: 80vh;
+  max-height: 100%;
   .intro {
     align-items: center;
     justify-items: center;
@@ -248,24 +199,6 @@ section {
       max-width: 32rem;
       max-height: 32rem;
       position: relative;
-
-      .backdrop {
-        // filter: grayscale(100%);
-
-        &:hover {
-          filter: none;
-        }
-      }
-
-      .avatar-img {
-        position: absolute;
-        inset: 0;
-        opacity: 0;
-      }
-
-      &:hover .avatar-img {
-        opacity: 1;
-      }
     }
 
     .intro-text {
@@ -350,11 +283,8 @@ section {
         }
       }
 
-      .flag {
-        svg {
-          height: 1.25rem;
-          margin-bottom: -4px;
-        }
+      a:hover {
+        color: var(--primary-color);
       }
     }
 
@@ -381,11 +311,11 @@ section {
 
           svg {
             height: 35px;
-            filter: grayscale(100%);
+            // filter: grayscale(100%);
 
-            &:hover {
-              filter: none;
-            }
+            // &:hover {
+            //   filter: none;
+            // }
           }
         }
       }
@@ -398,6 +328,7 @@ section {
         gap: 5px;
         a {
           opacity: 0.8;
+
           &:hover {
             opacity: 1;
           }
@@ -407,11 +338,11 @@ section {
     .ent {
       svg {
         height: 38px;
-        filter: grayscale(100%);
+        // filter: grayscale(100%);
 
-        &:hover {
-          filter: none;
-        }
+        // &:hover {
+        //   filter: none;
+        // }
       }
     }
 
@@ -451,7 +382,7 @@ section {
       color: var(--text-color);
       border-radius: 0;
       box-shadow: none;
-      border: 1px solid #515151;
+      // border: 1px solid #515151;
 
       .ref {
         padding-top: 10px;
@@ -593,6 +524,15 @@ section {
           }
         }
       }
+
+      .contact-img {
+        svg {
+          display: block;
+          max-height: 28rem;
+          max-width: 28rem;
+          margin: auto;
+        }
+      }
     }
   }
 }
@@ -639,8 +579,9 @@ section {
       text-align: center;
 
       .avatar {
-        margin-bottom: 3rem;
-        transform: scale(1.25);
+        // margin-bottom: 3rem;
+        margin-top: 0.25rem;
+        transform: scale(1.1);
       }
 
       .grid {
