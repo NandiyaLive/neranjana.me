@@ -8,13 +8,13 @@ const Home = () => {
     <section className="home">
       <div className="container grid intro">
         <div className="avatar">
-          <Image src={avatarImg} layout="responsive" width={400} height={400} alt="Avatar Image" placeholder="blur" priority />
+          <Image src={avatarImg} layout="responsive" width={400} height={400} alt="Avatar Image with Python, React, Sass, Nextjs Logos" placeholder="blur" priority />
         </div>
 
         <div className="intro-text">
           <p className="is-text-28 text-500">Hey there!, I'm</p>
           <p className="is-text-44 text-500">Neranjana Prasad.</p>
-          <p className="is-text-36 text-500 opacity-90">Web Developer</p>
+          <p className="is-text-36 text-500 opacity-80">Web Developer</p>
           <hr />
           <ul className="social-icons mt-24 mb-10">
             <li>

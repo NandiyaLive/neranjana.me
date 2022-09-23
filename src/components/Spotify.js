@@ -1,6 +1,5 @@
 // Source : https://leerob.io/snippets/spotify
 
-import { get } from "http";
 import fetch from "isomorphic-unfetch";
 import querystring from "querystring";
 
