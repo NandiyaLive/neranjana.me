@@ -15,17 +15,11 @@ function MyApp({ Component, pageProps }) {
     <ThemeProvider defaultTheme="dark">
       <Head>
         <title>Neranjana Prasad</title>
-        <meta property="description" content="Computer Hobbyist • Web Dev • DIY Builder • Tweet-A-Holic • Linux Lover • Sri Lankan" />
       </Head>
       {loading ? (
         <div className="loading-screen">
           <div className="spinner-box">
-            <div className="configure-border-1">
-              <div className="configure-core"></div>
-            </div>
-            <div className="configure-border-2">
-              <div className="configure-core"></div>
-            </div>
+            <div className="three-quarter-spinner"></div>
           </div>
         </div>
       ) : (
