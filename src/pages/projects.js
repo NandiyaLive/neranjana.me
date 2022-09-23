@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Head from "next/head";
 
 const Projects = () => {
@@ -6,14 +7,12 @@ const Projects = () => {
       <Head>
         <title>Projects | Neranjana Prasad</title>
       </Head>
-      <section className="projects">
+      <section className="projects mt-18">
         <div className="container">
           <div className="project-cards grid grid-3">
             <div className="card">
-              <p className="is-text-18 text-500">Instagram Downloader Bot</p>
-              <p className="pt-10 text-400" style={{ lineHeight: 1.4 }}>
-                A bot that can help you to download media from Instagram over Telegram.
-              </p>
+              <p className="is-text-18 text-600">Instagram Downloader Bot</p>
+              <p className="pt-10 text-400" style={{lineHeight: 1.4}}>A bot that can help you to download media from Instagram over Telegram.</p>
               <p className="ref">
                 <a href="https://github.com/NandiyaLive/xIGDLBot" title="View on GitHub" target="_blank" rel="noreferrer">
                   <svg viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -28,10 +27,8 @@ const Projects = () => {
               </p>
             </div>
             <div className="card">
-              <p className="is-text-18 text-500">IGStoryDL-Automated</p>
-              <p className="pt-10 text-400" style={{ lineHeight: 1.4 }}>
-                A script that automates downloading stories and uploading to Telegram.
-              </p>
+              <p className="is-text-18 text-600">IGStoryDL-Automated</p>
+              <p className="pt-10 text-400" style={{lineHeight: 1.4}}>A script that automates downloading stories and uploading to Telegram.</p>
               <p className="ref">
                 <a href="https://github.com/NandiyaLive/IGStoryDL-Automated" title="View on GitHub" target="_blank" rel="noreferrer">
                   <svg viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -41,10 +38,8 @@ const Projects = () => {
               </p>
             </div>
             <div className="card">
-              <p className="is-text-18 text-500">News API</p>
-              <p className="pt-10 text-400" style={{ lineHeight: 1.4 }}>
-                API to fetch news from AdaDerana, a major news network in Sri Lanka.
-              </p>
+              <p className="is-text-18 text-600">News API</p>
+              <p className="pt-10 text-400" style={{lineHeight: 1.4}}>API to fetch news from AdaDerana, a major news network in Sri Lanka.</p>
               <p className="ref">
                 <a href="https://github.com/NandiyaLive/NewsAPI" title="View on GitHub" target="_blank" rel="noreferrer">
                   <svg viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -72,7 +67,7 @@ const Projects = () => {
                   <span className="text">NandiyaLive/RedditDLBot</span>
                 </a>
               </li>
-
+              
               <li>
                 <span>
                   <svg aria-hidden="true" viewBox="0 0 384 512">
@@ -83,7 +78,7 @@ const Projects = () => {
                   <span className="text">NandiyaLive/PSALinkGrabber</span>
                 </a>
               </li>
-
+              
               <li>
                 <span>
                   <svg aria-hidden="true" viewBox="0 0 384 512">
@@ -94,6 +89,7 @@ const Projects = () => {
                   <span className="text">NandiyaLive/covid-stats</span>
                 </a>
               </li>
+
             </ul>
           </div>
         </div>
