@@ -113,14 +113,14 @@ section {
       border: 3px solid #be0f06;
       border-top: 3px solid transparent;
       border-radius: 50%;
-      animation: spin .5s linear 0s infinite;
+      animation: spin 0.5s linear 0s infinite;
     }
-      
+
     @keyframes spin {
       from {
         transform: rotate(0);
       }
-      to{
+      to {
         transform: rotate(359deg);
       }
     }
@@ -184,11 +184,11 @@ section {
 
 .home {
   height: 80vh;
-  max-height: 100%;
+
   .intro {
     align-items: center;
     justify-items: center;
-    margin: auto;
+    margin: auto auto 1.5rem auto;
 
     .grid {
       grid-template-columns: 1.5fr 1fr;
@@ -573,16 +573,10 @@ section {
 
 @media (max-width: 768px) {
   .home {
-    padding-top: 15px;
+    height: auto;
 
     .intro {
       text-align: center;
-
-      .avatar {
-        // margin-bottom: 3rem;
-        margin-top: 0.25rem;
-        transform: scale(1.1);
-      }
 
       .grid {
         grid-template-columns: 1fr;
@@ -635,15 +629,5 @@ section {
 
   body {
     height: 100%;
-  }
-
-  .home {
-    padding-top: 0;
-
-    .intro {
-      .avatar {
-        margin: 1rem auto 4rem auto;
-      }
-    }
   }
 }
