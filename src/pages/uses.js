@@ -128,14 +128,10 @@ const Uses = () => {
               </span>
             </p>
             <p>
-              Hosted using{" "}
+              Hosted on{" "}
               <a href="https://vercel.com" target="_blank" rel="noreferrer">
                 Vercel
-              </a>
-              {" + "}
-              <a href="https://github.com/NandiyaLive/neranjana.tk" target="_blank" rel="noreferrer">
-                GitHub
-              </a>
+              </a>.
             </p>
           </footer>
         </div>
