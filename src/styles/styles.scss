@@ -170,14 +170,10 @@ textarea {
 
     .avatar {
       width: 100%;
-      max-width: 32rem;
-      max-height: 32rem;
+      max-width: 30rem;
+      max-height: 30rem;
       position: relative;
-
-      img {
-        display: block;
-        margin: auto;
-      }
+      padding: 0.5rem;
     }
 
     .intro-text {
