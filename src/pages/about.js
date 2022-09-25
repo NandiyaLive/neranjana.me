@@ -34,14 +34,14 @@ const About = () => {
         <div className="container">
           <div className="bio">
             <p>
-              I&apos;m <span className="text-600">Neranjana Prasad Ponnamperuma</span> (aka Nandiya), a 22 years old self taught <span className="text-600">Web Developer</span> / a{" "}
-              <span className="text-600">Computer Hobbyist</span> living in{" "}
-              <a href="https://en.wikipedia.org/wiki/Kandy" target="_blank" rel="noopener noreferrer" className="text-600">
+              I&apos;m <span className="text-500">Neranjana Prasad Ponnamperuma</span> (aka Nandiya), a 22 years old self taught <span className="text-500">Web Developer</span> / a{" "}
+              <span className="text-500">Computer Hobbyist</span> living in{" "}
+              <a href="https://en.wikipedia.org/wiki/Kandy" target="_blank" rel="noopener noreferrer" className="text-500">
                 Kandy, Sri Lanka
               </a>
               {". "}
               I'm currently studying for a{" "}
-              <span className="text-600">
+              <span className="text-500">
                 BSc in IT @{" "}
                 <a href="https://en.wikipedia.org/wiki/University_of_Vavuniya" target="_blank" rel="noopener noreferrer">
                   University of Vavuniya, Sri Lanka.
@@ -52,7 +52,7 @@ const About = () => {
             </p>
             <p className="pt-5">
               Outside of coding, I enjoy spending time reading novels, listening into music and podcasts or binge watching TV Series and Movies. I occasionally update
-              <a href="https://blog.neranjana.tk" target="_blank" rel="noopener noreferrer" className="text-600">
+              <a href="https://blog.neranjana.tk" target="_blank" rel="noopener noreferrer" className="text-500">
                 {" "}
                 my blog
               </a>{" "}

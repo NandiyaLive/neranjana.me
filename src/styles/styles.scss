@@ -172,6 +172,7 @@ textarea {
       width: 100%;
       max-width: 32rem;
       max-height: 32rem;
+      position: relative;
 
       img {
         display: block;
@@ -245,7 +246,7 @@ textarea {
     .grid {
       grid-template-columns: 1.25fr 1fr;
       align-items: flex-start;
-      gap: 1.75rem;
+      gap: 2rem;
     }
 
     .flex {
@@ -260,6 +261,7 @@ textarea {
         display: flex;
         align-items: center;
         gap: 5px;
+
         a {
           opacity: 0.8;
 
@@ -314,6 +316,10 @@ textarea {
       border-radius: 0;
       box-shadow: none;
 
+      .details {
+        line-height: 1.4;
+      }
+
       .ref {
         padding-top: 10px;
         svg {
@@ -338,6 +344,7 @@ textarea {
 
       li {
         opacity: 1;
+        line-height: 1.6;
 
         span {
           svg {
