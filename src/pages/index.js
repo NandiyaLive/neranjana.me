@@ -1,6 +1,5 @@
-import Image from "next/image";
+import Image from "next/future/image";
 import Link from "next/link";
-import { useState } from "react";
 import avatarImg from "../../public/avatar.webp";
 
 const Home = () => {
@@ -8,7 +7,7 @@ const Home = () => {
     <section className="home">
       <div className="container grid intro">
         <div className="avatar">
-          <Image src={avatarImg} layout="responsive" width={400} height={400} alt="Avatar Image with Python, React, Sass, Nextjs Logos" placeholder="blur" priority />
+          <Image src={avatarImg} layout="responsive" style={{ maxWidth: "100%", height: "auto" }} alt="Avatar Image with Python, React, Sass, Nextjs Logos" placeholder="blur" priority />
         </div>
 
         <div className="intro-text">
