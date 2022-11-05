@@ -157,7 +157,7 @@ const About = () => {
             </div>
             <p className="pt-4 text-sm spotify">
               Vibing To :&nbsp;
-              <span className="now-playing"></span>
+              <span className="opacity-90 hover:opacity-100"></span>
             </p>
           </div>
         </div>
