@@ -8,8 +8,8 @@ function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setLoading(false)
-  }, [])
+    setLoading(false);
+  }, []);
 
   return (
     <ThemeProvider attribute="class" defaultTheme="dark" enableSystem="false">
@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }) {
         <title>Neranjana Prasad</title>
       </Head>
       {loading ? (
-        <div className="loading-screen">
+        <div className="loading-screen bg-bgColor-light dark:bg-bgColor-dark">
           <div className="spinner-box">
             <div className="three-quarter-spinner"></div>
           </div>
