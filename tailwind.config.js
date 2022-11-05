@@ -38,6 +38,7 @@ module.exports = {
       md: { max: "767px" },
       xmd: { max: "830px" },
       sm: { max: "639px" },
+      mobile: "640px",
     },
   },
   plugins: [],

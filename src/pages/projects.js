@@ -8,7 +8,7 @@ const Projects = () => {
     <Head>
       <title>Projects — Neranjana Prasad</title>
     </Head>
-    <section className="xmd:mb-4">
+    <section className="xmd:mb-6">
       <div className="grid grid-cols-3 xmd:grid-cols-2 sm:grid-cols-1 gap-4">
         {mainProjects.map(({ title, description, live, telegram, github }, index) => {
           return (
@@ -18,17 +18,17 @@ const Projects = () => {
               <div className="flex gap-2 mt-4 fill-bgColor-dark dark:fill-white">
                 {live && (
                   <div className="h-5">
-                    <a href={live}>{Icons.vercel}</a>
+                    <a href={live} target="_blank" rel="noreferrer">{Icons.vercel}</a>
                   </div>
                 )}
                 {telegram && (
                   <div className="h-5">
-                    <a href={telegram}>{Icons.telegram}</a>
+                    <a href={telegram} target="_blank" rel="noreferrer">{Icons.telegram}</a>
                   </div>
                 )}
                 {github && (
                   <div className="h-5">
-                    <a href={github}>{Icons.github}</a>
+                    <a href={github} target="_blank" rel="noreferrer">{Icons.github}</a>
                   </div>
                 )}
               </div>
@@ -44,7 +44,7 @@ const Projects = () => {
             return (
               <li className="flex gap-2 items-center" key={index}>
                 <span className="h-4 fill-bgColor-dark dark:fill-white">{Icons.git}</span>
-                <a href={github}>
+                <a href={github} target="_blank" rel="noreferrer">
                   <p className="font-jbmono opacity-90 hover:opacity-100">{title}</p>
                 </a>
               </li>

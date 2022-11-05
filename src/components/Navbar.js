@@ -11,8 +11,8 @@ const Navbar = () => {
   useEffect(() => setMounted(true), []);
 
   return (
-    <nav className=" text-stone-900 dark:text-white container max-w-main flex items-center justify-between h-16 sm:flex-col sm:justify-center sm:h-24 sm:space-y-2">
-      <div className="logo">
+    <nav className=" text-stone-900 dark:text-white container max-w-main flex items-center justify-between h-16 sm:flex-col sm:justify-center sm:space-y-2">
+      <div className="sm:hidden">
         <Link href="/">
           <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 706 125" className="h-7 sm:h-8">
             <path
@@ -28,9 +28,9 @@ const Navbar = () => {
         </Link>
       </div>
       <ul className="flex gap-4 items-center text-nav uppercase">
-        {/* <Link href="/" passHref>
-          <li className={`font-medium ${router.pathname == "/" ? "opacity-100 font-medium" : "opacity-70"}`}>Home</li>
-        </Link> */}
+        <Link href="/" passHref>
+          <li className={`font-medium mobile:hidden ${router.pathname == "/" ? "opacity-100 font-medium" : "opacity-70"}`}>Home</li>
+        </Link>
         <Link href="/about" passHref>
           <li className={`font-medium ${router.pathname == "/about" ? "opacity-100 font-medium" : "opacity-70"}`}>About</li>
         </Link>

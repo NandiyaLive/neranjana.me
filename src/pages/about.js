@@ -25,7 +25,7 @@ const About = () => {
       <Head>
         <title>About — Neranjana Prasad</title>
       </Head>
-      <section className="xmd:mb-4">
+      <section className="xmd:mb-6">
         <div>
           <div className="bio">
             <p>
@@ -66,7 +66,7 @@ const About = () => {
               too.
             </p>
           </div>
-          <div className="grid grid-cols-home gap-6">
+          <div className="grid grid-cols-home gap-6 md:grid-cols-1">
             <div className="work-with">
               <p className="font-medium text-2xl mt-4 mb-2 uppercase">Tech Stack</p>
 

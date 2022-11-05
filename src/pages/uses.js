@@ -34,7 +34,7 @@ const Uses = () => {
         </div>
 
         <div>
-          <p className="text-2xl font-semibold mb-2">Other</p>
+          <p className="text-2xl font-semibold mb-2 sm:mt-2">Other</p>
           <ul className="list-disc ml-4">
             {otherUses.map(({ title, subtitle }, index) => {
               return (
