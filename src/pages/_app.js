@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }) {
   }, [])
 
   return (
-    <ThemeProvider defaultTheme="dark">
+    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem="false">
       <Head>
         <title>Neranjana Prasad</title>
       </Head>
