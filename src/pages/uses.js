@@ -1,141 +1,76 @@
 import Head from "next/head";
+import { Icons } from "../data/icons";
+import { developmentUses, otherUses, primaryUses } from "../data/uses";
 
 const Uses = () => {
-  const heartIcon = (
-    <svg height="1rem" viewBox="0 0 512 512">
-      <path
-        fill="crimson"
-        d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"
-      ></path>
-    </svg>
-  );
-
   return (
     <>
-      <Head>
-        <title>Uses | Neranjana Prasad</title>
-      </Head>
-      <section className="uses">
-        <div className="container">
-          <div className="grid">
-            <div className="pb-10">
-              <div>
-                <p className="is-text-20 text-600 pb-5">Primary</p>
-                <ul>
-                  <li>
-                    <span>Hardware - </span>Acer TravelMate P446
-                  </li>
-                  <li>
-                    <span>OS - </span>Manjaro Linux (XFCE)
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <p className="is-text-20 text-600 pb-5 pt-10">Development</p>
-                <ul>
-                  <li>
-                    <span>IDE - </span>VSCode
-                  </li>
-                  <li>
-                    <span>Online IDE - </span>CodeSandbox
-                  </li>
-                  <li>
-                    <span>Shell - </span>fish
-                  </li>
-                  <li>
-                    <span>Prompt - </span>Starship
-                  </li>
-                  <li>
-                    <span>Version Control - </span>Github
-                  </li>
-                  <li>
-                    <span>Hosting - </span>Vercel / Netlify / Heroku
-                  </li>
-                  <li>
-                    <span>API Testing - </span>Postman
-                  </li>
-                  <li>
-                    <span>DNS + CDN - </span>Cloudflare
-                  </li>
-                  <li>
-                    <span>Prototyping - </span>Figma
-                  </li>
-                  <li>
-                    <span>Illustrations - </span>unDraw
-                  </li>
-                  <li>
-                    <span>Icons - </span>SVG Repo / Font Awesome
-                  </li>
-                </ul>
-              </div>
-            </div>
+    <Head>
+      <title>Uses — Neranjana Prasad</title>
+    </Head>
+      <section className="grid grid-cols-2 sm:grid-cols-1 relative">
+        <div>
+          <p className="text-2xl font-semibold mb-2">Primary</p>
+          <ul className="list-disc ml-4">
+            {primaryUses.map(({ title, subtitle }, index) => {
+              return (
+                <li key={index}>
+                  <span className="font-medium">{title}</span> - <span className="opacity-95">{subtitle}</span>
+                </li>
+              );
+            })}
+          </ul>
 
-            <div>
-              <p className="is-text-20 text-600 pb-5">Other</p>
-              <ul>
-                <li>
-                  <span>Music Streaming - </span>Spotify
+          <p className="text-2xl font-semibold my-2">Development</p>
+          <ul className="list-disc ml-4">
+            {developmentUses.map(({ title, subtitle }, index) => {
+              return (
+                <li key={index}>
+                  <span className="font-medium">{title}</span> - <span className="opacity-95">{subtitle}</span>
                 </li>
-                <li>
-                  <span>Password Manager - </span>Bitwarden
-                </li>
-                <li>
-                  <span>2FA - </span> Google Authenticator
-                </li>
-                <li>
-                  <span>Main Browser - </span> Firefox
-                </li>
-                <li>
-                  <span>Secondary Browser - </span> Brave
-                </li>
-                <li>
-                  <span>Ad Blocker - </span>uBlock Origin
-                </li>
-                <li>
-                  <span>Texting - </span> Signal
-                </li>
-                <li>
-                  <span>Cloud Storage - </span> Telegram
-                </li>
-                <li>
-                  <span>Media Player - </span> VLC / mpv-android
-                </li>
-                <li>
-                  <span>TV / Movies Tracker - </span>Trakt.tv
-                </li>
-                <li>
-                  <span>Note Taking - </span> Google Keep
-                </li>
-              </ul>
-            </div>
-          </div>
+              );
+            })}
+          </ul>
         </div>
-        <div className="bottom">
-          <footer>
-            <p>
-              Made with <span>{heartIcon}</span>
-              {" + "}
-              <a href="https://nextjs.org/" target="_blank" rel="noreferrer">
-                <span>Next.js</span>
-              </a>
-              {" + "}
-              <a href="https://sass-lang.com/" target="_blank" rel="noreferrer">
-                <span>Sass</span>
-              </a>{" "}
-              in{" "}
-              <span role="img" aria-label="Flag LK" title="Sri Lanka">
-                🇱🇰
-              </span>
-            </p>
-            <p>
-              Hosted on{" "}
-              <a href="https://vercel.com" target="_blank" rel="noreferrer">
-                Vercel
-              </a>.
-            </p>
-          </footer>
+
+        <div>
+          <p className="text-2xl font-semibold mb-2">Other</p>
+          <ul className="list-disc ml-4">
+            {otherUses.map(({ title, subtitle }, index) => {
+              return (
+                <li key={index}>
+                  <span className="font-medium">{title}</span> - <span className="opacity-95">{subtitle}</span>
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </section>
+
+      <footer className="text-center sm:static absolute left-0 right-0 bottom-6 md:mt-4 sm:mb-4">
+        <p className="flex items-center justify-center gap-1 text-sm">
+          Made with <span className="h-4">{Icons.heart}</span>
+          {" + "}
+          <a href="https://nextjs.org/" target="_blank" rel="noreferrer">
+            <span className="text-rose-800 dark:text-yellow-200">Next.js</span>
+          </a>
+          {" + "}
+          <a href="https://tailwindcss.com" target="_blank" rel="noreferrer">
+            <span className="text-rose-800 dark:text-yellow-200">TailwindCSS</span>
+          </a>{" "}
+          in{" "}
+          <span role="img" aria-label="Flag LK" title="Sri Lanka">
+            🇱🇰
+          </span>
+        </p>
+        <p className="text-sm">
+          Hosted on{" "}
+          <a href="https://vercel.com" target="_blank" rel="noreferrer" className="text-rose-800 dark:text-yellow-200">
+            Vercel
+          </a>
+          .
+        </p>
+      </footer>
     </>
   );
 };
