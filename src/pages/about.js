@@ -47,16 +47,7 @@ const About = () => {
               direction. I do believe that anyone can master coding, But the passion can&apos;t be gained that easy.
             </p>
             <p className="pt-2">
-              Outside of coding, I enjoy spending time reading novels, listening into music and podcasts or binge watching TV Series and Movies or you can find me simping over{" "}
-              <a
-                href="https://en.wikipedia.org/wiki/Rashmika_Mandanna "
-                target="_blank "
-                title="Rashmika Mandanna (born 5 April 1996) is an Indian film actress and model who works predominantly in Telugu and Kannada films.She is popularly dubbed by the media and Kannada film industry as the 'Karnataka Crush'."
-                className="font-medium"
-              >
-                Rashmika Mandanna
-              </a>{" "}
-              <span className="h-4 inline-block">{Icons.pleadingFace}</span>
+              Outside of coding, I enjoy spending time reading novels, listening into music and podcasts or binge watching TV Series and Movies.
             </p>
             <p className="pt-2">
               And I occasionally update{" "}
