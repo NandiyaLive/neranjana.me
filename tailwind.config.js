@@ -8,24 +8,8 @@ module.exports = {
       center: true,
     },
     extend: {
-      fontSize: {
-        nav: "0.85rem",
-      },
-      gridTemplateColumns: {
-        home: "1.25fr 1fr",
-      },
-      maxWidth: {
-        main: "68rem",
-      },
-      colors: {
-        bgColor: {
-          light: "#eeeeee",
-          dark: "#0b0b0b",
-        },
-        card: {
-          light: "#e0e0e0",
-          dark: "#131313",
-        },
+      width: {
+        avatar: "6rem",
       },
       fontFamily: {
         jbmono: ['"JetBrains Mono"', "monospace"],
