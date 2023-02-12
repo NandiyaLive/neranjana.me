@@ -1,4 +1,4 @@
-import "../styles/styles.scss";
+import "@/styles/styles.scss";
 import Layout from "../components/Layout";
 import { ThemeProvider } from "next-themes";
 import Head from "next/head";
@@ -12,12 +12,13 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   return (
-    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem="false">
+    <>
       <Head>
         <title>Neranjana Prasad</title>
       </Head>
+
       {loading ? (
-        <div className="loading-screen bg-bgColor-light dark:bg-bgColor-dark">
+        <div className="loading-screen bg-black">
           <div className="spinner-box">
             <div className="three-quarter-spinner"></div>
           </div>
@@ -27,7 +28,7 @@ function MyApp({ Component, pageProps }) {
           <Component {...pageProps} />
         </Layout>
       )}
-    </ThemeProvider>
+    </>
   );
 }
 

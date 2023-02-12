@@ -27,7 +27,7 @@ const About = () => {
       </Head>
       <section className="xmd:mb-6">
         <div>
-          <div className="bio">
+          <div className="bio leading-relaxed">
             <p>
               I&apos;m <span className="font-medium">Neranjana Prasad Ponnamperuma</span> (aka Nandiya), a 22 years old self taught <span className="font-medium">Web Developer</span> / a{" "}
               <span className="font-medium">Computer Hobbyist</span> living in{" "}
@@ -35,31 +35,36 @@ const About = () => {
                 Kandy, Sri Lanka
               </a>
               {". "}
-              I'm currently studying for a
+              I&apos;m currently studying for a
               <span className="font-medium">
                 {" "}
                 BSc in IT @{" "}
                 <a href="https://en.wikipedia.org/wiki/University_of_Vavuniya" target="_blank" rel="noopener noreferrer">
-                  University of Vavuniya, Sri Lanka.{" "}
+                  University of Vavuniya, Sri Lanka
+                </a>{" "}
+              </span>
+              and working part-time as a web developer @{" "}
+              <span className="font-medium">
+                <a href="https://dynamicbiz.org.lk" target="_blank" rel="noopener noreferrer">
+                  Dynamic Biz
                 </a>
+                {". "}
               </span>
               I spend hours experimenting with HTML, CSS, and JavaScript or dabbling with Python. I’m curious, and enjoy work that challenges me to learn something new and stretch in a different
               direction. I do believe that anyone can master coding, But the passion can&apos;t be gained that easy.
             </p>
-            <p className="pt-2">
-              Outside of coding, I enjoy spending time reading novels, listening into music and podcasts or binge watching TV Series and Movies.
-            </p>
-            <p className="pt-2">
+            <p className="pt-2">Outside of coding, I enjoy spending time reading novels, listening into music and podcasts or binge watching TV Series and Movies.</p>
+            <p>
               And I occasionally update{" "}
-              <a href="https://blog.neranjana.tk" target="_blank" rel="noopener noreferrer" className="font-medium">
-                my blog{" "}
-              </a>
+              <a href="https://blog.neranjana.tk" target="_blank" rel="noopener noreferrer" className="font-medium underline underline-offset-2">
+                my blog
+              </a>{" "}
               too.
             </p>
           </div>
           <div className="grid grid-cols-home gap-6 md:grid-cols-1">
             <div className="work-with">
-              <p className="font-medium text-2xl mt-4 mb-2 uppercase">Tech Stack</p>
+              <p className="font-medium text-2xl my-4 uppercase">Tech Stack</p>
 
               <div className="flex gap-3 gap-y-4 flex-wrap items-center">
                 <svg-icon className="h-9 w-auto" title="HTML5">
@@ -117,7 +122,7 @@ const About = () => {
             </div>
 
             <div className="achivements">
-              <p className="font-medium text-2xl mt-4 mb-2 uppercase">Achivements</p>
+              <p className="font-medium text-2xl my-4 uppercase">Achivements</p>
               <ul className="space-y-1">
                 {Achivements.map(({ title, link }, index) => {
                   return (
@@ -134,7 +139,7 @@ const About = () => {
           </div>
 
           <div>
-            <p className="font-medium text-2xl mt-6 mb-2 uppercase">My happy pills</p>
+            <p className="font-medium text-2xl my-4 uppercase">My happy pills</p>
             <div className="flex gap-3">
               {happyPills.map(({ title, link, logo }, index) => {
                 return (

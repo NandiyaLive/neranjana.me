@@ -30,3 +30,9 @@ export const otherUses = [
   { title: "TV / Movies Tracker", subtitle: "Trakt.tv" },
   { title: "Note Taking", subtitle: "Google Keep" },
 ];
+
+export const portfolioUses = [
+  { title: "JS Framework", subtitle: "NextJS" },
+  { title: "CSS Framework", subtitle: "TailwindCSS" },
+  { title: "Hosted On", subtitle: "Vercel" },
+];
