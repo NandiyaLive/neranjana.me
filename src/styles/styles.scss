@@ -10,25 +10,9 @@ a {
   text-decoration: none;
 }
 
-:root {
-  --primary-color: #FDEF89;
-}
-
-.light {
-  --primary-color: #9B1238;
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-.btn {
-  @apply bg-rose-800 text-white dark:bg-yellow-200 dark:text-bgColor-dark rounded-md py-2 px-5;
-}
-
-.btn-outline {
-  @apply bg-none border-2 border-yellow-200 rounded-md py-[calc(0.5rem-2px)] px-4;
-}
 
 .loading-screen {
   z-index: 90;
@@ -46,7 +30,7 @@ a {
     .three-quarter-spinner {
       width: 5rem;
       height: 5rem;
-      border: 3px solid var(--primary-color);
+      border: 3px solid rgb(159 18 57);
       border-top: 3px solid transparent;
       border-radius: 50%;
       animation: spin 0.5s linear 0s infinite;
