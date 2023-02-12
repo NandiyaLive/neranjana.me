@@ -7,21 +7,18 @@ export default function Home() {
   return (
     <>
       <section className="flex gap-16 items-center justify-center md:flex-col md:my-8">
-        <div className="relative max-w-lg">
-          <div className="w-full h-fit">
-            <Image
-              src={avatar}
-              width={700}
-              height={700}
-              sizes="(max-width: 768px) 100vw,
+        <div className="relative h-[450px] w-[500px] max-w-full sm:h-[300px]">
+          <Image
+            src={avatar}
+            sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw"
-              alt="Avatar Image"
-              placeholder="blur"
-              className="max-w-full h-auto"
-              priority
-            />
-          </div>
+            alt="Avatar Image"
+            placeholder="blur"
+            className="object-contain"
+            priority
+            fill
+          />
         </div>
 
         <div className="max-w-sm md:max-w-full md:text-center">
