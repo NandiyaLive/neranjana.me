@@ -11,7 +11,7 @@ export default function Document() {
         <meta property="og:url" content="https://neranjana.me" />
         <meta property="og:title" content="Neranjana Prasad — Eat. Sleep. Code. Repeat!" />
         <meta property="og:description" content="Computer Hobbyist • Web Dev • DIY Builder • Tweet-A-Holic • Linux Lover • Sri Lankan" />
-        <meta property="og:image" content="avatar.png" />
+        <meta property="og:image" content="https://neranjana.vercel.app/avatar.png" />
 
         <link rel="icon" type="image/x-icon" href="/batman.svg" />
 
@@ -20,7 +20,7 @@ export default function Document() {
         <meta property="twitter:url" content="https://neranjana.me" />
         <meta property="twitter:title" content="Neranjana Prasad — Eat. Sleep. Code. Repeat!" />
         <meta property="twitter:description" content="Computer Hobbyist • Web Dev • DIY Builder • Tweet-A-Holic • Linux Lover • Sri Lankan" />
-        <meta property="twitter:image" content="avatar.png" />
+        <meta property="twitter:image" content="https://neranjana.vercel.app/avatar.png" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
