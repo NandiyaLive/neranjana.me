@@ -10,7 +10,7 @@ const Footer = () => {
           return (
             <li key={index}>
               <a href={link} title={platform} target="_blank" rel="noreferrer">
-                <div className="h-5 fill-white">{Icons[icon]}</div>
+                <div className="h-5 fill-white sm:h-6">{Icons[icon]}</div>
               </a>
             </li>
           );
