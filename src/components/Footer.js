@@ -18,7 +18,7 @@ const Footer = () => {
       </ul>
 
       <p className="underline underline-offset-2 text-sm sm:hidden">
-        <a href="mailto:neranjanaprsd@gmail.com">neranjanaprsd@gmail.com</a>
+        <a href="mailto:hello@neranjana.me">hello@neranjana.me</a>
       </p>
     </footer>
   );
