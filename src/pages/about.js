@@ -62,8 +62,8 @@ const About = () => {
               too.
             </p>
           </div>
-          <div className="grid grid-cols-home gap-6 md:grid-cols-1">
-            <div className="work-with">
+          <div className="flex gap-8 md:flex-col md:gap-0">
+            <div className="max-w-xl lg:max-w-md md:max-w-full">
               <p className="font-medium text-2xl my-4 uppercase">Tech Stack</p>
 
               <div className="flex gap-3 gap-y-4 flex-wrap items-center">
@@ -122,7 +122,7 @@ const About = () => {
             </div>
 
             <div className="achivements">
-              <p className="font-medium text-2xl my-4 uppercase">Achivements</p>
+              <p className="font-medium text-2xl my-4 uppercase ">Achivements</p>
               <ul className="space-y-1">
                 {Achivements.map(({ title, link }, index) => {
                   return (
