@@ -11,7 +11,7 @@ const Contact = () => {
 
         <p className="mt-8 font-semibold">Mail Me At :</p>
         <p className="underline underline-offset-2">
-          <a href="mailto:neranjanaprsd@gmail.com">neranjanaprsd@gmail.com</a>
+          <a href="mailto:hello@neranjana.me">hello@neranjana.me</a>
         </p>
 
         <p className="mt-8 mb-2 font-semibold">Follow Me On :</p>
