@@ -3,7 +3,7 @@ import { socialLinks } from "@/data/social-links";
 
 const Contact = () => {
   return (
-    <div className="flex gap-8 justify-between h-full pb-12">
+    <div className="flex gap-8 justify-between h-full pb-12 md:flex-col mt-8">
       <div className="max-w-md">
         <h1 className="text-4xl mb-8 font-bold">Just Say Hi!</h1>
 
@@ -15,7 +15,7 @@ const Contact = () => {
         </p>
 
         <p className="mt-8 mb-2 font-semibold">Follow Me On :</p>
-        <ul className="flex gap-4 xmd:justify-center">
+        <ul className="flex gap-4">
           {socialLinks.map(({ platform, link, icon }, index) => {
             return (
               <li key={index}>
@@ -28,8 +28,8 @@ const Contact = () => {
         </ul>        
       </div>
 
-      <div className="xmd:w-full w-1/2">
-        <form action="https://formspree.io/xyynwlly" method="POST">
+      <div className="w-1/2 md:w-full">
+        <form action="https://formspree.io/xyynwlly" method="POST" className="max-w-full md:max-w-xl">
           <label className="block text-sm mb-2" htmlFor="name">
             Name
           </label>

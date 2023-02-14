@@ -15,6 +15,11 @@ export const socialLinks = [
     icon: "github",
   },
   {
+    platform: "DEV Community",
+    link: "https://dev.to/neranjana",
+    icon: "dev",
+  },
+  {
     platform: "Twitter",
     link: "https://twitter.com/NandiyaLive",
     icon: "twitter",

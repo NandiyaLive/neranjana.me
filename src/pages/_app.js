@@ -3,7 +3,7 @@ import Layout from "../components/Layout";
 import { ThemeProvider } from "next-themes";
 import Head from "next/head";
 import { useEffect, useState } from "react";
-
+import ogImage from "../../public/avatar.png";
 function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = useState(true);
 
