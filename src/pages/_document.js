@@ -27,7 +27,7 @@ export default function Document() {
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@200;300;400;500;600&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Sinhala:wght@500;600&display=swap" rel="stylesheet" />
       </Head>
-      <body className="bg-black text-neutral-50 max-h-screen h-screen overflow-hidden xmd:overflow-y-auto transition-colors duration-200">
+      <body className="bg-black text-neutral-50 max-h-screen h-screen overflow-hidden lg:overflow-y-auto transition-colors duration-200">
         <Main />
         <NextScript />
       </body>
