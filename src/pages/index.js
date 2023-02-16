@@ -1,25 +1,22 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import avatar from "../../public/avatar.png";
+import avatar from "../../public/avatar.webp";
 
 export default function Home() {
   return (
     <>
       <section className="flex gap-16 items-center justify-center md:flex-col md:gap-4 md:my-8">
-        <div className="relative h-[400px] w-[500px] max-w-full sm:h-[270px]">
           <Image
             src={avatar}
-            sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
+            height={1080}
+            width={1080}
             alt="Avatar Image"
             placeholder="blur"
-            className="object-contain"
+            className="w-full h-auto max-w-sm rounded-full border-2 border-orange-400 p-1"
             priority
-            fill
           />
-        </div>
+
 
         <div className="max-w-sm md:max-w-full md:text-center">
           <p className="text-2xl">Hey there!, I&apos;m</p>
@@ -28,12 +25,8 @@ export default function Home() {
 
           <div className="flex items-center gap-4 md:justify-center sm:gap-2">
             <Link href="/contact">
-              <button className="border-2 border-rose-800 bg-rose-800 rounded-md py-2 px-5 mt-6 sm:text-sm">Let&apos;s Talk</button>
+              <button className="bg-orange-400 text-neutral-900 rounded-md py-2 px-5 mt-6 sm:text-sm">Let&apos;s Talk</button>
             </Link>
-
-            <a href="https://fiverr.com/neranjanaprasad" target="_blank" rel="noreferrer">
-              <button className="border-2 border-rose-800 box-border rounded-md py-2 px-5 mt-6 flex items-center gap-2 sm:text-sm">{/* <p className="h-5 fill-white">{Icons.fiverr}</p> */} Hire Me</button>
-            </a>
           </div>
         </div>
       </section>
