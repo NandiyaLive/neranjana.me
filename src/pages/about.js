@@ -1,24 +1,26 @@
 import Head from "next/head";
+import { useEffect, useState } from "react";
 import { Achivements } from "../data/achivements";
 import { happyPills } from "../data/happy-pills";
 import { Icons } from "../data/icons";
 import { Logos } from "../data/logos";
 
 const About = () => {
-  (async () => {
-    await fetch(`api/spotify`)
-      .then((response) => response.json())
-      .then((data) => {
-        if (process.browser) {
-          const npText = document.querySelector(".now-playing");
-          if (data["isPlaying"]) {
-            npText.innerHTML = `<a href="${data["songUrl"]}" title="${data["title"]} - ${data["artist"]}" target="_blank" rel="noreferrer">${data["title"]}</a><span role='img' aria-label='Sparkles emoji'> ✨</span>`;
-          } else {
-            npText.innerHTML = "<a>Nothing! Maybe he's asleep</a><span role='img' aria-label='Sleeping Symbol emoji'> 💤</span>";
-          }
-        }
-      });
-  })();
+  const [songDetails, setSongDetails] = useState({});
+
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const response = await fetch(`/api/spotify`);
+        const data = await response?.json();
+        setSongDetails(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    getData();
+  }, []);
 
   return (
     <>
@@ -151,9 +153,15 @@ const About = () => {
                 );
               })}
             </div>
-            <p className="pt-4 text-sm spotify">
-              Vibing To :&nbsp;
-              <span className="now-playing opacity-90 hover:opacity-100"></span>
+            <p className="pt-4 text-sm now-playing">
+              <span className={`${songDetails.isPlaying ? "text-green-500" : "text-red-600"}`}>⦿</span>&nbsp;
+              {!songDetails ? "Spotify Player" : songDetails.isPlaying ? "Now Playing " : "Last Played"}&nbsp;—&nbsp;
+              <a href={songDetails["songUrl"]} title={`${songDetails["title"]} - ${songDetails["artist"]}`} target="_blank" rel="noreferrer" className="font-medium opacity-90 hover:opacity-100">
+                {songDetails["title"]}{" "}
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="h-3 fill-white inline-block ml-1">
+                  <path d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6V32c0-17.7-14.3-32-32-32H352zM80 32C35.8 32 0 67.8 0 112v320c0 44.2 35.8 80 80 80h320c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32v112c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16h112c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z" />
+                </svg>
+              </a>
             </p>
           </div>
         </div>
