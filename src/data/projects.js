@@ -8,7 +8,7 @@ export const mainProjects = [
   },
   {
     title: "Portfolio Website",
-    description: "v5 of my portfolio website. Made with NextS and TailwindCSS.",
+    description: "v6 of my portfolio website. Made with NextS and TailwindCSS.",
     live: "https://neranjana.me",
     telegram: "",
     github: "https://github.com/NandiyaLive/neranjana.me",

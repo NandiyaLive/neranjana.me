@@ -41,7 +41,7 @@ const Navbar = () => {
           </Link>
         </p>
         <p className="font-medium opacity-70">
-          <a href="https://blog.neranjana.tk" target="_blank" rel="noopener noreferrer">
+          <a href="https://blog.neranjana.me" target="_blank" rel="noopener noreferrer">
             Blog
           </a>
         </p>
