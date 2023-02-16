@@ -15,7 +15,7 @@ const Navbar = () => {
       <div className="sm:hidden">
         <Link href="/">
           <h1 className="text-2xl font-bold font-jbmono">
-            neranjana<span className="text-rose-800">.</span>me
+            neranjana<span className="text-orange-400">.</span>me
           </h1>
         </Link>
       </div>
