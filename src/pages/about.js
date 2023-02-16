@@ -56,7 +56,7 @@ const About = () => {
             <p className="pt-2">Outside of coding, I enjoy spending time reading novels, listening into music and podcasts or binge watching TV Series and Movies.</p>
             <p>
               And I occasionally update{" "}
-              <a href="https://blog.neranjana.tk" target="_blank" rel="noopener noreferrer" className="font-medium underline underline-offset-2">
+              <a href="https://blog.neranjana.me" target="_blank" rel="noopener noreferrer" className="font-medium underline underline-offset-2">
                 my blog
               </a>{" "}
               too.

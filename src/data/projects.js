@@ -9,9 +9,9 @@ export const mainProjects = [
   {
     title: "Portfolio Website",
     description: "v5 of my portfolio website. Made with NextS and TailwindCSS.",
-    live: "https://neranjana.tk",
+    live: "https://neranjana.me",
     telegram: "",
-    github: "https://github.com/NandiyaLive/neranjana.tk",
+    github: "https://github.com/NandiyaLive/neranjana.me",
   },
   {
     title: "Instagram Downloader Bot",
