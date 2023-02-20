@@ -6,14 +6,14 @@ import avatar from "../../public/avatar.webp";
 export default function Home() {
   return (
     <>
-      <section className="flex gap-16 items-center justify-center md:flex-col md:gap-4 md:my-8">
+      <section className="flex gap-16 items-center justify-center md:flex-col md:gap-8 md:my-8">
           <Image
             src={avatar}
             height={1080}
             width={1080}
             alt="Avatar Image"
             placeholder="blur"
-            className="w-full h-auto max-w-sm rounded-full border-2 border-orange-400 p-1"
+            className="w-full h-auto max-w-avatar"
             priority
           />
 

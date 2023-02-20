@@ -6,7 +6,7 @@ import { Icons } from "../data/icons";
 import { Logos } from "../data/logos";
 
 const About = () => {
-  const [songDetails, setSongDetails] = useState({});
+  const [songDetails, setSongDetails] = useState();
 
   useEffect(() => {
     const getData = async () => {
@@ -153,15 +153,15 @@ const About = () => {
                 );
               })}
             </div>
-            {songDetails && (
+            {songDetails ? (
               <p className="pt-4 text-sm">
-                <span className={`${songDetails.isPlaying ? "text-green-500" : "text-red-600"} animate-pulse`}>⦿</span>&nbsp;
+                <span className={`${songDetails.isPlaying ? "text-green-500 animate-pulse" : "text-red-600"}`}>⦿</span>&nbsp;
                 {songDetails.isPlaying ? "Now Playing " : "Last Played"}&nbsp;—&nbsp;
                 <a href={songDetails["songUrl"]} title={`${songDetails["title"]} - ${songDetails["artist"]}`} target="_blank" rel="noreferrer" className="font-medium opacity-90 hover:opacity-100">
                   {songDetails["title"]}
                 </a>
               </p>
-            )}
+            ) : <p className="pt-4 text-sm">⦿ Checking Spotify...</p>}
           </div>
         </div>
       </section>
