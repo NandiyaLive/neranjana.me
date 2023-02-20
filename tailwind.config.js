@@ -11,6 +11,9 @@ module.exports = {
       width: {
         avatar: "6rem",
       },
+      maxWidth: {
+        avatar: "420px",
+      },
       fontFamily: {
         jbmono: ['"JetBrains Mono"', "monospace"],
       },
