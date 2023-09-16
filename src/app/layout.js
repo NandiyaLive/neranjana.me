@@ -4,7 +4,7 @@ import "@/src/app/globals.scss";
 export const metadata = {
   title: {
     default: "Neranjana Prasad",
-    template: "%s | Neranjana Prasad",
+    template: "%s — Neranjana Prasad",
   },
   description: "I'm Neranjana Prasad, a Freelance Full-Stack Developer with expertise in Next.js and TailwindCSS.",
   metadataBase: new URL("https://neranjana.me"),
