@@ -1,7 +1,7 @@
 import Image from "next/image";
 import avatar from "@/public/avatar.jpg";
-import { socialLinks } from "./(assets)/social-links";
-import { Icons } from "./(assets)/icons";
+import { socialLinks } from "./social-links";
+import { Icons } from "./icons";
 
 export default function Home() {
   return (

@@ -10,14 +10,21 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`container max-w-6xl flex items-start mt-4 mb-8 ${pathname == "/" ? "justify-end" : "justify-between"}`}
+      className={`container max-w-6xl flex items-start mt-4 mb-8 ${
+        pathname == "/" ? "justify-end" : "justify-between"
+      }`}
     >
       {pathname != "/" && (
         <Link href="/">
-          <div className="flex gap-4">
-            <div className="h-12 w-12 relative">
-              <Image src={avatar} alt="Avatar Image" className="rounded-full h-full w-full p-1" fill />
-            </div>
+          <div className="flex gap-4 items-center">
+            <Image
+              src={avatar}
+              width={45}
+              height={45}
+              alt="Avatar Image"
+              placeholder="blur"
+              className="rounded-full"
+            />
 
             <div>
               <h1 className="text-lg font-bold">Neranjana Prasad</h1>
