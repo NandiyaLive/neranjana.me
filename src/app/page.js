@@ -5,7 +5,7 @@ import { Icons } from "./(assets)/icons";
 
 export default function Home() {
   return (
-    <main className="container max-w-6xl space-y-6 absolute left-0 right-0 bottom-20">
+    <main className="container max-w-6xl space-y-6 absolute left-0 right-0 bottom-10">
       <Image
         src={avatar}
         width={80}
