@@ -1,13 +1,13 @@
 export const metadata = {
-  title: "Projects",
+  title: "Uses",
 };
 
-const ProjectsPage = () => {
+const UsesPage = () => {
   return (
     <main className="container max-w-6xl pb-16">
-      <p>ProjectsPage</p>
+      <p>UsesPage</p>
     </main>
   );
 };
 
-export default ProjectsPage;
+export default UsesPage;
