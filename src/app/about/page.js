@@ -12,8 +12,8 @@ const AboutPage = () => {
     <main className="container max-w-6xl pb-16">
       <section className="space-y-2">
         <p>
-          I'm Neranjana Prasad Ponnamperuma, a self taught, freelance full-stack web developer based in the sacred
-          city of Kandy, Sri Lanka. I&apos;m an IT Student at the{" "}
+          I&apos;m Neranjana Prasad Ponnamperuma, a self taught, freelance full-stack web developer based in the
+          sacred city of Kandy, Sri Lanka. I&apos;m an IT Student at the{" "}
           <a
             href="https://en.wikipedia.org/wiki/University_of_Vavuniya"
             target="_blank"
@@ -52,7 +52,7 @@ const AboutPage = () => {
           watching, and I occasionally update my blog too.
         </p>
         <p>
-          I'm currently available for a new freelance job.{" "}
+          I&apos;m currently available for a new freelance job.{" "}
           <Link href="/hire" className="font-medium underline underline-offset-4">
             Hire me!
           </Link>
