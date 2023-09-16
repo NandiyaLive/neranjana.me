@@ -27,7 +27,7 @@ const Navbar = () => {
         </Link>
       )}
 
-      <ul className="flex items-center gap-8 uppercase text-sm font-medium">
+      <ul className="flex items-center gap-6 uppercase text-sm font-medium">
         <li className="opacity-80 hover:opacity-100 transition-opacity ease-in-out duration-200">
           <Link href="/about">About</Link>
         </li>

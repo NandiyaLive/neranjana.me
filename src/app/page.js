@@ -18,12 +18,22 @@ export default function Home() {
       <h1 className="text-6xl font-medium max-w-2xl">Web Dev. Freelancer. Student.</h1>
 
       <h2 className="max-w-xl opacity-90">
-        Hey, I'm Neranjana. I'm a Freelance Full-Stack Developer with expertise in{" "}
-        <a href="https://nextjs.org" target="_blank" rel="noopener noreferrer" className="font-medium opacity-100 underline underline-offset-4">
+        Hey, I&apos;m Neranjana. I&apos;m a Freelance Full-Stack Developer with expertise in{" "}
+        <a
+          href="https://nextjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-medium opacity-100 underline underline-offset-4"
+        >
           Next.js
         </a>{" "}
         and{" "}
-        <a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer" className="font-medium opacity-100 underline underline-offset-4">
+        <a
+          href="https://tailwindcss.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-medium opacity-100 underline underline-offset-4"
+        >
           TailwindCSS
         </a>
         .
