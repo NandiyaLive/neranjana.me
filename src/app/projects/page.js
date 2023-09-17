@@ -37,7 +37,7 @@ const ProjectsPage = () => {
 
               <div className="flex mt-2 gap-2">
                 {technologies.map((tech, index) => (
-                  <p className="text-xsm bg-yellow-500 text-black py-1 px-2 rounded">{tech}</p>
+                  <p className="text-xsm bg-yellow-500 text-black py-1 px-2 rounded" key={index}>{tech}</p>
                 ))}
               </div>
 
