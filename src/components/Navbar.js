@@ -44,6 +44,10 @@ const Navbar = () => {
         </li>
 
         <li className="opacity-80 hover:opacity-100 transition-opacity ease-in-out duration-200">
+          <Link href="/hire">Hire</Link>
+        </li>
+
+        <li className="opacity-80 hover:opacity-100 transition-opacity ease-in-out duration-200">
           <Link href="/uses">Uses</Link>
         </li>
 
