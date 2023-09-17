@@ -19,7 +19,7 @@ const ProjectsPage = () => {
 
       <div className="grid grid-cols-3 gap-4 mt-4">
         {pro.map(({ name, description, image, url, telegram, github, technologies }, index) => (
-          <div className="bg-stone-900 rounded-md">
+          <div className="bg-stone-900 rounded-md" key={index}>
             <a href={url} target="_blank" rel="noopener noreferrer">
               <div className="w-full h-44 relative overflow-hidden">
                 <Image
