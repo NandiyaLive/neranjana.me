@@ -1,24 +1,21 @@
 import Image from "next/image";
-import avatar from "@/public/avatar.jpg";
+import avatar from "../../../public/avatar.jpg";
 import { socialLinks } from "./social-links";
 import { Icons } from "./icons";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="container max-w-6xl space-y-6 absolute left-0 right-0 bottom-10">
-      <Image
-        src={avatar}
-        width={80}
-        height={80}
-        placeholder="blur"
-        alt="Avatar Image"
-        className="rounded-full p-1"
-      />
+    <main className="container max-w-6xl space-y-6 absolute left-0 right-0 bottom-10 sm:bottom-4">
+      <Image src={avatar} width={120} height={120} placeholder="blur" alt="Avatar Image" className="rounded-full" />
 
-      <h1 className="text-6xl font-medium max-w-2xl">Web Dev. Freelancer. Student.</h1>
+      <h1 className="text-7xl font-medium max-w-2xl md:text-5xl leading-tight">
+        IT Student by Day, <br /> Web Dev by Night!
+      </h1>
 
       <h2 className="max-w-xl opacity-90">
-        Hey, I&apos;m Neranjana. I&apos;m a Freelance Full-Stack Developer with expertise in{" "}
+        Hey, I&apos;m Neranjana. I&apos;m a Full-Stack Developer who builds fast, interactive, and user-friendly
+        websites, with expertise in{" "}
         <a
           href="https://nextjs.org"
           target="_blank"
@@ -39,7 +36,14 @@ export default function Home() {
         .
       </h2>
 
-      <ul className="flex gap-4">
+      <Link href="/hire" className="block">
+        <div className="flex items-center gap-2 bg-white text-black py-2 px-6 rounded-full w-fit">
+          <div className="w-3 h-3 bg-green-500 rounded-lg blur-[3px] animate-pulse" />
+          <p>Open For Hiring</p>
+        </div>
+      </Link>
+
+      {/* <ul className="absolute right-0 bottom-10 flex flex-col gap-4">
         {socialLinks.map(({ platform, link, icon }, index) => {
           return (
             <li key={index}>
@@ -49,7 +53,7 @@ export default function Home() {
             </li>
           );
         })}
-      </ul>
+      </ul> */}
     </main>
   );
 }
