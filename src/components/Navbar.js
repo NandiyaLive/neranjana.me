@@ -3,28 +3,23 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import avatar from "@/public/avatar.jpg";
+import avatar from "../../public/avatar.jpg";
+import { cn } from "@/lib/utils";
 
 const Navbar = () => {
   const pathname = usePathname();
 
   return (
     <nav
-      className={`container max-w-6xl flex items-start mt-4 mb-8 ${
+      className={cn(
+        "container max-w-6xl flex items-start mt-4 mb-8",
         pathname == "/" ? "justify-end" : "justify-between"
-      }`}
+      )}
     >
       {pathname != "/" && (
         <Link href="/">
           <div className="flex gap-4 items-center">
-            <Image
-              src={avatar}
-              width={45}
-              height={45}
-              alt="Avatar Image"
-              placeholder="blur"
-              className="rounded-full"
-            />
+            <Image src={avatar} width={45} height={45} alt="Avatar Image" placeholder="blur" className="rounded-full" />
 
             <div>
               <h1 className="text-lg font-bold">Neranjana Prasad</h1>

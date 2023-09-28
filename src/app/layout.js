@@ -1,5 +1,5 @@
-import Navbar from "@/src/components/Navbar";
-import "@/src/app/globals.scss";
+import Navbar from "@/components/Navbar";
+import "@/app/globals.scss";
 
 export const metadata = {
   title: {
@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
         <link rel="manifest" href="manifest.json" />
       </head>
 
-      <body className="max-h-screen">
+      <body className="max-h-screen bg-black text-white">
         <header>
           <Navbar />
         </header>
