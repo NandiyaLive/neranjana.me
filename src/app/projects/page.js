@@ -19,7 +19,7 @@ const ProjectsPage = () => {
       <div className="grid grid-cols-3 gap-4 mt-4">
         {pro.map(({ name, description, logo, url }, index) => (
           <div
-            className="flex flex-col justify-between hover:bg-neutral-900 transition-colors ease-in-out duration-300 p-4 select-none group"
+            className="flex flex-col justify-between hover:bg-neutral-100 transition-colors ease-in-out duration-300 p-4 select-none group dark:hover:bg-neutral-900"
             key={index}
           >
             <div>
@@ -28,7 +28,7 @@ const ProjectsPage = () => {
               <p className="text-sm">{description}</p>
             </div>
 
-            <div className="flex items-center gap-2 mt-6 font-medium group-hover:text-yellow-500">
+            <div className="flex items-center gap-2 mt-6 font-medium group-hover:text-yellow-500 transition-colors ease-in-out duration-300">
               <Link size={16} />
               <a href={`https://${url}`} target="_blank" rel="noopener noreferrer">
                 {url}

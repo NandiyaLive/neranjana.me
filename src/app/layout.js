@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import "@/app/globals.scss";
+import NextThemeProvider from "@/components/NextThemeProvider";
 
 export const metadata = {
   title: {
@@ -34,12 +35,17 @@ export default function RootLayout({ children }) {
         <link rel="manifest" href="manifest.json" />
       </head>
 
-      <body className="max-h-screen bg-black text-white">
-        <header>
-          <Navbar />
-        </header>
-        {children}
-      </body>
+      <NextThemeProvider>
+        <body
+          className="max-h-screen max-w-screen overflow-x-hidden dark:bg-black dark:text-white"
+          suppressHydrationWarning={true}
+        >
+          <header>
+            <Navbar />
+          </header>
+          {children}
+        </body>
+      </NextThemeProvider>
     </html>
   );
 }
