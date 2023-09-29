@@ -7,8 +7,24 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className="container max-w-6xl space-y-6 absolute left-0 right-0 bottom-10 sm:bottom-4">
-      <Image src={avatar} width={120} height={120} placeholder="blur" alt="Avatar Image" className="rounded-full" />
-
+      <div className="relative w-fit">
+        <Image src={avatar} width={120} height={120} placeholder="blur" alt="Avatar Image" className="rounded-full" />
+        <div className="flex gap-4 w-fit absolute left-1/2 right-1/2 -translate-x-1/2 bg-yellow-500 py-2 px-3 rounded-full top-full -translate-y-4">
+          {socialLinks.map(({ platform, link, icon }, index) => {
+            return (
+              <a
+                key={index}
+                href={link}
+                title={platform}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div className="h-5 fill-black sm:h-6">{Icons[icon]}</div>
+              </a>
+            );
+          })}
+        </div>
+      </div>
       <h1 className="text-7xl font-medium max-w-2xl md:text-5xl leading-tight">
         IT Student by Day, <br /> Web Dev by Night!
       </h1>
@@ -42,18 +58,6 @@ export default function Home() {
           <p>Open For Hiring</p>
         </div>
       </Link>
-
-      {/* <ul className="absolute right-0 bottom-10 flex flex-col gap-4">
-        {socialLinks.map(({ platform, link, icon }, index) => {
-          return (
-            <li key={index}>
-              <a href={link} title={platform} target="_blank" rel="noreferrer">
-                <div className="h-5 fill-white sm:h-6">{Icons[icon]}</div>
-              </a>
-            </li>
-          );
-        })}
-      </ul> */}
     </main>
   );
 }

@@ -14,24 +14,24 @@ export const socialLinks = [
     link: "https://github.com/NandiyaLive",
     icon: "github",
   },
-  {
-    platform: "DEV Community",
-    link: "https://dev.to/neranjana",
-    icon: "dev",
-  },
+  // {
+  //   platform: "DEV Community",
+  //   link: "https://dev.to/neranjana",
+  //   icon: "dev",
+  // },
   {
     platform: "Twitter",
     link: "https://twitter.com/NandiyaLive",
     icon: "twitter",
   },
-  {
-    platform: "Instagram",
-    link: "https://instagram.com/NandiyaLive",
-    icon: "instagram",
-  },
-  {
-    platform: "Telegram",
-    link: "https://t.me/NandiyaLive",
-    icon: "telegram",
-  },
+  // {
+  //   platform: "Instagram",
+  //   link: "https://instagram.com/NandiyaLive",
+  //   icon: "instagram",
+  // },
+  // {
+  //   platform: "Telegram",
+  //   link: "https://t.me/NandiyaLive",
+  //   icon: "telegram",
+  // },
 ];
