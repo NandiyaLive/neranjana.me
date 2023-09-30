@@ -1,6 +1,6 @@
 export default function Loading() {
   return (
-    <main className="h-screen w-screen absolute top-0 left-0 right-0 bottom-0 z-50 flex items-center justify-center">
+    <main className="max-h-screen max-w-screen absolute top-0 left-0 right-0 bottom-0 z-50 flex items-center justify-center">
       <svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 800 600" className="h-40 animate-pulse">
         <path
           fill="#eab308"

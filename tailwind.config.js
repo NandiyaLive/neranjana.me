@@ -22,6 +22,7 @@ module.exports = {
     extend: {
       width: {
         avatar: "6rem",
+        screen: ["100vh /* fallback for Opera, IE and etc. */", "100dvh"],
       },
       maxWidth: {
         avatar: "420px",

@@ -16,7 +16,7 @@ const ProjectsPage = () => {
 
       <h3 className="text-2xl uppercase font-semibold mt-8 mb-2">Professional</h3>
 
-      <div className="grid grid-cols-3 gap-4 mt-4">
+      <div className="grid grid-cols-3 gap-4 mt-4 md:grid-cols-2 sm:grid-cols-1">
         {pro.map(({ name, description, logo, url }, index) => (
           <div
             className="flex flex-col justify-between hover:bg-neutral-100 transition-colors ease-in-out duration-300 p-4 select-none group dark:hover:bg-neutral-900"

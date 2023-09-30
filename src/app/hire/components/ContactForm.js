@@ -92,12 +92,12 @@ export function ContactForm() {
             )}
           />
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 sm:flex-col">
             <FormField
               control={form.control}
               name="email"
               render={({ field }) => (
-                <FormItem>
+                <FormItem className="flex-1 sm:w-full">
                   <FormLabel>Email</FormLabel>
                   <FormControl>
                     <Input disabled={loading} placeholder="bruce@waynecorp.com" {...field} />
@@ -111,10 +111,10 @@ export function ContactForm() {
               control={form.control}
               name="phone"
               render={({ field }) => (
-                <FormItem>
+                <FormItem className="flex-1 sm:w-full">
                   <FormLabel>Phone</FormLabel>
                   <FormControl>
-                    <Input disabled={loading} className="w-72" placeholder="+94 76 1234567" {...field} />
+                    <Input disabled={loading} placeholder="+94 76 1234567" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -130,17 +130,20 @@ export function ContactForm() {
                 <FormLabel className="block">Timeline</FormLabel>
                 <FormDescription className="mb-2">Minimum of 2 weeks is needed for development.</FormDescription>
                 <FormControl>
-                  <Popover disabled={loading}>
+                  <Popover disabled={loading} className="sm:w-full">
                     <PopoverTrigger asChild>
                       <Button
                         variant={"outline"}
-                        className={cn("w-72 justify-start text-left font-normal", !date && "text-muted-foreground")}
+                        className={cn(
+                          "w-72 justify-start text-left font-normal sm:w-full",
+                          !date && "text-muted-foreground"
+                        )}
                       >
                         <CalendarIcon className="mr-2 h-4 w-4" />
                         {date ? format(date, "PPP") : <span>Pick a Date</span>}
                       </Button>
                     </PopoverTrigger>
-                    <PopoverContent className="w-auto p-0">
+                    <PopoverContent className="w-auto p-0 sm:w-full">
                       <Calendar mode="single" selected={date} onSelect={setDate} initialFocus />
                     </PopoverContent>
                   </Popover>
@@ -157,7 +160,7 @@ export function ContactForm() {
               <FormItem>
                 <FormLabel>Budget</FormLabel>
                 <FormControl>
-                  <Input disabled={loading} className="w-72" placeholder="LKR36,000 / $110" {...field} />
+                  <Input disabled={loading} className="w-72 sm:w-full" placeholder="LKR36,000 / $110" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
