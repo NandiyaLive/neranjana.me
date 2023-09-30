@@ -1,6 +1,9 @@
+import { Inter } from "next/font/google";
+
 import Navbar from "@/components/Navbar";
 import "@/app/globals.scss";
 import NextThemeProvider from "@/components/NextThemeProvider";
+import { cn } from "@/lib/utils";
 
 export const metadata = {
   title: {
@@ -20,16 +23,15 @@ export const metadata = {
   },
 };
 
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+});
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning={true}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@200;300;400;500;600;700;800&display=swap"
-          rel="stylesheet"
-        />
         <link rel="shortcut icon" href="batman.svg" type="image/x-icon" />
         <link rel="apple-touch-icon" href="batman.svg" />
         <link rel="manifest" href="manifest.json" />
@@ -37,8 +39,7 @@ export default function RootLayout({ children }) {
 
       <NextThemeProvider>
         <body
-          className="max-h-screen max-w-screen overflow-x-hidden dark:bg-black dark:text-white"
-          suppressHydrationWarning={true}
+          className={cn("max-h-screen max-w-screen overflow-x-hidden dark:bg-black dark:text-white", inter.className)}
         >
           <header>
             <Navbar />

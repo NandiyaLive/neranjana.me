@@ -32,29 +32,33 @@ const getAccessToken = async () => {
 };
 
 export const getNowPlaying = async (accessToken) => {
-  const { data } = await axios.get(NOW_PLAYING_ENDPOINT, {
-    headers: {
-      "Cache-Control": "max-age=300",
-      Authorization: `Bearer ${accessToken}`,
-    },
-  });
+  try {
+    const res = await axios.get(NOW_PLAYING_ENDPOINT, {
+      headers: {
+        "Cache-Control": "max-age=300",
+        Authorization: `Bearer ${accessToken}`,
+      },
+    });
 
-  console.log("[SPOTIFY] Now Playing", data.item.name);
-
-  return data;
+    return res;
+  } catch (error) {
+    console.log("[SPOTIFY] Now Playing Error : ", error);
+  }
 };
 
 export const getLastPlayed = async (accessToken) => {
-  const { data } = await axios.get(LAST_PLAYED_ENDPOINT, {
-    headers: {
-      "Cache-Control": "max-age=300",
-      Authorization: `Bearer ${accessToken}`,
-    },
-  });
+  try {
+    const res = await axios.get(LAST_PLAYED_ENDPOINT, {
+      headers: {
+        "Cache-Control": "max-age=300",
+        Authorization: `Bearer ${accessToken}`,
+      },
+    });
 
-  console.log("[SPOTIFY] Last Played", data.items[0].track.name);
-
-  return data;
+    return res;
+  } catch (error) {
+    console.log("[SPOTIFY] Last Played Error : ", error);
+  }
 };
 
 const getSongData = async () => {
@@ -64,25 +68,26 @@ const getSongData = async () => {
   let item;
   let isPlaying = false;
 
-  if (response.status == 200) {
-    if (response.is_playing === false) {
-      const response = await getLastPlayed(accessToken);
-
-      item = response.items[0].track;
-    }
+  if (response.status === 200) {
+    isPlaying = response.data.is_playing;
+    item = response.data.item;
   } else {
-    isPlaying = response.is_playing;
-    item = response.item;
+    const response = await getLastPlayed(accessToken);
+    item = response.data.items[0].track;
   }
 
-  return {
-    isPlaying,
-    title: item.name,
-    album: item.album.name,
-    artist: item.album.artists[0].name,
-    albumImageUrl: item.album.images[0].url,
-    songUrl: item.external_urls.spotify,
-  };
+  if (item === undefined) {
+    return null;
+  } else {
+    return {
+      isPlaying,
+      title: item?.name,
+      album: item?.album.name,
+      artist: item?.album.artists[0].name,
+      albumImageUrl: item?.album.images[0].url,
+      songUrl: item?.external_urls.spotify,
+    };
+  }
 };
 
 export default getSongData;

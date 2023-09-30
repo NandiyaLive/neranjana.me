@@ -6,19 +6,13 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="container max-w-6xl space-y-6 absolute left-0 right-0 bottom-10 sm:bottom-4">
-      <div className="relative w-fit">
+    <main className="container max-w-6xl space-y-6 absolute left-0 right-0 bottom-10 sm:bottom-8">
+      <div className="relative w-fit mb-10">
         <Image src={avatar} width={120} height={120} placeholder="blur" alt="Avatar Image" className="rounded-full" />
         <div className="flex gap-4 w-fit absolute left-1/2 right-1/2 -translate-x-1/2 bg-yellow-500 py-2 px-3 rounded-full top-full -translate-y-4">
           {socialLinks.map(({ platform, link, icon }, index) => {
             return (
-              <a
-                key={index}
-                href={link}
-                title={platform}
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a key={index} href={link} title={platform} target="_blank" rel="noreferrer">
                 <div className="h-5 fill-black sm:h-6">{Icons[icon]}</div>
               </a>
             );
@@ -53,7 +47,7 @@ export default function Home() {
       </h2>
 
       <Link href="/hire" className="block">
-        <div className="flex items-center gap-2 bg-white text-black py-2 px-6 rounded-full w-fit">
+        <div className="flex items-center gap-2 bg-neutral-950 text-white dark:bg-white dark:text-black py-2 px-6 rounded-full w-fit">
           <div className="w-3 h-3 bg-green-500 rounded-lg blur-[3px] animate-pulse" />
           <p>Open For Hiring</p>
         </div>

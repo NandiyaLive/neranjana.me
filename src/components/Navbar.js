@@ -43,7 +43,7 @@ const Navbar = () => {
   return (
     <nav
       className={cn(
-        "container max-w-6xl flex items-start mt-4 mb-8 relative",
+        "container max-w-6xl flex items-start mt-4 mb-8 relative mb:items-center",
         pathname == "/" ? "justify-end" : "justify-between"
       )}
     >
@@ -71,16 +71,16 @@ const Navbar = () => {
             <li
               key={item.id}
               className={cn(
-                "hover:opacity-100 transition-opacity ease-in-out duration-200 md:bg-black md:px-8 md:opacity-100 md:w-full md:hover:bg-stone-900",
-                pathname === item.href ? "opacity-100 md:bg-stone-900" : "opacity-80"
+                "hover:opacity-100 transition-opacity ease-in-out duration-200 md:bg-neutral-200 dark:md:bg-neutral-950 md:px-8 md:opacity-100 md:w-full dark:md:hover:bg-neutral-900 md:hover:bg-neutral-300",
+                pathname === item.href ? "opacity-100 dark:md:bg-neutral-900 md:bg-neutral-300" : "opacity-80"
               )}
             >
-              <Link href={item.href} className="md:block md:py-4">
+              <Link href={item.href} className="md:block md:py-4" onClick={() => setIsNavOpen((state) => !state)}>
                 {item.label}
               </Link>
             </li>
           ))}
-          <li className="opacity-80 hover:opacity-100 transition-opacity ease-in-out duration-200 md:bg-black md:px-8 md:opacity-100 md:w-full md:hover:bg-stone-900">
+          <li className="opacity-80 hover:opacity-100 transition-opacity ease-in-out duration-200 md:bg-neutral-200 dark:md:bg-neutral-950 md:px-8 md:opacity-100 md:w-full dark:md:hover:bg-neutral-900 md:hover:bg-neutral-300">
             <a href="https://blog.neranjana.me" target="_blank" rel="noopener noreferrer" className="md:block md:py-4">
               Blog
             </a>
