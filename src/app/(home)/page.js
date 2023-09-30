@@ -13,7 +13,7 @@ export default function Home() {
           {socialLinks.map(({ platform, link, icon }, index) => {
             return (
               <a key={index} href={link} title={platform} target="_blank" rel="noreferrer">
-                <div className="h-5 fill-black sm:h-6">{Icons[icon]}</div>
+                <div className="h-5 fill-black">{Icons[icon]}</div>
               </a>
             );
           })}
