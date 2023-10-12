@@ -47,8 +47,8 @@ export default function Home() {
       </h2>
 
       <Link href="/hire" className="block">
-        <div className="flex items-center gap-2 bg-neutral-950 text-white dark:bg-white dark:text-black py-2 px-6 rounded-full w-fit">
-          <div className="w-3 h-3 bg-green-500 rounded-lg blur-[3px] animate-pulse" />
+        <div className="flex items-center gap-2 text-sm bg-neutral-950 text-white dark:bg-white dark:text-black py-2 px-6 rounded-full w-fit">
+          <div className="w-2 h-2 bg-green-500 rounded-lg blur-[2px] animate-pulse" />
           <p>Open For Hiring</p>
         </div>
       </Link>
