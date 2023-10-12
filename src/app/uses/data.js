@@ -8,6 +8,10 @@ export const hardware = [
     description: 'HP L1950 19" LCD (Need an Upgrade)',
   },
   {
+    name: "Smartphone",
+    description: "Nokia 6.1 (Pixel Experience 12)",
+  },
+  {
     name: "External HDD",
     description: "Transcend StoreJet 25H3 1TB External HDD",
   },

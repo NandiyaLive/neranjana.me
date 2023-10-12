@@ -132,8 +132,8 @@ const AboutPage = async () => {
         </div>
       </section>
 
-      <section className="mt-8 flex items-center gap-2">
-        <svg viewBox="0 0 24 24" className="h-5">
+      <section className="mt-8 flex items-center gap-1">
+        <svg viewBox="0 0 24 24" className="h-4">
           <path
             fill="#1ED760"
             fillRule="evenodd"
@@ -141,7 +141,7 @@ const AboutPage = async () => {
           />
         </svg>
         {songData ? (
-          <p className="inline-block">
+          <p className="inline-block text-sm">
             {songData.isPlaying ? "Listening To — " : "Last Played — "}
 
             <HoverCard>
