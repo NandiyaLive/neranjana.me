@@ -63,7 +63,7 @@ const Navbar = () => {
       <div className="flex items-center gap-4">
         <ul
           className={cn(
-            "flex items-center gap-6 uppercase text-sm font-medium top-16 right-0 left-0 md:absolute md:flex-col md:items-end md:text-right md:gap-0 md:hidden",
+            "flex items-center gap-6 uppercase text-sm font-medium top-14 right-0 left-0 md:absolute md:flex-col md:items-end md:text-right md:gap-0 md:hidden md:z-40",
             isNavOpen && "md:flex"
           )}
         >

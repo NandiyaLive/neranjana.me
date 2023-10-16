@@ -68,8 +68,8 @@ const AboutPage = async () => {
         <h3 className="text-2xl uppercase font-semibold mb-2">Life Changelog</h3>
 
         <ul className="select-none">
-          <li className="flex items-center gap-2 w-fit">
-            <p className="flex-1">2022 —</p>
+          <li className="flex items-center gap-4 md:items-start">
+            <p className="shrink-0">2022 —</p>
             <p className="opacity-80"> Started BSc in IT at University of Vavuniya</p>
           </li>
         </ul>
@@ -90,7 +90,7 @@ const AboutPage = async () => {
                   title={label}
                 >
                   <div className="h-4">{logo}</div>
-                  <p className="sm:text-xsm">{label}</p>
+                  <p className="sm:text-2xs">{label}</p>
                 </div>
               ))}
             </div>
@@ -107,7 +107,7 @@ const AboutPage = async () => {
                   title={label}
                 >
                   <div className="h-4">{logo}</div>
-                  <p className="sm:text-xsm">{label}</p>
+                  <p className="sm:text-2xs">{label}</p>
                 </div>
               ))}
             </div>
@@ -124,7 +124,7 @@ const AboutPage = async () => {
                   title={label}
                 >
                   <div className="h-4">{logo}</div>
-                  <p className="sm:text-xsm">{label}</p>
+                  <p className="sm:text-2xs">{label}</p>
                 </div>
               ))}
             </div>
@@ -132,7 +132,7 @@ const AboutPage = async () => {
         </div>
       </section>
 
-      <section className="mt-8 flex items-center gap-1">
+      <section className="mt-8 flex items-center gap-2">
         <svg viewBox="0 0 24 24" className="h-4">
           <path
             fill="#1ED760"
@@ -141,7 +141,7 @@ const AboutPage = async () => {
           />
         </svg>
         {songData ? (
-          <p className="inline-block text-sm">
+          <p className="inline-block text-sm md:text-xs">
             {songData.isPlaying ? "Listening To — " : "Last Played — "}
 
             <HoverCard>

@@ -31,7 +31,9 @@ module.exports = {
         jb: ['"JetBrains Mono"', "monospace"],
       },
       fontSize: {
-        xsm: "0.75rem",
+        xs: "0.8rem",
+        "2xs": "0.75rem",
+        "3xs": "0.7rem",
       },
       colors: {
         border: "hsl(var(--border))",
