@@ -54,7 +54,7 @@ const Navbar = () => {
 
             <div>
               <h1 className="text-lg font-semibold">Neranjana Prasad</h1>
-              <p className="font-jb text-xs font-semibold opacity-80">@NandiyaLive</p>
+              <p className="font-jb text-xs font-medium opacity-80">@NandiyaLive</p>
             </div>
           </div>
         </Link>

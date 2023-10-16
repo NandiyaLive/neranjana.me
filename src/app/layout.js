@@ -40,6 +40,7 @@ export default function RootLayout({ children }) {
       <NextThemeProvider>
         <body
           className={cn("max-h-screen max-w-screen overflow-x-hidden dark:bg-black dark:text-white", inter.className)}
+          suppressHydrationWarning={true}
         >
           <header>
             <Navbar />
