@@ -1,8 +1,8 @@
 import { Inter } from "next/font/google";
 
-import Navbar from "@/components/Navbar";
+import NextThemeProvider from "@/components/next-theme-provider";
+import Navbar from "@/components/navbar";
 import "@/app/globals.scss";
-import NextThemeProvider from "@/components/NextThemeProvider";
 import { cn } from "@/lib/utils";
 
 export const metadata = {
