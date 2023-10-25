@@ -26,7 +26,7 @@ const Questions = () => {
     {
       question: "How long does a project take?",
       answer:
-        "Most of the projects take between 10 days to 2 months and it heavily depends on the workload I have to complete. But I can assure you that I will deliver the project on time.",
+        "Most of the projects take between 14 days to 2 months but it heavily depends on the workload I have to complete. But I can assure you that I will deliver the project on time.",
     },
     {
       question: "How do you communicate with clients?",

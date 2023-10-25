@@ -20,7 +20,7 @@ export const hardware = [
 export const devSoft = [
   {
     name: "Operating System",
-    description: "Manjaro Linux",
+    description: "Manjaro Linux (XFCE)",
     url: "https://manjaro.org",
   },
   {
@@ -88,7 +88,7 @@ export const devSoft = [
 export const otherSoft = [
   {
     name: "Music",
-    description: "Spotify",
+    description: "Spotify (YT Music is good too)",
     url: "https://spotify.com",
   },
   {
