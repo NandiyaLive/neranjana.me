@@ -1,5 +1,3 @@
-import { Inter } from "next/font/google";
-
 import NextThemeProvider from "@/components/next-theme-provider";
 import Navbar from "@/components/navbar";
 import "@/app/globals.scss";
@@ -23,11 +21,6 @@ export const metadata = {
   },
 };
 
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-});
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
@@ -39,7 +32,7 @@ export default function RootLayout({ children }) {
 
       <NextThemeProvider>
         <body
-          className={cn("max-h-screen max-w-screen overflow-x-hidden dark:bg-black dark:text-white", inter.className)}
+          className={cn("max-h-screen max-w-screen overflow-x-hidden dark:bg-black dark:text-white")}
           suppressHydrationWarning={true}
         >
           <header>
