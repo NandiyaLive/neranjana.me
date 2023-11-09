@@ -68,12 +68,12 @@ const getSongData = async () => {
   let item;
   let isPlaying = false;
 
-  if (response.status === 200) {
-    isPlaying = response.data.is_playing;
-    item = response.data.item;
+  if (response?.status === 200) {
+    isPlaying = response.data?.is_playing;
+    item = response.data?.item;
   } else {
     const response = await getLastPlayed(accessToken);
-    item = response.data.items[0].track;
+    item = response.data?.items[0].track;
   }
 
   if (item === undefined) {

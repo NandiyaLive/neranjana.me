@@ -77,6 +77,7 @@ const Questions = () => {
       answer: "I'm currently available for hire. I'm also available for long-term contracts.",
     },
   ];
+  
   return (
     <Accordion type="single" collapsible className="w-full">
       {QandA.map((qa, i) => (

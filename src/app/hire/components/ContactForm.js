@@ -47,7 +47,6 @@ export function ContactForm() {
       phone: "",
       timeline: "",
       budget: "",
-      //   services: [],
       description: "",
     },
   });
@@ -63,7 +62,7 @@ export function ContactForm() {
     setLoading(true);
     try {
       data.timeline = date.toLocaleDateString();
-      const response = await axios.post("/api/send", data);
+      await axios.post("/api/send", data);
       setSubmitted(true);
     } catch (error) {
       console.log(error.response.data);
@@ -166,47 +165,6 @@ export function ContactForm() {
               </FormItem>
             )}
           />
-
-          {/* <FormField
-          control={form.control}
-          name="services"
-          render={() => (
-            <FormItem>
-              <div>
-                <div className="mb-4">
-                  <FormLabel>Sidebar</FormLabel>
-                </div>
-                <div className="flex items-center flex-wrap gap-4">
-                  {items.map((item) => (
-                    <FormField
-                      key={item.id}
-                      control={form.control}
-                      name="services"
-                      render={({ field }) => {
-                        return (
-                          <FormItem key={item.id} className="flex flex-row items-center gap-3 p-2 border rounded w-fit">
-                            <FormControl>
-                              <Checkbox
-                                checked={field.value?.includes(item.id)}
-                                onCheckedChange={(checked) => {
-                                  return checked
-                                    ? field.onChange([...field.value, item.id])
-                                    : field.onChange(field.value?.filter((value) => value !== item.id));
-                                }}
-                              />
-                            </FormControl>
-                            <FormLabel className="text-sm font-normal">{item.label}</FormLabel>
-                          </FormItem>
-                        );
-                      }}
-                    />
-                  ))}
-                </div>
-              </div>
-              <FormMessage />
-            </FormItem>
-          )}
-        /> */}
 
           <FormField
             control={form.control}

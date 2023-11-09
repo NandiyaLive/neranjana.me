@@ -1,10 +1,10 @@
 import Link from "next/link";
 import React from "react";
-
-import { backend, frontend, tools } from "./technologies";
-import getSongData from "@/lib/spotify";
-import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import Image from "next/image";
+
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
+import getSongData from "@/lib/spotify";
+import { backend, frontend, tools } from "./technologies";
 
 export const metadata = {
   title: "About",
@@ -64,22 +64,86 @@ const AboutPage = async () => {
         </p>
       </section>
 
-      <section className="mt-8">
-        <h3 className="text-2xl uppercase font-semibold mb-2">Life Changelog</h3>
+      <section className="grid grid-cols-2 gap-4 mt-8 md:grid-cols-1">
+        <div className="border rounded-md p-6">
+          <h4 className="text-lg font-medium mb-4 underline underline-offset-8">Education</h4>
 
-        <ul className="select-none">
-          <li className="flex items-center gap-4 md:items-start">
-            <p className="shrink-0">2022 —</p>
-            <p className="opacity-80"> Started BSc in IT at University of Vavuniya</p>
-          </li>
-        </ul>
+          <ul className="select-none space-y-4">
+            <li>
+              <p className="text-sm">2005 - 2015</p>
+              <p>Sri Chandananda Buddhist College, Kandy</p>
+            </li>
+
+            <li>
+              <p className="text-sm">2015 - 2019</p>
+              <p>Govt. Science College, Matale</p>
+            </li>
+
+            <li>
+              <p className="text-sm">2022 - Present</p>
+              <p>University of Vavuniya</p>
+            </li>
+          </ul>
+        </div>
+
+        <div className="border rounded-md p-6">
+          <h4 className="text-lg font-medium mb-4 underline underline-offset-8">Experience</h4>
+
+          <ul className="select-none space-y-4">
+            <li>
+              <p className="text-sm">2022 - Present</p>
+              <p>Freelance Web Developer @ DynamicBiz</p>
+            </li>
+          </ul>
+        </div>
+
+        <div className="border rounded-md p-6">
+          <h4 className="text-lg font-medium mb-4 underline underline-offset-8">Certifications</h4>
+
+          <ul className="select-none space-y-2">
+            <li>
+              <a
+                href="https://www.freecodecamp.org/certification/neranjana/responsive-web-design"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline underline-offset-4"
+              >
+                Responsive Web Design - FreeCodeCamp
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://drive.google.com/file/d/1vFg-YekQ-_wNCP53EEIAKMqPXyk5Vfn6/view"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline underline-offset-4"
+              >
+                Fundamentals of Digital Marketing - Google
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div className="border rounded-md p-6">
+          <h4 className="text-lg font-medium mb-4 underline underline-offset-8">Volunteering</h4>
+
+          <ul className="select-none space-y-4">
+            <li>
+              <p className="text-sm">2023 - Present</p>
+              <p>
+                Developer @ <span className="font-bold">GDG Sri Lanka</span>
+              </p>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <section className="mt-8">
-        <h3 className="text-2xl uppercase font-semibold mb-2">Tech Stack</h3>
+        <h3 className="text-2xl uppercase font-semibold">Tech Stack</h3>
 
-        <div className="grid grid-cols-2 gap-x-8 gap-y-4 sm:grid-cols-1">
-          <div>
+        <div className="grid grid-cols-2 gap-4 mt-4 md:grid-cols-1">
+          <div className="border rounded-md p-6">
             <h4 className="text-lg font-medium mb-2">Frontend</h4>
 
             <div className="flex gap-2 flex-wrap items-center text-sm">
@@ -96,7 +160,7 @@ const AboutPage = async () => {
             </div>
           </div>
 
-          <div>
+          <div className="border rounded-md p-6">
             <h4 className="text-lg font-medium mb-2">Backend</h4>
 
             <div className="flex gap-2 flex-wrap items-center text-sm">
@@ -113,7 +177,7 @@ const AboutPage = async () => {
             </div>
           </div>
 
-          <div>
+          <div className="border rounded-md p-6">
             <h4 className="text-lg font-medium mb-2">Tools</h4>
 
             <div className="flex gap-2 flex-wrap items-center text-sm">
@@ -132,7 +196,7 @@ const AboutPage = async () => {
         </div>
       </section>
 
-      <section className="mt-8 flex items-center gap-2">
+      <div className="mt-8 flex items-center gap-2">
         <svg viewBox="0 0 24 24" className="h-4">
           <path
             fill="#1ED760"
@@ -171,7 +235,7 @@ const AboutPage = async () => {
         ) : (
           <p>Loading...</p>
         )}
-      </section>
+      </div>
     </main>
   );
 };
