@@ -40,6 +40,18 @@ const ProjectsPage = () => {
         ))}
       </div>
 
+      <p className="mt-4 text-lg font-medium flex items-center gap-2">
+        + 4 Projects @
+        <a
+          href="https://hellodynamicbiz.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-bold underline underline-offset-4"
+        >
+          Dynamic Biz
+        </a>
+      </p>
+
       <h3 className="text-2xl uppercase font-semibold mt-16 mb-2">Hobby</h3>
 
       <div className="grid grid-cols-3 gap-4 mt-4 md:grid-cols-2 sm:grid-cols-1">

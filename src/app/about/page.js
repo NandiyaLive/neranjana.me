@@ -65,7 +65,7 @@ const AboutPage = async () => {
       </section>
 
       <section className="grid grid-cols-2 gap-4 mt-8 md:grid-cols-1">
-        <div className="border rounded-md p-6">
+        {/* <div className="border rounded-md p-6">
           <h4 className="text-lg font-medium mb-4 underline underline-offset-8">Education</h4>
 
           <ul className="select-none space-y-4">
@@ -84,7 +84,7 @@ const AboutPage = async () => {
               <p>University of Vavuniya</p>
             </li>
           </ul>
-        </div>
+        </div> */}
 
         <div className="border rounded-md p-6">
           <h4 className="text-lg font-medium mb-4 underline underline-offset-8">Experience</h4>
@@ -93,6 +93,19 @@ const AboutPage = async () => {
             <li>
               <p className="text-sm">2022 - Present</p>
               <p>Freelance Web Developer @ DynamicBiz</p>
+            </li>
+          </ul>
+        </div>
+
+        <div className="border rounded-md p-6">
+          <h4 className="text-lg font-medium mb-4 underline underline-offset-8">Volunteering</h4>
+
+          <ul className="select-none space-y-4">
+            <li>
+              <p className="text-sm">2023 - Present</p>
+              <p>
+                Developer @ <span className="font-bold">GDG Sri Lanka</span>
+              </p>
             </li>
           </ul>
         </div>
@@ -121,19 +134,6 @@ const AboutPage = async () => {
               >
                 Fundamentals of Digital Marketing - Google
               </a>
-            </li>
-          </ul>
-        </div>
-
-        <div className="border rounded-md p-6">
-          <h4 className="text-lg font-medium mb-4 underline underline-offset-8">Volunteering</h4>
-
-          <ul className="select-none space-y-4">
-            <li>
-              <p className="text-sm">2023 - Present</p>
-              <p>
-                Developer @ <span className="font-bold">GDG Sri Lanka</span>
-              </p>
             </li>
           </ul>
         </div>
