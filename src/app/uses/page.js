@@ -11,7 +11,7 @@ const UsesPage = () => {
   return (
     <main className="container max-w-6xl pb-16">
       <section>
-        <p className="text-xl">A list of the hardware and software I use on a daily basis.</p>
+        <p>A list of the hardware and software I use on a daily basis.</p>
 
         <h2 className="text-3xl font-bold mb-2 mt-8">Hardware</h2>
 
