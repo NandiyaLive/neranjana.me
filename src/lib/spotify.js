@@ -68,6 +68,10 @@ const getSongData = async () => {
   let item;
   let isPlaying = false;
 
+  if (response == undefined) {
+    return null;
+  }
+
   if (response?.status === 200) {
     isPlaying = response.data?.is_playing;
     item = response.data?.item;
@@ -76,18 +80,14 @@ const getSongData = async () => {
     item = response.data?.items[0].track;
   }
 
-  if (item === undefined) {
-    return null;
-  } else {
-    return {
-      isPlaying,
-      title: item?.name,
-      album: item?.album.name,
-      artist: item?.album.artists[0].name,
-      albumImageUrl: item?.album.images[0].url,
-      songUrl: item?.external_urls.spotify,
-    };
-  }
+  return {
+    isPlaying,
+    title: item?.name,
+    album: item?.album.name,
+    artist: item?.album.artists[0].name,
+    albumImageUrl: item?.album.images[0].url,
+    songUrl: item?.external_urls.spotify,
+  };
 };
 
 export default getSongData;
