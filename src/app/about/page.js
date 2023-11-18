@@ -5,6 +5,9 @@ import Image from "next/image";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import getSongData from "@/lib/spotify";
 import { backend, frontend, tools } from "./technologies";
+import { Briefcase } from "lucide-react";
+import { Award } from "lucide-react";
+import { ScrollText } from "lucide-react";
 
 export const metadata = {
   title: "About",
@@ -66,43 +69,49 @@ const AboutPage = async () => {
 
       <section className="grid grid-cols-2 gap-4 mt-8 md:grid-cols-1">
         {/* <div className="border rounded-md p-6">
-          <h4 className="text-lg font-medium mb-4 underline underline-offset-8">Education</h4>
+          <h4 className="text-lg font-semibold mb-4 flex items-center gap-2"><Briefcase className="h-4 w-4"/> Education</h4>
 
           <ul className="select-none space-y-4">
             <li>
-              <p className="text-sm">2005 - 2015</p>
+              <p className="text-sm opacity-80">2005 - 2015</p>
               <p>Sri Chandananda Buddhist College, Kandy</p>
             </li>
 
             <li>
-              <p className="text-sm">2015 - 2019</p>
+              <p className="text-sm opacity-80">2015 - 2019</p>
               <p>Govt. Science College, Matale</p>
             </li>
 
             <li>
-              <p className="text-sm">2022 - Present</p>
+              <p className="text-sm opacity-80">2022 - Present</p>
               <p>University of Vavuniya</p>
             </li>
           </ul>
         </div> */}
 
         <div className="border rounded-md p-6">
-          <h4 className="text-lg font-medium mb-4 underline underline-offset-8">Experience</h4>
+          <h4 className="text-lg font-semibold mb-4 flex items-center gap-2">
+            <Briefcase className="h-4 w-4" /> Experience
+          </h4>
 
           <ul className="select-none space-y-4">
             <li>
-              <p className="text-sm">2022 - Present</p>
-              <p>Freelance Web Developer @ DynamicBiz</p>
+              <p className="text-sm opacity-80">2022 - Present</p>
+              <p>
+                Freelance Web Developer @ <span className="font-bold">DynamicBiz</span>
+              </p>
             </li>
           </ul>
         </div>
 
         <div className="border rounded-md p-6">
-          <h4 className="text-lg font-medium mb-4 underline underline-offset-8">Volunteering</h4>
+          <h4 className="text-lg font-semibold mb-4 flex items-center gap-2">
+            <Award className="h-4 w-4" /> Volunteering
+          </h4>
 
           <ul className="select-none space-y-4">
             <li>
-              <p className="text-sm">2023 - Present</p>
+              <p className="text-sm opacity-80">2023 - Present</p>
               <p>
                 Developer @ <span className="font-bold">GDG Sri Lanka</span>
               </p>
@@ -111,7 +120,9 @@ const AboutPage = async () => {
         </div>
 
         <div className="border rounded-md p-6">
-          <h4 className="text-lg font-medium mb-4 underline underline-offset-8">Certifications</h4>
+          <h4 className="text-lg font-semibold mb-4 flex items-center gap-2">
+            <ScrollText className="h-4 w-4" /> Certifications
+          </h4>
 
           <ul className="select-none space-y-2">
             <li>
@@ -119,7 +130,7 @@ const AboutPage = async () => {
                 href="https://www.freecodecamp.org/certification/neranjana/responsive-web-design"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:underline underline-offset-4"
+                className="opacity-80 hover:opacity-100 hover:underline underline-offset-4"
               >
                 Responsive Web Design - FreeCodeCamp
               </a>
@@ -130,7 +141,7 @@ const AboutPage = async () => {
                 href="https://drive.google.com/file/d/1vFg-YekQ-_wNCP53EEIAKMqPXyk5Vfn6/view"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:underline underline-offset-4"
+                className="opacity-80 hover:opacity-100 hover:underline underline-offset-4"
               >
                 Fundamentals of Digital Marketing - Google
               </a>
@@ -196,7 +207,7 @@ const AboutPage = async () => {
         </div>
       </section>
 
-      <div className="mt-8 flex items-center gap-2">
+      <div className="mt-8 flex items-center text-sm gap-2">
         <svg viewBox="0 0 24 24" className="h-4">
           <path
             fill="#1ED760"
@@ -204,8 +215,9 @@ const AboutPage = async () => {
             d="M19.0983701,10.6382791 C15.230178,8.34118115 8.85003755,8.12986439 5.15729493,9.25058527 C4.56433588,9.43062856 3.93727638,9.09580812 3.75758647,8.50284907 C3.57789655,7.90953664 3.91236362,7.28283051 4.50585273,7.10261054 C8.74455585,5.81598127 15.7909802,6.06440214 20.2440037,8.70780512 C20.7774195,9.02442687 20.9525156,9.71332656 20.6362472,10.2456822 C20.3198021,10.779098 19.6305491,10.9549008 19.0983701,10.6382791 M18.971686,14.0407262 C18.7004726,14.4810283 18.1246521,14.6190203 17.6848801,14.3486903 C14.4600027,12.3664473 9.54264764,11.792217 5.72728477,12.9503953 C5.23256328,13.0998719 4.70992535,12.8208843 4.55974204,12.3270462 C4.41061884,11.8323247 4.68978312,11.3107469 5.18362118,11.1602103 C9.5419409,9.83771368 14.9600247,10.4782013 18.6638986,12.7544503 C19.1036707,13.0253103 19.242016,13.6013075 18.971686,14.0407262 M17.5034233,17.308185 C17.2876894,17.6617342 16.827245,17.7725165 16.4749326,17.5571359 C13.6571403,15.8347984 10.1101639,15.4459119 5.93312425,16.4000177 C5.53063298,16.4922479 5.12937851,16.2399399 5.03767834,15.8376253 C4.94544812,15.4351341 5.19669597,15.0338796 5.60024736,14.9420027 C10.1712973,13.8970803 14.0923186,14.3467468 17.2551791,16.2796943 C17.6078449,16.4948982 17.7189805,16.9556959 17.5034233,17.308185 M12,0 C5.37267547,0 0,5.37249879 0,11.9998233 C0,18.6278546 5.37267547,24 12,24 C18.6275012,24 24,18.6278546 24,11.9998233 C24,5.37249879 18.6275012,0 12,0"
           />
         </svg>
+
         {songData ? (
-          <p className="inline-block text-sm md:text-xs">
+          <p className="inline-block md:text-xs">
             {songData.isPlaying ? "Listening To — " : "Last Played — "}
 
             <HoverCard>
