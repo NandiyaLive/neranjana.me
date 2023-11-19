@@ -2,6 +2,8 @@ import { Link } from "lucide-react";
 
 import { freelance } from "./data/freelance";
 import { hobby } from "./data/hobby";
+import { Construction } from "lucide-react";
+
 
 export const metadata = {
   title: "Projects",
@@ -19,9 +21,9 @@ const ProjectsPage = () => {
       <h3 className="text-2xl uppercase font-semibold mt-8 mb-2">Freelance</h3>
 
       <div className="grid grid-cols-3 gap-4 mt-4 md:grid-cols-2 sm:grid-cols-1">
-        {freelance.map(({ name, description, logo, url }, index) => (
+        {freelance.map(({ name, description, logo, url, completed }, index) => (
           <div
-            className="flex flex-col justify-between hover:bg-neutral-100 transition-colors ease-in-out duration-300 p-4 select-none group dark:hover:bg-neutral-900"
+            className="flex flex-col justify-between hover:bg-neutral-100 transition-colors ease-in-out duration-300 p-4 select-none group border border-neutral-900 dark:hover:bg-neutral-900"
             key={index}
           >
             <div>
@@ -31,10 +33,19 @@ const ProjectsPage = () => {
             </div>
 
             <div className="flex items-center gap-2 mt-6 font-medium text-sm group-hover:text-yellow-500 transition-colors ease-in-out duration-300">
-              <Link size={14} />
-              <a href={`https://${url}`} target="_blank" rel="noopener noreferrer">
-                {url}
-              </a>
+              {completed ? (
+                <>
+                  <Link size={14} />
+                  <a href={`https://${url}`} target="_blank" rel="noopener noreferrer">
+                    {url}
+                  </a>
+                </>
+              ) : (
+                <p className="flex items-center gap-1">
+                  <Construction className="h-4" />
+                  In Progress
+                </p>
+              )}
             </div>
           </div>
         ))}
@@ -55,9 +66,9 @@ const ProjectsPage = () => {
       <h3 className="text-2xl uppercase font-semibold mt-16 mb-2">Hobby</h3>
 
       <div className="grid grid-cols-3 gap-4 mt-4 md:grid-cols-2 sm:grid-cols-1">
-        {hobby.map(({ name, description, logo, url }, index) => (
+        {hobby.map(({ name, description, logo, url, completed }, index) => (
           <div
-            className="flex flex-col justify-between hover:bg-neutral-100 transition-colors ease-in-out duration-300 p-4 select-none group dark:hover:bg-neutral-900"
+            className="flex flex-col justify-between hover:bg-neutral-100 transition-colors ease-in-out duration-300 p-4 select-none group border border-neutral-900 dark:hover:bg-neutral-900"
             key={index}
           >
             <div>
@@ -67,10 +78,19 @@ const ProjectsPage = () => {
             </div>
 
             <div className="flex items-center gap-2 mt-6 font-medium text-sm group-hover:text-yellow-500 transition-colors ease-in-out duration-300">
-              <Link size={14} />
-              <a href={`https://${url}`} target="_blank" rel="noopener noreferrer">
-                {url}
-              </a>
+              {completed ? (
+                <>
+                  <Link size={14} />
+                  <a href={`https://${url}`} target="_blank" rel="noopener noreferrer">
+                    {url}
+                  </a>
+                </>
+              ) : (
+                <p className="flex items-center gap-1">
+                  <Construction className="h-4" />
+                  In Progress
+                </p>
+              )}
             </div>
           </div>
         ))}

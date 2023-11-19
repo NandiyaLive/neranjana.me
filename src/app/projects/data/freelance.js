@@ -40,6 +40,7 @@ export const freelance = [
       </svg>
     ),
     url: "dossceylon.com",
+    completed: false,
   },
   {
     name: "Growtek Substrates Website",
@@ -239,5 +240,6 @@ export const freelance = [
       </svg>
     ),
     url: "growtek.vercel.app",
+    completed: true,
   },
 ];
