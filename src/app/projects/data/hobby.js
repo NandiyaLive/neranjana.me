@@ -23,6 +23,7 @@ export const hobby = [
       </svg>
     ),
     url: "pettahjs.neranjana.me",
+    completed: false,
   },
   {
     name: "Portfolio v7",
@@ -67,6 +68,7 @@ export const hobby = [
       </svg>
     ),
     url: "neranjana.me",
+    completed: true,
   },
   {
     name: "Nextflix",
@@ -112,6 +114,7 @@ export const hobby = [
       </svg>
     ),
     url: "nextflix.madebyneranjana.tk",
+    completed: true,
   },
   {
     name: "News API",
@@ -129,5 +132,6 @@ export const hobby = [
       </svg>
     ),
     url: "newsapi.madebyneranjana.tk",
+    completed: true,
   },
 ];

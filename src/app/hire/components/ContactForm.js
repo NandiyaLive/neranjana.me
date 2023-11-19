@@ -125,7 +125,9 @@ export function ContactForm() {
             render={({ field }) => (
               <FormItem>
                 <FormLabel className="block">Timeline</FormLabel>
-                <FormDescription className="mb-2">Minimum of 2 weeks is needed for development.</FormDescription>
+                <FormDescription className="mb-2">
+                  Minimum of 2 weeks is needed for development, but we can discuss.
+                </FormDescription>
                 <FormControl>
                   <Popover disabled={loading} className="sm:w-full">
                     <PopoverTrigger asChild>
@@ -171,7 +173,7 @@ export function ContactForm() {
               <FormItem>
                 <FormLabel>Description</FormLabel>
                 <FormControl>
-                  <Textarea disabled={loading} rows={5} placeholder="Tell us about your project" {...field} />
+                  <Textarea disabled={loading} rows={8} placeholder="Tell us about your project" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
