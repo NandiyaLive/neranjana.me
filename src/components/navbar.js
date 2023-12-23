@@ -43,8 +43,8 @@ const Navbar = () => {
   return (
     <nav
       className={cn(
-        "container max-w-6xl flex items-start mt-4 mb-8 relative mb:items-center",
-        pathname == "/" ? "justify-end" : "justify-between"
+        "container max-w-6xl flex items-start pt-4 pb-8 relative mb:items-center",
+        pathname == "/" ? "justify-end" : "justify-between", isNavOpen && "md:bg-neutral-200 dark:md:bg-neutral-950"
       )}
     >
       {pathname != "/" && (
