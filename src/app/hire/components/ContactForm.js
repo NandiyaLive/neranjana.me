@@ -188,7 +188,7 @@ export function ContactForm() {
     );
   } else {
     return (
-      <div className="text-left space-y-4 h-full p-4">
+      <div className="text-left space-y-4 h-full mt-20">
         <h1 className="text-4xl font-bold">Thank you for your interest!</h1>
         <p className="text-lg leading-tight">
           We have received your message and we will get back to you in 1-2 business days.
