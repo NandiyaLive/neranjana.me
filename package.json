@@ -1,5 +1,5 @@
 {
-  "name": "neranjana.me-v6",
+  "name": "neranjana.me",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,19 +9,40 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/font": "13.1.6",
-    "eslint": "8.34.0",
-    "eslint-config-next": "13.1.6",
-    "isomorphic-unfetch": "^4.0.2",
-    "next": "13.1.6",
-    "next-themes": "^0.2.1",
+    "@hookform/resolvers": "^3.3.2",
+    "@radix-ui/react-accordion": "^1.1.2",
+    "@radix-ui/react-checkbox": "^1.0.4",
+    "@radix-ui/react-hover-card": "^1.0.7",
+    "@radix-ui/react-label": "^2.0.2",
+    "@radix-ui/react-popover": "^1.0.7",
+    "@radix-ui/react-select": "^2.0.0",
+    "@radix-ui/react-separator": "^1.0.3",
+    "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-toast": "^1.1.5",
+    "@types/react": "^18.2.37",
+    "axios": "^1.6.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "date-fns": "^2.30.0",
+    "eslint": "8.52.0",
+    "eslint-config-next": "14.0.0",
+    "lucide-react": "^0.279.0",
+    "next": "14.0.0",
+    "next-themes": "0.2.1",
     "react": "18.2.0",
+    "react-day-picker": "^8.9.1",
     "react-dom": "18.2.0",
-    "sass": "^1.58.0"
+    "react-hook-form": "^7.48.2",
+    "resend": "^2.0.0",
+    "tailwind-merge": "^1.14.0",
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.13",
-    "postcss": "^8.4.21",
-    "tailwindcss": "^3.2.6"
+    "@types/node": "^20.10.0",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "sass": "^1.69.5",
+    "tailwindcss": "^3.3.5"
   }
 }
