@@ -1,5 +1,6 @@
 import React from "react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import Link from "next/link";
 
 const Questions = () => {
   const QandA = [
@@ -15,8 +16,16 @@ const Questions = () => {
     },
     {
       question: "What are your rates?",
-      answer:
-        "My minimum rate is $110 (LKR36,000) for a single page website and it goes up to ∞, depending on your requirements.",
+      answer: (
+        <span>
+          My minimum rate is $110 (LKR36,000) for a single page website and it goes up to ∞, depending on your
+          requirements. <br />
+          {/* <Link href="/pricing" className="font-medium hover:underline">
+            Click here
+          </Link>{" "}
+          to see my pricing page. */}
+        </span>
+      ),
     },
     {
       question: "Where are you located? Do you work remotely?",
@@ -77,7 +86,7 @@ const Questions = () => {
       answer: "I'm currently available for hire. I'm also available for long-term contracts.",
     },
   ];
-  
+
   return (
     <Accordion type="single" collapsible className="w-full">
       {QandA.map((qa, i) => (
