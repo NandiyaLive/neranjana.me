@@ -159,7 +159,7 @@ export function ContactForm() {
               <FormItem>
                 <FormLabel>Budget</FormLabel>
                 <FormControl>
-                  <Input disabled={loading} className="w-72 sm:w-full" placeholder="LKR36,000 / $110" {...field} />
+                  <Input disabled={loading} className="w-72 sm:w-full" placeholder="LKR 35, 000 / $99" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>

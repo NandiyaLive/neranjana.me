@@ -2,7 +2,7 @@ export const hobby = [
   {
     name: "Pettah.js",
     description:
-      "A beginner friendly eCommerce backend made with Next.js, that will help developers to create digital commerce applications easily",
+      "A beginner friendly eCommerce backend made with Next.js, that will help developers to create digital commerce applications easily.",
     logo: (
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 220 206" className="h-full w-auto">
         <path

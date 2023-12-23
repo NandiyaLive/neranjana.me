@@ -52,7 +52,7 @@ const Navbar = () => {
           <div className="flex gap-4 items-center">
             <Image src={avatar} width={45} height={45} alt="Avatar Image" placeholder="blur" className="rounded-full" />
 
-            <div>
+            <div className="leading-none">
               <h1 className="text-lg font-semibold">Neranjana Prasad</h1>
               <p className="font-jb text-xs font-medium opacity-80">@NandiyaLive</p>
             </div>

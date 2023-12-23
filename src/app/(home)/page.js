@@ -16,7 +16,7 @@ export default function Home() {
             {socialLinks.map(({ platform, link, icon }, index) => {
               return (
                 <a key={index} href={link} title={platform} target="_blank" rel="noreferrer">
-                  <div className="h-5 fill-black">{Icons[icon]}</div>
+                  <div className="h-5 fill-black hover:fill-neutral-800">{Icons[icon]}</div>
                 </a>
               );
             })}
@@ -27,7 +27,7 @@ export default function Home() {
         </h1>
 
         <h2 className="max-w-xl opacity-90">
-          Hey, I&apos;m Neranjana. I&apos;m a Full-Stack Developer who builds fast, interactive, and user-friendly
+          Hey, I&apos;m Neranjana. I&apos;m a Web Developer who builds fast, interactive, and user-friendly
           websites, with expertise in
           <a
             href="https://nextjs.org"
@@ -37,14 +37,14 @@ export default function Home() {
           >
             Next.js
           </a>
-          and
+          and 
           <a
             href="https://tailwindcss.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="font-medium opacity-100 underline underline-offset-4"
           >
-            TailwindCSS
+            {" "}TailwindCSS
           </a>
           .
         </h2>

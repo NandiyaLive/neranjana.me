@@ -9,7 +9,7 @@ export const hardware = [
   },
   {
     name: "Smartphone",
-    description: "Nokia 6.1 (Pixel Experience 12)",
+    description: "Moto g51 5G (6GB RAM, 128GB Storage)",
   },
   {
     name: "External HDD",
@@ -80,7 +80,7 @@ export const devSoft = [
   },
   {
     name: "Icons",
-    description: "Lucide React",
+    description: "Lucide / Heroicons / FontAwesome",
     url: "https://lucide.dev",
   },
 ];
@@ -89,7 +89,7 @@ export const otherSoft = [
   {
     name: "Music",
     description: "Spotify (YT Music is good too)",
-    url: "https://spotify.com",
+    url: "https://open.spotify.com/playlist/4oKjrCt8bfJCLQxL635Ftq",
   },
   {
     name: "Password Manager",
@@ -113,8 +113,8 @@ export const otherSoft = [
   },
   {
     name: "Email Client",
-    description: "Mozilla Thunderbird",
-    url: "https://thunderbird.net",
+    description: "MailSpring",
+    url: "https://getmailspring.com",
   },
   {
     name: "Ad Blocker",
@@ -127,10 +127,15 @@ export const otherSoft = [
     url: "https://telegram.org",
   },
   {
-    name: "Media Player",
-    description: "VLC",
-    url: "https://videolan.org/vlc/index.html",
+    name: "Media Server",
+    description: "Jellyfin",
+    url: "https://jellyfin.org",
   },
+  // {
+  //   name: "Media Player",
+  //   description: "VLC",
+  //   url: "https://videolan.org/vlc/index.html",
+  // },
   {
     name: "TV / Movies Tracker",
     description: "Trakt.tv",

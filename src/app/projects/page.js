@@ -18,9 +18,9 @@ const ProjectsPage = () => {
         only getting better. Check out my projects to see what I&apos;ve been up to!
       </p>
 
-      <h3 className="text-2xl uppercase font-semibold mt-8 mb-2">Freelance</h3>
+      {/* <h3 className="text-2xl uppercase font-semibold mt-8 mb-2">Freelance</h3> */}
 
-      <div className="grid grid-cols-3 gap-4 mt-4 md:grid-cols-2 sm:grid-cols-1">
+      <div className="grid grid-cols-3 gap-4 mt-8 md:grid-cols-2 sm:grid-cols-1">
         {freelance.map(({ name, description, logo, url, completed }, index) => (
           <div
             className="flex flex-col justify-between hover:bg-neutral-100 transition-colors ease-in-out duration-300 p-4 select-none group border border-neutral-900 dark:hover:bg-neutral-900"

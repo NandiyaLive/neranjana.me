@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
+import { Skeleton } from "@/components/ui/skeleton";
 import getSongData from "@/lib/spotify";
 import { backend, frontend, tools } from "./technologies";
 import { Briefcase } from "lucide-react";
@@ -20,8 +21,8 @@ const AboutPage = async () => {
     <main className="container max-w-6xl pb-16" suppressHydrationWarning={false}>
       <section className="space-y-2">
         <p>
-          I&apos;m Neranjana Prasad Ponnamperuma, a self taught, freelance full-stack web developer based in the sacred
-          city of Kandy, Sri Lanka. I&apos;m an IT Student at the{" "}
+          I&apos;m Neranjana Prasad Ponnamperuma, a self taught, freelance web (mainly frontend) developer from the
+          sacred city of Kandy, Sri Lanka. I&apos;m an IT Student at the{" "}
           <a
             href="https://vau.ac.lk/"
             target="_blank"
@@ -69,7 +70,7 @@ const AboutPage = async () => {
 
       <section className="grid grid-cols-2 gap-4 mt-8 md:grid-cols-1">
         {/* <div className="border rounded-md p-6">
-          <h4 className="text-lg font-semibold mb-4 flex items-center gap-2"><Briefcase className="h-4 w-4"/> Education</h4>
+          <h4 className="text-xl font-semibold mb-4 flex items-center gap-2"><Briefcase className="h-5 w-5"/> Education</h4>
 
           <ul className="select-none space-y-4">
             <li>
@@ -90,38 +91,44 @@ const AboutPage = async () => {
         </div> */}
 
         <div className="border rounded-md p-6">
-          <h4 className="text-lg font-semibold mb-4 flex items-center gap-2">
-            <Briefcase className="h-4 w-4" /> Experience
+          <h4 className="text-xl font-semibold mb-4 flex items-center gap-2">
+            <Briefcase className="h-5 w-5" /> Experience
           </h4>
 
           <ul className="select-none space-y-4">
             <li>
               <p className="text-sm opacity-80">2022 - Present</p>
               <p>
-                Freelance Web Developer @ <span className="font-bold">DynamicBiz</span>
+                Freelance Web Developer @{" "}
+                <a href="https://hellodynamicbiz.com" className="font-semibold">
+                  DynamicBiz
+                </a>
               </p>
             </li>
           </ul>
         </div>
 
-        <div className="border rounded-md p-6">
-          <h4 className="text-lg font-semibold mb-4 flex items-center gap-2">
-            <Award className="h-4 w-4" /> Volunteering
+        {/* <div className="border rounded-md p-6">
+          <h4 className="text-xl font-semibold mb-4 flex items-center gap-2">
+            <Award className="h-5 w-5" /> Volunteering
           </h4>
 
           <ul className="select-none space-y-4">
             <li>
               <p className="text-sm opacity-80">2023 - Present</p>
               <p>
-                Developer @ <span className="font-bold">GDG Sri Lanka</span>
+                Developer @{" "}
+                <a href="https://gdgsrilanka.org" className="font-semibold">
+                  GDG Sri Lanka
+                </a>
               </p>
             </li>
           </ul>
-        </div>
+        </div> */}
 
         <div className="border rounded-md p-6">
-          <h4 className="text-lg font-semibold mb-4 flex items-center gap-2">
-            <ScrollText className="h-4 w-4" /> Certifications
+          <h4 className="text-xl font-semibold mb-4 flex items-center gap-2">
+            <ScrollText className="h-5 w-5" /> Certifications
           </h4>
 
           <ul className="select-none space-y-2">
@@ -217,7 +224,7 @@ const AboutPage = async () => {
         </svg>
 
         {songData ? (
-          <p className="inline-block md:text-xs">
+          <p className="md:text-xs">
             {songData.isPlaying ? "Listening To — " : "Last Played — "}
 
             <HoverCard>
@@ -245,7 +252,7 @@ const AboutPage = async () => {
             </HoverCard>
           </p>
         ) : (
-          <p>Loading...</p>
+          <Skeleton className="w-[220px] h-[14px] rounded-full" />
         )}
       </div>
     </main>
