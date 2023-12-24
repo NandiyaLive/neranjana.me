@@ -97,6 +97,7 @@ const Navbar = () => {
             variant="ghost"
             className="hidden md:flex"
             onClick={() => setIsNavOpen((state) => !state)}
+            aria-label="Theme Toggle"
           >
             <Menu size={16} />
           </Button>
