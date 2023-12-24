@@ -63,7 +63,7 @@ export function ContactForm() {
       await axios.post("/api/send", data);
       setSubmitted(true);
     } catch (error) {
-      console.log(error.response.data);
+      console.log(error);
     } finally {
       setLoading(false);
     }
