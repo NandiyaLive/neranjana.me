@@ -9,12 +9,14 @@ import { backend, frontend, tools } from "./technologies";
 import { Briefcase } from "lucide-react";
 import { Award } from "lucide-react";
 import { ScrollText } from "lucide-react";
+import { cookies } from "next/headers";
 
 export const metadata = {
   title: "About",
 };
 
 const AboutPage = async () => {
+  cookies();
   const songData = await getSongData();
 
   return (
