@@ -33,8 +33,7 @@ export default function RootLayout({ children }) {
         <Script
           src="https://eu.umami.is/script.js"
           data-website-id="4f0403cf-09ce-47cc-9b9c-bfe30084454c"
-          async
-          defer
+          strategy="lazyOnload"
         />
       </head>
 
