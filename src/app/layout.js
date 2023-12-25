@@ -2,6 +2,7 @@ import NextThemeProvider from "@/components/next-theme-provider";
 import Navbar from "@/components/navbar";
 import "@/app/globals.scss";
 import { cn } from "@/lib/utils";
+import Script from "next/script";
 
 export const metadata = {
   title: {
@@ -28,6 +29,13 @@ export default function RootLayout({ children }) {
         <link rel="shortcut icon" href="batman.svg" type="image/x-icon" />
         <link rel="apple-touch-icon" href="batman.svg" />
         <link rel="manifest" href="manifest.json" />
+
+        <Script
+          src="https://eu.umami.is/script.js"
+          data-website-id="4f0403cf-09ce-47cc-9b9c-bfe30084454c"
+          async
+          defer
+        />
       </head>
 
       <NextThemeProvider>

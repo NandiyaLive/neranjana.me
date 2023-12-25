@@ -44,7 +44,8 @@ const Navbar = () => {
     <nav
       className={cn(
         "container max-w-6xl flex items-start pt-4 pb-8 relative mb:items-center",
-        pathname == "/" ? "justify-end" : "justify-between", isNavOpen && "md:bg-neutral-200 dark:md:bg-neutral-950"
+        pathname == "/" ? "justify-end" : "justify-between",
+        isNavOpen && "md:bg-neutral-200 dark:md:bg-neutral-950"
       )}
     >
       {pathname != "/" && (
@@ -88,7 +89,12 @@ const Navbar = () => {
         </ul>
 
         <div className="flex items-center">
-          <Button size="icon" variant="ghost" onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}>
+          <Button
+            size="icon"
+            variant="ghost"
+            onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+            aria-label="Toggle Theme"
+          >
             {resolvedTheme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
           </Button>
 
@@ -97,7 +103,7 @@ const Navbar = () => {
             variant="ghost"
             className="hidden md:flex"
             onClick={() => setIsNavOpen((state) => !state)}
-            aria-label="Theme Toggle"
+            aria-label="Toggle Navigation"
           >
             <Menu size={16} />
           </Button>
