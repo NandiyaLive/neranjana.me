@@ -17,142 +17,6 @@ export const hardware = [
   },
 ];
 
-// export const devSoft = [
-//   {
-//     name: "Operating System",
-//     description: "Manjaro 23 - Vulcan (XFCE)",
-//     url: "https://manjaro.org",
-//   },
-//   {
-//     name: "IDE",
-//     description: "Visual Studio Code",
-//     url: "https://code.visualstudio.com",
-//   },
-//   {
-//     name: "VS Code Theme",
-//     description: "Andromeda",
-//     url: "https://marketplace.visualstudio.com/items?itemName=EliverLara.andromeda",
-//   },
-//   {
-//     name: "AI Pair Programmer",
-//     description: "GitHub Copilot",
-//     url: "https://copilot.github.com",
-//   },
-//   {
-//     name: "Online IDE",
-//     description: "CodeSandbox",
-//     url: "https://codesandbox.io",
-//   },
-//   {
-//     name: "Shell",
-//     description: "fish",
-//     url: "https://fishshell.com",
-//   },
-//   {
-//     name: "Prompt",
-//     description: "Starship",
-//     url: "https://starship.rs",
-//   },
-//   {
-//     name: "Version Control",
-//     description: "GitHub",
-//     url: "https://github.com",
-//   },
-//   {
-//     name: "Hosting",
-//     description: "Vercel",
-//     url: "https://vercel.com",
-//   },
-//   {
-//     name: "API Testing",
-//     description: "Insomnia & Postman",
-//     url: "https://insomnia.rest",
-//   },
-//   {
-//     name: "DNS",
-//     description: "Cloudflare",
-//     url: "https://cloudflare.com",
-//   },
-//   {
-//     name: "Prototyping",
-//     description: "Figma",
-//     url: "https://figma.com",
-//   },
-//   {
-//     name: "Illustrations",
-//     description: "unDraw",
-//     url: "https://undraw.co",
-//   },
-//   {
-//     name: "Icons",
-//     description: "Lucide / Heroicons / FontAwesome",
-//     url: "https://lucide.dev",
-//   },
-// ];
-
-// export const otherSoft = [
-//   {
-//     name: "Music",
-//     description: "Spotify & YouTube Music",
-//     url: "https://open.spotify.com/playlist/4oKjrCt8bfJCLQxL635Ftq",
-//   },
-//   {
-//     name: "Password Manager",
-//     description: "Bitwarden",
-//     url: "https://bitwarden.com",
-//   },
-//   {
-//     name: "2FA",
-//     description: "Twilio Authy",
-//     url: "https://authy.com",
-//   },
-//   {
-//     name: "Main Browser",
-//     description: "Mozilla Firefox",
-//     url: "https://mozilla.org/en-US/firefox",
-//   },
-//   {
-//     name: "Secondary Browser",
-//     description: "Brave",
-//     url: "https://brave.com",
-//   },
-//   {
-//     name: "Email Client",
-//     description: "MailSpring",
-//     url: "https://getmailspring.com",
-//   },
-//   {
-//     name: "Ad Blocker",
-//     description: "uBlock Origin",
-//     url: "https://ublockorigin.com",
-//   },
-//   {
-//     name: "Cloud Storage",
-//     description: "Telegram",
-//     url: "https://telegram.org",
-//   },
-//   {
-//     name: "Media Server",
-//     description: "Jellyfin",
-//     url: "https://jellyfin.org",
-//   },
-//   // {
-//   //   name: "Media Player",
-//   //   description: "VLC",
-//   //   url: "https://videolan.org/vlc/index.html",
-//   // },
-//   {
-//     name: "TV / Movies Tracker",
-//     description: "Trakt.tv",
-//     url: "https://trakt.tv",
-//   },
-//   {
-//     name: "Note Taking",
-//     description: "Notion",
-//     url: "https://notion.so",
-//   },
-// ];
-
 export const softwaresList = [
   {
     name: "Operating System",
@@ -160,6 +24,24 @@ export const softwaresList = [
       {
         name: "Manjaro 23 - Vulcan (XFCE)",
         url: "https://manjaro.org",
+      },
+    ],
+  },
+  {
+    name: "Shell",
+    softwares: [
+      {
+        name: "fish",
+        url: "https://fishshell.com",
+      },
+    ],
+  },
+  {
+    name: "Prompt",
+    softwares: [
+      {
+        name: "Starship",
+        url: "https://starship.rs",
       },
     ],
   },
@@ -197,32 +79,23 @@ export const softwaresList = [
         name: "CodeSandbox",
         url: "https://codesandbox.io",
       },
-    ],
-  },
-  {
-    name: "Shell",
-    softwares: [
       {
-        name: "fish",
-        url: "https://fishshell.com",
+        name: "StackBlitz",
+        url: "https://stackblitz.com",
       },
     ],
   },
+
   {
-    name: "Prompt",
-    softwares: [
-      {
-        name: "Starship",
-        url: "https://starship.rs",
-      },
-    ],
-  },
-  {
-    name: "Version Control",
+    name: "Git Hosting",
     softwares: [
       {
         name: "GitHub",
         url: "https://github.com",
+      },
+      {
+        name: "GitLab",
+        url: "https://gitlab.com",
       },
     ],
   },
@@ -232,6 +105,10 @@ export const softwaresList = [
       {
         name: "Vercel",
         url: "https://vercel.com",
+      },
+      {
+        name: "Netlify",
+        url: "https://netlify.com",
       },
     ],
   },
@@ -249,7 +126,7 @@ export const softwaresList = [
     ],
   },
   {
-    name: "DNS",
+    name: "CDN",
     softwares: [
       {
         name: "Cloudflare",
@@ -272,23 +149,6 @@ export const softwaresList = [
       {
         name: "unDraw",
         url: "https://undraw.co",
-      },
-    ],
-  },
-  {
-    name: "Icons",
-    softwares: [
-      {
-        name: "Lucide",
-        url: "https://lucide.dev",
-      },
-      {
-        name: "Heroicons",
-        url: "https://heroicons.com",
-      },
-      {
-        name: "FontAwesome",
-        url: "https://fontawesome.com",
       },
     ],
   },
@@ -360,7 +220,7 @@ export const softwaresList = [
     ],
   },
   {
-    name: "Cloud Storage",
+    name: "Messaging + Cloud Storage",
     softwares: [
       {
         name: "Telegram",
@@ -383,6 +243,10 @@ export const softwaresList = [
       {
         name: "Trakt.tv",
         url: "https://trakt.tv",
+      },
+      {
+        name: "Simkl",
+        url: "https://simkl.com",
       },
     ],
   },
