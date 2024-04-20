@@ -6,8 +6,10 @@ const client_secret = process.env.SPOTIFY_CLIENT_SECRET;
 const refresh_token = process.env.SPOTIFY_REFRESH_TOKEN;
 
 const basic = Buffer.from(`${client_id}:${client_secret}`).toString("base64");
-const NOW_PLAYING_ENDPOINT = "https://api.spotify.com/v1/me/player/currently-playing";
-const LAST_PLAYED_ENDPOINT = "https://api.spotify.com/v1/me/player/recently-played?limit=1";
+const NOW_PLAYING_ENDPOINT =
+  "https://api.spotify.com/v1/me/player/currently-playing";
+const LAST_PLAYED_ENDPOINT =
+  "https://api.spotify.com/v1/me/player/recently-played?limit=1";
 const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
 
 const getAccessToken = async () => {
@@ -27,7 +29,7 @@ const getAccessToken = async () => {
 
     return response.data.access_token;
   } catch (error) {
-    console.log(error);
+    console.log("[SPOTIFY] Access Token Error : ", error.message);
   }
 };
 
@@ -42,7 +44,7 @@ export const getNowPlaying = async (accessToken) => {
 
     return res;
   } catch (error) {
-    console.log("[SPOTIFY] Now Playing Error : ", error);
+    console.log("[SPOTIFY] Now Playing Error : ", error.message);
   }
 };
 
@@ -57,7 +59,7 @@ export const getLastPlayed = async (accessToken) => {
 
     return res;
   } catch (error) {
-    console.log("[SPOTIFY] Last Played Error : ", error);
+    console.log("[SPOTIFY] Last Played Error : ", error.message);
   }
 };
 
@@ -77,7 +79,7 @@ const getSongData = async () => {
     item = response.data?.item;
   } else {
     const response = await getLastPlayed(accessToken);
-    item = response.data?.items[0].track;
+    item = response?.data?.items[0].track;
   }
 
   return {
