@@ -2,14 +2,14 @@ import NextThemeProvider from "@/components/next-theme-provider";
 import Navbar from "@/components/navbar";
 import "@/app/globals.scss";
 import { cn } from "@/lib/utils";
+import Script from "next/script";
 
 export const metadata = {
   title: {
     default: "Neranjana Prasad",
     template: "%s — Neranjana Prasad",
   },
-  description:
-    "I'm Neranjana Prasad, a Freelance Web Developer with expertise in Next.js and TailwindCSS.",
+  description: "I'm Neranjana Prasad, a Freelance Web Developer with expertise in Next.js and TailwindCSS.",
   metadataBase: new URL("https://neranjana.me"),
   alternates: {
     canonical: "/",
@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
         <link rel="apple-touch-icon" href="batman.svg" />
         <link rel="manifest" href="manifest.json" />
 
-        <script
+        <Script
           src="https://eu.umami.is/script.js"
           data-website-id="4f0403cf-09ce-47cc-9b9c-bfe30084454c"
           strategy="lazyOnload"
@@ -39,9 +39,7 @@ export default function RootLayout({ children }) {
 
       <NextThemeProvider>
         <body
-          className={cn(
-            "max-h-screen max-w-screen overflow-x-hidden dark:text-white"
-          )}
+          className={cn("max-h-screen max-w-screen overflow-x-hidden dark:text-white")}
           suppressHydrationWarning={true}
         >
           <header>
