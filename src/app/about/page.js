@@ -2,7 +2,11 @@ import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 
-import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
 import { Skeleton } from "@/components/ui/skeleton";
 import getSongData from "@/lib/spotify";
 import { backend, frontend, tools } from "./technologies";
@@ -16,15 +20,19 @@ export const metadata = {
 };
 
 const AboutPage = async () => {
-  cookies();
+  "use server"
   const songData = await getSongData();
 
   return (
-    <main className="container max-w-6xl pb-16" suppressHydrationWarning={false}>
+    <main
+      className="container max-w-6xl pb-16"
+      suppressHydrationWarning={false}
+    >
       <section className="space-y-2">
         <p>
-          I&apos;m Neranjana Prasad Ponnamperuma, a self taught, freelance web (mainly frontend) developer from the
-          sacred city of Kandy, Sri Lanka. I&apos;m an IT Student at the{" "}
+          I&apos;m Neranjana Prasad Ponnamperuma, a self taught, freelance web
+          (mainly frontend) developer from the sacred city of Kandy, Sri Lanka.
+          I&apos;m an IT Student at the{" "}
           <a
             href="https://vau.ac.lk/"
             target="_blank"
@@ -36,9 +44,10 @@ const AboutPage = async () => {
           by day and a full-on tech nerd by night.
         </p>
         <p>
-          I have extensive knowledge of HTML, CSS & JavaScript and I&apos;m passionate about building blazing fast,
-          user-friendly, responsive and visually stunning web applications with 2 years experience in cutting-edge
-          technologies like{" "}
+          I have extensive knowledge of HTML, CSS & JavaScript and I&apos;m
+          passionate about building blazing fast, user-friendly, responsive and
+          visually stunning web applications with 2 years experience in
+          cutting-edge technologies like{" "}
           <a
             href="https://nextjs.org"
             target="_blank"
@@ -59,12 +68,16 @@ const AboutPage = async () => {
           .
         </p>
         <p>
-          When I am not at my desk, you can find me reading novels, listening to music and podcasts or binge watching,
-          and I occasionally update my blog too.
+          When I am not at my desk, you can find me reading novels, listening to
+          music and podcasts or binge watching, and I occasionally update my
+          blog too.
         </p>
         <p>
           I&apos;m currently available for a new freelance job.{" "}
-          <Link href="/hire" className="font-medium underline underline-offset-4">
+          <Link
+            href="/hire"
+            className="font-medium underline underline-offset-4"
+          >
             Hire me!
           </Link>
         </p>
@@ -110,7 +123,7 @@ const AboutPage = async () => {
           </ul>
         </div>
 
-        {/* <div className="border rounded-md p-6">
+        <div className="border rounded-md p-6">
           <h4 className="text-xl font-semibold mb-4 flex items-center gap-2">
             <Award className="h-5 w-5" /> Volunteering
           </h4>
@@ -119,14 +132,13 @@ const AboutPage = async () => {
             <li>
               <p className="text-sm opacity-80">2023 - Present</p>
               <p>
-                Developer @{" "}
                 <a href="https://gdgsrilanka.org" className="font-semibold">
                   GDG Sri Lanka
                 </a>
               </p>
             </li>
           </ul>
-        </div> */}
+        </div>
 
         <div className="border rounded-md p-6">
           <h4 className="text-xl font-semibold mb-4 flex items-center gap-2">
@@ -231,7 +243,12 @@ const AboutPage = async () => {
 
             <HoverCard>
               <HoverCardTrigger>
-                <a href={songData.songUrl} target="_blank" rel="noopener noreferrer" className="font-medium">
+                <a
+                  href={songData.songUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium"
+                >
                   {songData.title}
                 </a>
               </HoverCardTrigger>
