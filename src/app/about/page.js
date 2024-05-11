@@ -20,7 +20,7 @@ export const metadata = {
 };
 
 const AboutPage = async () => {
-  "use server"
+  "use server";
   const songData = await getSongData();
 
   return (
@@ -112,11 +112,21 @@ const AboutPage = async () => {
 
           <ul className="select-none space-y-4">
             <li>
-              <p className="text-sm opacity-80">2022 - Present</p>
+              <p className="text-sm opacity-80">2022 Nov. - Present</p>
               <p>
-                Freelance Web Developer @{" "}
+                Frontend Developer @{" "}
                 <a href="https://hellodynamicbiz.com" className="font-semibold">
                   DynamicBiz
+                </a>
+              </p>
+            </li>
+
+            <li>
+              <p className="text-sm opacity-80">2024 Apr. - Present</p>
+              <p>
+                Frontend Developer @{" "}
+                <a href="https://mathru.lk" className="font-semibold">
+                  Mathru.lk
                 </a>
               </p>
             </li>
