@@ -5,11 +5,11 @@ export const hardware = [
   },
   {
     name: "Monitor",
-    description: 'HP L1950 19" LCD (Need an Upgrade)',
+    description: 'ViewSonic VA2732-H 27" FHD IPS',
   },
   {
     name: "Smartphone",
-    description: "Moto g51 5G (6GB RAM, 128GB Storage)",
+    description: "Moto g51 5G (EvolutionX)",
   },
   {
     name: "External HDD",
