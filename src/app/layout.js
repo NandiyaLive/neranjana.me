@@ -3,7 +3,6 @@ import Navbar from "@/components/navbar";
 import NextThemeProvider from "@/components/next-theme-provider";
 import { cn } from "@/lib/utils";
 
-import Head from "next/head";
 import Script from "next/script";
 
 export const metadata = {
@@ -28,7 +27,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
+      <head>
         <link rel="shortcut icon" href="batman.svg" type="image/x-icon" />
         <link rel="apple-touch-icon" href="batman.svg" />
         <link rel="manifest" href="manifest.json" />
@@ -39,7 +38,7 @@ export default function RootLayout({ children }) {
           strategy="lazyOnload"
           suppressHydrationWarning
         />
-      </Head>
+      </head>
 
       <NextThemeProvider>
         <body
