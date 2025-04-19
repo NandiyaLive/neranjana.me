@@ -1,7 +1,0 @@
-// nextjs api route that returns hello
-
-import { NextResponse } from "next/server";
-
-export async function GET(req) {
-  return NextResponse.json({ hello: "world" });
-}
