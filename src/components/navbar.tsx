@@ -35,9 +35,9 @@ const Navbar = () => {
       href: "/projects",
     },
     {
-      id: "hire",
-      label: "Hire",
-      href: "/hire",
+      id: "contact",
+      label: "Contact",
+      href: "/contact",
     },
     {
       id: "uses",
