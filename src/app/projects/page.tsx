@@ -1,0 +1,44 @@
+import { freelanceProjects, hobbyProjects } from "@/data/projects";
+import { ProjectCard } from "./components/project-card";
+
+const Page = () => (
+  <main className="container mx-auto max-w-7xl pt-24 pb-16">
+    <p className="mb-8 text-lg leading-relaxed">
+      For the past years, I&apos;ve been working with clients and teams from all
+      walks of life and getting the chance to get my hands on the latest
+      technologies and approaches. It&apos;s been an exciting journey, and
+      it&apos;s only getting better. Check out my projects to see what I&apos;ve
+      been up to!
+    </p>
+
+    <h3 className="mt-8 text-3xl font-bold uppercase">Freelance</h3>
+
+    <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      {freelanceProjects.map(({ name, description, url, completed }, index) => (
+        <ProjectCard
+          key={index}
+          name={name}
+          description={description}
+          url={url}
+          completed={completed}
+        />
+      ))}
+    </div>
+
+    <h3 className="mt-8 text-3xl font-bold uppercase">Hobby</h3>
+
+    <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      {hobbyProjects.map(({ name, description, url, completed }, index) => (
+        <ProjectCard
+          key={index}
+          name={name}
+          description={description}
+          url={url}
+          completed={completed}
+        />
+      ))}
+    </div>
+  </main>
+);
+
+export default Page;
