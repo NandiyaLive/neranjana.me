@@ -87,8 +87,8 @@ const Navbar = () => {
               className={cn(
                 "transition-opacity duration-200 ease-in-out hover:opacity-100",
                 "w-full px-8",
-                "md:w-auto md:px-0 md:opacity-100",
-                pathname === item.href ? "opacity-100" : "opacity-80",
+                "md:w-auto md:px-0",
+                pathname === item.href ? "opacity-100" : "md:opacity-80",
               )}
             >
               <Link
@@ -110,6 +110,7 @@ const Navbar = () => {
               setTheme(resolvedTheme === "dark" ? "light" : "dark")
             }
             aria-label="Toggle Theme"
+            suppressHydrationWarning={true}
           >
             {resolvedTheme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
           </Button>
