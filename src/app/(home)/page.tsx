@@ -53,7 +53,7 @@ const Page = () => {
         </p>
 
         <div className="animate-fade-in-up animation-delay-200">
-          <Link href="/hire">
+          <Link href="/contact">
             <div className="inline-flex items-center gap-2 rounded-full bg-neutral-950 px-8 py-3 text-sm text-white shadow-lg transition-transform dark:bg-white dark:text-black">
               <div className="h-2 w-2 animate-pulse rounded-full bg-green-500 blur-[1px]"></div>
               <span className="font-medium">Open For Hiring</span>

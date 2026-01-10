@@ -54,7 +54,7 @@ const Page = () => {
         </p>
         <p>
           I&apos;m currently available for a new freelance job.
-          <LinkText text="Hire Me" href="/hire" className="ml-1" />.
+          <LinkText text="Hire Me" href="/contact" className="ml-1" />.
         </p>
       </section>
 

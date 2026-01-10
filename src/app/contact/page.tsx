@@ -1,6 +1,7 @@
 import { Icon } from "@iconify/react";
 
 import { FAQS } from "@/data/faq";
+import { socialLinks } from "@/data/social-links";
 
 const Page = () => (
   <main className="container mx-auto max-w-7xl pt-24 pb-16">
@@ -19,7 +20,7 @@ const Page = () => (
               <Icon icon="lucide:mail" className="h-6 w-6" />
             </div>
             <div>
-              <h3 className="mb-1 font-semibold">Email</h3>
+              <h3 className="font-semibold">Email</h3>
               <a
                 href="mailto:hello@neranjana.me"
                 className="opacity-80 transition-colors hover:text-yellow-500 hover:opacity-100"
@@ -29,56 +30,24 @@ const Page = () => (
             </div>
           </div>
 
-          <div className="flex items-start gap-4">
-            <div className="rounded-lg bg-yellow-500/10 p-3 text-yellow-500">
-              <Icon icon="lucide:linkedin" className="h-6 w-6" />
+          {socialLinks.map((social) => (
+            <div key={social.platform} className="flex items-center gap-4">
+              <div className="rounded-lg bg-yellow-500/10 p-3 text-yellow-500">
+                <Icon icon={social.icon} className="h-6 w-6" />
+              </div>
+              <div>
+                <h3 className="font-semibold">{social.platform}</h3>
+                <a
+                  href={social.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="opacity-80 transition-colors hover:text-yellow-500 hover:opacity-100"
+                >
+                  @{social.handle}
+                </a>
+              </div>
             </div>
-            <div>
-              <h3 className="mb-1 font-semibold">LinkedIn</h3>
-              <a
-                href="https://linkedin.com/in/neranjanaprasad"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="opacity-80 transition-colors hover:text-yellow-500 hover:opacity-100"
-              >
-                @neranjanaprasad
-              </a>
-            </div>
-          </div>
-
-          <div className="flex items-start gap-4">
-            <div className="rounded-lg bg-yellow-500/10 p-3 text-yellow-500">
-              <Icon icon="lucide:github" className="h-6 w-6" />
-            </div>
-            <div>
-              <h3 className="mb-1 font-semibold">GitHub</h3>
-              <a
-                href="https://github.com/NandiyaLive"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="opacity-80 transition-colors hover:text-yellow-500 hover:opacity-100"
-              >
-                @NandiyaLive
-              </a>
-            </div>
-          </div>
-
-          <div className="flex items-start gap-4">
-            <div className="rounded-lg bg-yellow-500/10 p-3 text-yellow-500">
-              <Icon icon="lucide:twitter" className="h-6 w-6" />
-            </div>
-            <div>
-              <h3 className="mb-1 font-semibold">Twitter</h3>
-              <a
-                href="https://twitter.com/NandiyaLive"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="opacity-80 transition-colors hover:text-yellow-500 hover:opacity-100"
-              >
-                @NandiyaLive
-              </a>
-            </div>
-          </div>
+          ))}
         </div>
 
         <div className="mt-12 rounded-xl border border-neutral-200 p-6 dark:border-neutral-800">
