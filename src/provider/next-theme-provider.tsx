@@ -1,6 +1,7 @@
 "use client";
 
 import { ThemeProvider } from "next-themes";
+import { ReactQueryProvider } from "./react-query-provider";
 
 export const NextThemeProvider = ({
   children,
@@ -9,7 +10,7 @@ export const NextThemeProvider = ({
 }) => {
   return (
     <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-      {children}
+      <ReactQueryProvider>{children}</ReactQueryProvider>
     </ThemeProvider>
   );
 };

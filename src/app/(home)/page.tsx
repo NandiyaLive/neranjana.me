@@ -1,9 +1,9 @@
-import Background from "@/components/background";
-import { SocialLinks } from "@/components/social-links";
 import { socialLinks } from "@/data/social-links";
 import avatarImage from "@public/avatar.jpg";
-import Image from "next/image";
 import { Link } from "next-view-transitions";
+import Image from "next/image";
+import { Background } from "./components/background";
+import { SocialLinks } from "./components/social-links";
 
 const Page = () => {
   return (
@@ -39,7 +39,7 @@ const Page = () => {
             href="https://nextjs.org"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-semibold underline decoration-yellow-500 underline-offset-4 opacity-100 transition-colors hover:text-yellow-500"
+            className="font-semibold underline underline-offset-4 opacity-100 transition-colors hover:text-yellow-500"
           >
             Next.js
           </a>{" "}
@@ -48,7 +48,7 @@ const Page = () => {
             href="https://tailwindcss.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-semibold underline decoration-yellow-500 underline-offset-4 opacity-100 transition-colors hover:text-yellow-500"
+            className="font-semibold underline underline-offset-4 opacity-100 transition-colors hover:text-yellow-500"
           >
             TailwindCSS
           </a>
