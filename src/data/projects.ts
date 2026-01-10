@@ -1,4 +1,12 @@
-export const freelanceProjects = [
+export interface Project {
+  name: string;
+  description: string;
+  url: string;
+  completed: boolean;
+  active?: boolean;
+}
+
+export const freelanceProjects: Project[] = [
   {
     name: "Mathru.lk",
     description:
@@ -6,9 +14,17 @@ export const freelanceProjects = [
     url: "mathru.lk",
     completed: true,
   },
-] as const;
+];
 
-export const hobbyProjects = [
+export const hobbyProjects: Project[] = [
+  {
+    name: "xIGDLBot",
+    description:
+      "A Telegram bot that allows users to download Instagram photos, videos, reels, and IGTV videos directly from Telegram.",
+    url: "t.me/xIGDLBot",
+    completed: true,
+    active: false,
+  },
   {
     name: "DOSS",
     description:
@@ -19,15 +35,15 @@ export const hobbyProjects = [
   {
     name: "Nextflix",
     description:
-      "Just another Netflix clone built with Next.js, TailwindCSS, Supabase and TMDB API.",
-    url: "nextflix.madebyneranjana.tk",
+      "Every developer's first Next.js project. Just another Netflix clone built with Next.js, TailwindCSS and SupaBase.",
+    url: "nextflix.neranjana.tech",
     completed: true,
   },
   {
     name: "News API",
     description:
       "A simple API to fetch English news from the website of AdaDerana, a major news network in Sri Lanka.",
-    url: "newsapi.madebyneranjana.tk",
+    url: "newsapi.neranjana.tech",
     completed: true,
   },
-] as const;
+];

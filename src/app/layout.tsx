@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import { cn } from "@/lib/utils";
 import { Providers } from "@/provider";
@@ -51,6 +52,7 @@ export default function RootLayout({
           <Providers>
             <Navbar />
             {children}
+            <Footer />
           </Providers>
         </body>
       </ViewTransitions>

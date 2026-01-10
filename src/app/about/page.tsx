@@ -1,4 +1,4 @@
-import { LinkText } from "@/components/ui/link-text";
+import { LinkText } from "@/components/link-text";
 import { Certifications } from "./components/certifications";
 import { Experience } from "./components/experience";
 import { Volunteering } from "./components/volunteering";
