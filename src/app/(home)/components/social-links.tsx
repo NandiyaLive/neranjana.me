@@ -12,7 +12,7 @@ interface SocialLinksProps {
 
 export const SocialLinks = ({ links }: SocialLinksProps) => {
   return (
-    <div className="flex gap-4 w-fit absolute left-1/2 -translate-x-1/2 bg-yellow-500 py-2 px-4 rounded-full top-full -translate-y-4 shadow-lg">
+    <div className="absolute top-full left-1/2 flex w-fit -translate-x-1/2 -translate-y-4 gap-4 rounded-full bg-yellow-500 px-4 py-2 shadow-lg">
       {links.map(({ platform, link, icon }) => (
         <a
           key={platform}
@@ -23,7 +23,7 @@ export const SocialLinks = ({ links }: SocialLinksProps) => {
         >
           <Icon
             icon={icon}
-            className="w-6 h-6 text-black hover:text-neutral-800"
+            className="h-6 w-6 text-black hover:text-neutral-800"
           />
         </a>
       ))}

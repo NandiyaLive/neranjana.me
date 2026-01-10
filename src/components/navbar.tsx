@@ -7,13 +7,21 @@ import { useTheme } from "next-themes";
 import { Link } from "next-view-transitions";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 
 const Navbar = () => {
   const pathname = usePathname();
   const { resolvedTheme, setTheme } = useTheme();
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    const id = requestAnimationFrame(() => {
+      setMounted(true);
+    });
+    return () => cancelAnimationFrame(id);
+  }, []);
 
   const navItems = [
     {
@@ -63,7 +71,7 @@ const Navbar = () => {
               style={{ viewTransitionName: "avatar" }}
             />
 
-            <div className="leading-none">
+            <div className="hidden leading-none md:block">
               <h1 className="text-lg font-semibold">Neranjana Prasad</h1>
               <p className="font-mono text-xs font-medium opacity-80">
                 @NandiyaLive
@@ -77,18 +85,20 @@ const Navbar = () => {
         <ul
           className={cn(
             isNavOpen ? "flex" : "hidden",
-            "absolute top-20 right-0 left-0 z-40 flex-col items-end gap-0 text-right text-sm font-medium uppercase",
-            "md:static md:z-auto md:flex md:flex-row md:items-center md:gap-8 md:text-left",
+            "absolute top-20 right-0 left-0 z-40 flex-col items-end gap-0 bg-white text-right text-sm font-medium uppercase shadow-lg dark:bg-black",
+            "md:static md:z-auto md:flex md:flex-row md:items-center md:gap-8 md:border-0 md:bg-transparent md:p-0 md:text-left md:shadow-none",
           )}
         >
           {navItems.map((item) => (
             <li
               key={item.id}
               className={cn(
-                "transition-opacity duration-200 ease-in-out hover:opacity-100",
+                "transition-opacity duration-200 ease-in-out hover:bg-neutral-950 md:hover:bg-transparent md:hover:opacity-100",
                 "w-full px-8",
                 "md:w-auto md:px-0",
-                pathname === item.href ? "opacity-100" : "md:opacity-80",
+                pathname === item.href
+                  ? "bg-neutral-950 opacity-100 md:bg-transparent"
+                  : "md:opacity-80",
               )}
             >
               <Link
@@ -110,9 +120,16 @@ const Navbar = () => {
               setTheme(resolvedTheme === "dark" ? "light" : "dark")
             }
             aria-label="Toggle Theme"
-            suppressHydrationWarning={true}
           >
-            {resolvedTheme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
+            {mounted ? (
+              resolvedTheme === "dark" ? (
+                <Sun size={16} />
+              ) : (
+                <Moon size={16} />
+              )
+            ) : (
+              <div className="h-4 w-4" />
+            )}
           </Button>
 
           <Button
