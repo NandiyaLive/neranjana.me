@@ -1,3 +1,4 @@
+import { LinkText } from "@/components/link-text";
 import { socialLinks } from "@/data/social-links";
 import avatarImage from "@public/avatar.jpg";
 import { Link } from "next-view-transitions";
@@ -34,24 +35,20 @@ const Page = () => {
 
         <p className="animate-fade-in-up animation-delay-100 max-w-2xl text-lg leading-relaxed opacity-90">
           Hey, I&apos;m Neranjana. I&apos;m a Web Developer who builds fast,
-          interactive, and user-friendly websites, with expertise in{" "}
-          <a
+          interactive, and user-friendly websites, with expertise in
+          <LinkText
+            text="Next.js"
             href="https://nextjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold underline underline-offset-4 opacity-100 transition-colors hover:text-yellow-500"
-          >
-            Next.js
-          </a>{" "}
-          and{" "}
-          <a
+            className="mx-1"
+            external
+          />
+          and
+          <LinkText
+            text="TailwindCSS"
             href="https://tailwindcss.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold underline underline-offset-4 opacity-100 transition-colors hover:text-yellow-500"
-          >
-            TailwindCSS
-          </a>
+            className="ml-1"
+            external
+          />
           .
         </p>
 
