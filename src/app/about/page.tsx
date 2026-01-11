@@ -1,7 +1,13 @@
 import { LinkText } from "@/components/link-text";
+import { Metadata } from "next";
 import { Certifications } from "./components/certifications";
 import { Experience } from "./components/experience";
 import { Volunteering } from "./components/volunteering";
+
+export const metadata: Metadata = {
+  title: "About",
+  description: "Learn more about Neranjana Prasad Ponnamperuma.",
+};
 
 const Page = () => {
   return (

@@ -1,5 +1,19 @@
-import { freelanceProjects, hobbyProjects } from "@/data/projects";
+import { LinkText } from "@/components/link-text";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  freelanceProjects,
+  hobbyProjects,
+  universityProjects,
+} from "@/data/projects";
+import { Link } from "lucide-react";
+import type { Metadata } from "next";
 import { ProjectCard } from "./components/project-card";
+
+export const metadata: Metadata = {
+  title: "Projects",
+  description:
+    "A showcase of my projects, including freelance work, hobby projects, and university assignments.",
+};
 
 const Page = () => (
   <main className="container mx-auto max-w-7xl pt-24 pb-16">
@@ -23,6 +37,28 @@ const Page = () => (
           completed={completed}
         />
       ))}
+
+      <Card className="border-border bg-card/40 gap-2 backdrop-blur-sm">
+        <CardHeader>
+          <CardTitle className="text-2xl">at DynamicBiz</CardTitle>
+        </CardHeader>
+        <CardContent className="flex h-full flex-col justify-between gap-4">
+          <div>
+            <p>6 Next.js Projects</p>
+            <p>3 WordPress Projects</p>
+          </div>
+
+          <div className="flex items-center gap-2 text-sm font-medium transition-colors group-hover:text-yellow-500">
+            <Link className="h-3 w-3" />
+            <LinkText
+              text="hellodynamicbiz.com"
+              href="https://hellodynamicbiz.com"
+              className="no-underline"
+              external
+            />
+          </div>
+        </CardContent>
+      </Card>
     </div>
 
     <h3 className="mt-8 text-3xl font-bold uppercase">Hobby</h3>
@@ -37,6 +73,22 @@ const Page = () => (
           completed={completed}
         />
       ))}
+    </div>
+
+    <h3 className="mt-8 text-3xl font-bold uppercase">University</h3>
+
+    <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      {universityProjects.map(
+        ({ name, description, url, completed }, index) => (
+          <ProjectCard
+            key={index}
+            name={name}
+            description={description}
+            url={url}
+            completed={completed}
+          />
+        ),
+      )}
     </div>
   </main>
 );

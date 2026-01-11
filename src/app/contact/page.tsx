@@ -1,7 +1,14 @@
 import { Icon } from "@iconify/react";
+import type { Metadata } from "next";
 
 import { FAQS } from "@/data/faq";
 import { socialLinks } from "@/data/social-links";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description:
+    "Get in touch with me for freelance work or any inquiries you may have.",
+};
 
 const Page = () => (
   <main className="container mx-auto max-w-7xl pt-24 pb-16">
