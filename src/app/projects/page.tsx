@@ -40,7 +40,7 @@ const Page = () => (
 
       <Card className="border-border bg-card/40 gap-2 backdrop-blur-sm">
         <CardHeader>
-          <CardTitle className="text-2xl">at DynamicBiz</CardTitle>
+          <CardTitle className="text-xl">at DynamicBiz</CardTitle>
         </CardHeader>
         <CardContent className="flex h-full flex-col justify-between gap-4">
           <div>
