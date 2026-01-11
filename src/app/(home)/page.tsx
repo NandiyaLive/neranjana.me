@@ -8,7 +8,7 @@ import { SocialLinks } from "./components/social-links";
 
 const Page = () => {
   return (
-    <main className="relative flex h-screen items-end overflow-hidden py-8">
+    <main className="relative flex h-svh max-h-svh items-end overflow-hidden py-8">
       <Background />
 
       <div className="container mx-auto max-w-7xl space-y-8 px-4">
