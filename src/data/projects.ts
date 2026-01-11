@@ -14,6 +14,13 @@ export const freelanceProjects: Project[] = [
     url: "mathru.lk",
     completed: true,
   },
+  {
+    name: "KodeBay",
+    description:
+      "A full-stack web development studio that specializes in creating enterprise-ready web applications using Next.js.",
+    url: "kodebay.cc",
+    completed: true,
+  },
 ];
 
 export const hobbyProjects: Project[] = [
@@ -44,6 +51,16 @@ export const hobbyProjects: Project[] = [
     description:
       "A simple API to fetch English news from the website of AdaDerana, a major news network in Sri Lanka.",
     url: "newsapi.neranjana.tech",
+    completed: true,
+  },
+];
+
+export const universityProjects: Project[] = [
+  {
+    name: "RestroHQ",
+    description:
+      "An all-in-one SaaS solution for restaurants. Manage POS, orders, reservations, menus, customer data, and analytics with ease.",
+    url: "restrohq.qzz.io",
     completed: true,
   },
 ];
