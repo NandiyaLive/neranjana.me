@@ -44,7 +44,7 @@ export default function RootLayout({
       <ViewTransitions>
         <body
           className={cn(
-            "flex min-h-screen flex-col justify-between bg-white text-black transition-colors duration-300 dark:bg-black dark:text-white",
+            "flex min-h-screen flex-col justify-between bg-white text-black dark:bg-black dark:text-white",
             geistSans.variable,
             jetBrainMono.variable,
           )}
