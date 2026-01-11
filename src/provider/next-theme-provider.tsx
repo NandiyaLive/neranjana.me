@@ -9,7 +9,12 @@ export const NextThemeProvider = ({
   children: React.ReactNode;
 }) => {
   return (
-    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="dark"
+      enableSystem
+      disableTransitionOnChange
+    >
       <ReactQueryProvider>{children}</ReactQueryProvider>
     </ThemeProvider>
   );

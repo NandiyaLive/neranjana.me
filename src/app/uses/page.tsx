@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 import {
   developmentEnvironment,
@@ -7,6 +8,12 @@ import {
   websiteStack,
 } from "@/data/uses";
 import { cn } from "@/lib/utils";
+
+export const metadata: Metadata = {
+  title: "Uses",
+  description:
+    "A detailed list of my development environment, hardware, software, and tech stack.",
+};
 
 const Page = () => (
   <main className="container mx-auto max-w-7xl pt-24 pb-16">

@@ -175,7 +175,7 @@ export const techStack = [
 export const websiteStack = [
   {
     name: "Framework",
-    items: "Astro",
+    items: "Next.js",
   },
   {
     name: "Styling",
