@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { LinkText } from "@/components/link-text";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 import {
   developmentEnvironment,
@@ -8,6 +8,7 @@ import {
   websiteStack,
 } from "@/data/uses";
 import { cn } from "@/lib/utils";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Uses",
@@ -17,6 +18,17 @@ export const metadata: Metadata = {
 
 const Page = () => (
   <main className="container mx-auto max-w-7xl pt-24 pb-16">
+    <p className="mb-8 text-lg leading-relaxed">
+      Here&apos;s a list of hardware, software, and tools I use on a daily basis
+      for work and personal projects. Inspired by
+      <LinkText
+        text="uses.tech"
+        href="https://uses.tech/"
+        className="ml-1"
+        external
+      />
+      .
+    </p>
     <section className="mb-16">
       <h2 className="mb-6 text-3xl font-bold uppercase">
         Development Environment

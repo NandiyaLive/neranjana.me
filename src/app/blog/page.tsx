@@ -5,7 +5,7 @@ import {
   formatDate,
   type BlogPostMetadata,
 } from "@/lib/blog/utils";
-import { Link } from "next-view-transitions";
+import Link from "next/link";
 import { Calendar } from "lucide-react";
 import type { Metadata } from "next";
 

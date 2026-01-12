@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import avatar from "@public/avatar.jpg";
 import { Menu, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
-import { Link } from "next-view-transitions";
+import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -68,7 +68,6 @@ const Navbar = () => {
               alt="Avatar Image"
               placeholder="blur"
               className="rounded-full"
-              style={{ viewTransitionName: "avatar" }}
             />
 
             <div className="hidden leading-none md:block">

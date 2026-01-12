@@ -1,11 +1,8 @@
-import { LinkText } from "@/components/link-text";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   freelanceProjects,
   hobbyProjects,
   universityProjects,
 } from "@/data/projects";
-import { Link } from "lucide-react";
 import type { Metadata } from "next";
 import { ProjectCard } from "./components/project-card";
 
@@ -38,27 +35,17 @@ const Page = () => (
         />
       ))}
 
-      <Card className="border-border bg-card/40 gap-2 backdrop-blur-sm">
-        <CardHeader>
-          <CardTitle className="text-xl">at DynamicBiz</CardTitle>
-        </CardHeader>
-        <CardContent className="flex h-full flex-col justify-between gap-4">
-          <div>
-            <p>6 Next.js Projects</p>
-            <p>3 WordPress Projects</p>
-          </div>
-
-          <div className="flex items-center gap-2 text-sm font-medium transition-colors group-hover:text-yellow-500">
-            <Link className="h-3 w-3" />
-            <LinkText
-              text="hellodynamicbiz.com"
-              href="https://hellodynamicbiz.com"
-              className="no-underline"
-              external
-            />
-          </div>
-        </CardContent>
-      </Card>
+      <ProjectCard
+        name="at DynamicBiz"
+        description={
+          <p className="text-muted-foreground">
+            6 Next.js Projects
+            <br />3 WordPress Projects
+          </p>
+        }
+        url="hellodynamicbiz.com"
+        completed={true}
+      />
     </div>
 
     <h3 className="mt-8 text-3xl font-bold uppercase">Hobby</h3>

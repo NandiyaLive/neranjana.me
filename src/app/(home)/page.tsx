@@ -1,7 +1,7 @@
 import { LinkText } from "@/components/link-text";
 import { socialLinks } from "@/data/social-links";
 import avatarImage from "@public/avatar.jpg";
-import { Link } from "next-view-transitions";
+import Link from "next/link";
 import Image from "next/image";
 import { Background } from "./components/background";
 import { SocialLinks } from "./components/social-links";
@@ -20,7 +20,6 @@ const Page = () => {
             height={150}
             placeholder="blur"
             className="rounded-full border-4 border-yellow-500/30 dark:border-yellow-500/20"
-            style={{ viewTransitionName: "avatar" }}
           />
           <SocialLinks links={socialLinks} />
         </div>
