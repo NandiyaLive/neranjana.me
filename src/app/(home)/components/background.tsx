@@ -1,6 +1,6 @@
 export const Background = () => {
   return (
-    <div className="pointer-events-none absolute inset-0 isolate -z-50 overflow-hidden">
+    <div className="pointer-events-none absolute inset-0 isolate z-0 overflow-hidden">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 600 600"

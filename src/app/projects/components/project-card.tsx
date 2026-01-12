@@ -1,11 +1,12 @@
 import { LinkText } from "@/components/link-text";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Construction, Link } from "lucide-react";
+import React from "react";
 
 interface ProjectCardProps {
-  key: string | number;
+  key?: string | number;
   name: string;
-  description: string;
+  description: string | React.ReactNode;
   url: string;
   completed: boolean;
 }
@@ -22,7 +23,11 @@ export const ProjectCard = ({
       <CardTitle className="text-xl">{name}</CardTitle>
     </CardHeader>
     <CardContent className="flex h-full flex-col justify-between gap-4">
-      <p>{description}</p>
+      {typeof description === "string" ? (
+        <p className="text-muted-foreground">{description}</p>
+      ) : (
+        description
+      )}
 
       <div className="flex items-center gap-2 text-sm font-medium transition-colors group-hover:text-yellow-500">
         {completed ? (

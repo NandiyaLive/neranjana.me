@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { formatDate, getAllPosts, getPostBySlug } from "@/lib/blog/utils";
 import { ArrowLeft, Calendar } from "lucide-react";
 import { compileMDX } from "next-mdx-remote/rsc";
-import { Link } from "next-view-transitions";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeSlug from "rehype-slug";
