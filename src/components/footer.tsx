@@ -1,7 +1,6 @@
 "use client";
 
 import { socialLinks } from "@/data/social-links";
-import { Icon } from "@iconify/react";
 import { usePathname } from "next/navigation";
 
 const Footer = () => {
@@ -24,6 +23,7 @@ const Footer = () => {
 
           <div className="flex items-center gap-4">
             {socialLinks.map((social) => {
+              const IconComponent = social.icon;
               return (
                 <a
                   key={social.platform}
@@ -33,7 +33,7 @@ const Footer = () => {
                   className="text-muted-foreground hover:text-foreground transition-colors"
                   aria-label={social.platform}
                 >
-                  <Icon icon={social.icon} width="24" height="24" />
+                  <IconComponent className="h-6 w-6" />
                 </a>
               );
             })}

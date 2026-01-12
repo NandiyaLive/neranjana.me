@@ -3,7 +3,7 @@ import Navbar from "@/components/navbar";
 import { cn } from "@/lib/utils";
 import { Providers } from "@/provider";
 import type { Metadata } from "next";
-import { ViewTransitions } from "next-view-transitions";
+
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -41,21 +41,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
-      <ViewTransitions>
-        <body
-          className={cn(
-            "flex min-h-screen flex-col justify-between bg-white text-black dark:bg-black dark:text-white",
-            geistSans.variable,
-            jetBrainMono.variable,
-          )}
-        >
-          <Providers>
-            <Navbar />
-            {children}
-            <Footer />
-          </Providers>
-        </body>
-      </ViewTransitions>
+      <body
+        className={cn(
+          "flex min-h-screen flex-col justify-between bg-white text-black dark:bg-black dark:text-white",
+          geistSans.variable,
+          jetBrainMono.variable,
+        )}
+      >
+        <Providers>
+          <Navbar />
+          {children}
+          <Footer />
+        </Providers>
+      </body>
     </html>
   );
 }

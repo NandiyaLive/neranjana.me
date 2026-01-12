@@ -1,4 +1,4 @@
-import { Icon } from "@iconify/react";
+import { Clock, HelpCircle, Mail } from "lucide-react";
 import type { Metadata } from "next";
 
 import { FAQS } from "@/data/faq";
@@ -24,7 +24,7 @@ const Page = () => (
         <div className="space-y-6">
           <div className="flex items-start gap-4">
             <div className="rounded-lg bg-yellow-500/10 p-3 text-yellow-500">
-              <Icon icon="lucide:mail" className="h-6 w-6" />
+              <Mail className="h-6 w-6" />
             </div>
             <div>
               <h3 className="font-semibold">Email</h3>
@@ -37,29 +37,32 @@ const Page = () => (
             </div>
           </div>
 
-          {socialLinks.map((social) => (
-            <div key={social.platform} className="flex items-center gap-4">
-              <div className="rounded-lg bg-yellow-500/10 p-3 text-yellow-500">
-                <Icon icon={social.icon} className="h-6 w-6" />
+          {socialLinks.map((social) => {
+            const IconComponent = social.icon;
+            return (
+              <div key={social.platform} className="flex items-center gap-4">
+                <div className="rounded-lg bg-yellow-500/10 p-3 text-yellow-500">
+                  <IconComponent className="h-6 w-6" />
+                </div>
+                <div>
+                  <h3 className="font-semibold">{social.platform}</h3>
+                  <a
+                    href={social.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="opacity-80 transition-colors hover:text-yellow-500 hover:opacity-100"
+                  >
+                    @{social.handle}
+                  </a>
+                </div>
               </div>
-              <div>
-                <h3 className="font-semibold">{social.platform}</h3>
-                <a
-                  href={social.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="opacity-80 transition-colors hover:text-yellow-500 hover:opacity-100"
-                >
-                  @{social.handle}
-                </a>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         <div className="mt-12 rounded-xl border border-neutral-200 p-6 dark:border-neutral-800">
           <h3 className="mb-2 flex items-center gap-2 font-semibold">
-            <Icon icon="lucide:clock" className="h-5 w-5" />
+            <Clock className="h-5 w-5" />
             Availability
           </h3>
           <p className="opacity-80">
@@ -80,10 +83,7 @@ const Page = () => (
               className="rounded-xl border border-neutral-200 p-6 select-none dark:border-neutral-800"
             >
               <h3 className="mb-2 flex items-start gap-2 font-semibold">
-                <Icon
-                  icon="lucide:help-circle"
-                  className="mt-0.5 h-5 w-5 text-yellow-500"
-                />
+                <HelpCircle className="mt-0.5 h-5 w-5 text-yellow-500" />
                 {faq.question}
               </h3>
               <p className="ml-7 leading-relaxed opacity-80">{faq.answer}</p>
