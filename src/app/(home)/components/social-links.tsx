@@ -1,9 +1,9 @@
-import { Icon } from "@iconify/react";
+import type { ComponentType, SVGProps } from "react";
 
 interface SocialLink {
   platform: string;
   link: string;
-  icon: string;
+  icon: ComponentType<SVGProps<SVGSVGElement>>;
 }
 
 interface SocialLinksProps {
@@ -21,10 +21,12 @@ export const SocialLinks = ({ links }: SocialLinksProps) => {
           target="_blank"
           rel="noreferrer"
         >
-          <Icon
-            icon={icon}
-            className="h-6 w-6 text-black hover:text-neutral-800"
-          />
+          {(() => {
+            const IconComponent = icon;
+            return (
+              <IconComponent className="h-6 w-6 text-black hover:text-neutral-800" />
+            );
+          })()}
         </a>
       ))}
     </div>

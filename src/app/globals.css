@@ -183,14 +183,3 @@ html.light {
 .animation-delay-200 {
   animation-delay: 0.2s;
 }
-
-/* View Transitions */
-::view-transition-old(avatar),
-::view-transition-new(avatar) {
-  animation-duration: 0.5s;
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-::view-transition-group(avatar) {
-  animation-duration: 0.5s;
-}
