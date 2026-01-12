@@ -25,15 +25,18 @@ const Page = () => (
     <h3 className="mt-8 text-3xl font-bold uppercase">Freelance</h3>
 
     <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-      {freelanceProjects.map(({ name, description, url, completed }, index) => (
-        <ProjectCard
-          key={index}
-          name={name}
-          description={description}
-          url={url}
-          completed={completed}
-        />
-      ))}
+      {freelanceProjects.map(
+        ({ name, description, url, completed, active }, index) => (
+          <ProjectCard
+            key={index}
+            name={name}
+            description={description}
+            url={url}
+            completed={completed}
+            active={active}
+          />
+        ),
+      )}
 
       <ProjectCard
         name="at DynamicBiz"
@@ -51,28 +54,32 @@ const Page = () => (
     <h3 className="mt-8 text-3xl font-bold uppercase">Hobby</h3>
 
     <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-      {hobbyProjects.map(({ name, description, url, completed }, index) => (
-        <ProjectCard
-          key={index}
-          name={name}
-          description={description}
-          url={url}
-          completed={completed}
-        />
-      ))}
-    </div>
-
-    <h3 className="mt-8 text-3xl font-bold uppercase">University</h3>
-
-    <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-      {universityProjects.map(
-        ({ name, description, url, completed }, index) => (
+      {hobbyProjects.map(
+        ({ name, description, url, completed, active }, index) => (
           <ProjectCard
             key={index}
             name={name}
             description={description}
             url={url}
             completed={completed}
+            active={active}
+          />
+        ),
+      )}
+    </div>
+
+    <h3 className="mt-8 text-3xl font-bold uppercase">University</h3>
+
+    <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      {universityProjects.map(
+        ({ name, description, url, completed, active }, index) => (
+          <ProjectCard
+            key={index}
+            name={name}
+            description={description}
+            url={url}
+            completed={completed}
+            active={active}
           />
         ),
       )}
