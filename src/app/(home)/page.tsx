@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Background } from "./components/background";
 import { SocialLinks } from "./components/social-links";
+import { Button } from "@/components/ui/button";
 
 const Page = () => {
   return (
@@ -52,12 +53,15 @@ const Page = () => {
         </p>
 
         <div className="animate-fade-in-up animation-delay-200">
-          <Link href="/contact">
-            <div className="inline-flex items-center gap-2 rounded-full bg-neutral-950 px-8 py-3 text-sm text-white shadow-lg transition-transform dark:bg-white dark:text-black">
-              <div className="h-2 w-2 animate-pulse rounded-full bg-green-500 blur-[1px]"></div>
+          <Button
+            asChild
+            className="inline-flex items-center gap-2 rounded-full px-8 py-4"
+          >
+            <Link href="/contact">
+              <span className="h-2 w-2 animate-pulse rounded-full bg-green-500 blur-[1px]" />
               <span className="font-medium">Open For Hiring</span>
-            </div>
-          </Link>
+            </Link>
+          </Button>
         </div>
       </div>
     </main>

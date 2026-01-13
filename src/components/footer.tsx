@@ -21,7 +21,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-6">
             {socialLinks.map((social) => {
               const IconComponent = social.icon;
               return (
@@ -33,7 +33,7 @@ const Footer = () => {
                   className="text-muted-foreground hover:text-foreground transition-colors"
                   aria-label={social.platform}
                 >
-                  <IconComponent className="h-6 w-6" />
+                  <IconComponent className="h-5 w-5" />
                 </a>
               );
             })}
