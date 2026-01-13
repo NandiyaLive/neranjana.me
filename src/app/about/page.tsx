@@ -21,55 +21,47 @@ const Page = () => {
             Software Engineer
           </p>
         </div>
-
-        <p>
-          A self taught, freelance web (mainly frontend) developer from the
-          sacred city of Kandy, Sri Lanka. I&apos;m an IT Student at the
-          <LinkText
-            text="University of Vavuniya"
-            href="https://vau.ac.lk/"
-            className="mx-1"
-            external
-          />
-          by day and a full-on tech nerd by night.
-        </p>
-        <p>
-          I have extensive knowledge of HTML, CSS & JavaScript and I&apos;m
-          passionate about building blazing fast, user-friendly, responsive and
-          visually stunning web applications with 2 years experience in
-          cutting-edge technologies like
-          <LinkText
-            text="Next.js"
-            href="https://nextjs.org/"
-            className="mx-1"
-            external
-          />
-          and
-          <LinkText
-            text="TailwindCSS"
-            href="https://tailwindcss.com/"
-            className="ml-1"
-            external
-          />
-          .
-        </p>
-        <p>
-          When I am not at my desk, you can find me reading novels, listening to
-          music and podcasts or binge watching, and I occasionally update my
-          blog too.
-        </p>
-        <p>
-          I&apos;m currently available for a new freelance job.
-          <LinkText text="Hire Me" href="/contact" className="ml-1" />.
-        </p>
+        <div className="grid gap-2">
+          <p>
+            I am a full-stack developer based in Kandy, Sri Lanka, and an IT
+            undergraduate at the University of Vavuniya. Since{" "}
+            <span className="font-medium">2022</span>, I have been building and
+            shipping modern web applications using{" "}
+            <span className="font-medium">React and Next.js</span>, with an
+            emphasis on performance, responsiveness, and intuitive user
+            experience.
+          </p>
+          <p>
+            I enjoy translating complex ideas and designs into clean, scalable
+            interfaces using{" "}
+            <span className="font-medium">
+              TypeScript, Tailwind CSS, and modern UI patterns
+            </span>
+            . I value maintainable code, thoughtful UI decisions, and
+            collaboration in both freelance and team-based environments.
+          </p>
+          <p>
+            Outside of development, I spend my time reading novels, listening to
+            music and podcasts, and occasionally writing on my blog.
+          </p>
+          <p>
+            If you have a project in mind or would like to discuss a potential
+            role, feel free to <LinkText text="reach out" href="/contact" />.
+            You can also{" "}
+            <LinkText
+              text="download my CV"
+              href="/docs/neranjana-ponnamperuma-cv.pdf"
+              external
+            />{" "}
+            for a more detailed overview of my experience and background.
+          </p>
+        </div>
       </section>
 
-      <section>
-        <div className="grid items-start gap-6 md:grid-cols-2">
-          <Experience />
-          <Certifications />
-          <Volunteering />
-        </div>
+      <section className="grid items-start gap-6 md:grid-cols-2">
+        <Experience />
+        <Certifications />
+        <Volunteering />
       </section>
     </main>
   );
