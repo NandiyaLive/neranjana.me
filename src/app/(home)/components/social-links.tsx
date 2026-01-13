@@ -24,7 +24,7 @@ export const SocialLinks = ({ links }: SocialLinksProps) => {
           {(() => {
             const IconComponent = icon;
             return (
-              <IconComponent className="h-6 w-6 text-black hover:text-neutral-800" />
+              <IconComponent className="h-5 w-5 text-black hover:text-neutral-800" />
             );
           })()}
         </a>
