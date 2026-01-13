@@ -7,6 +7,12 @@ export interface Certificate {
 
 export const CERTIFICATES: Certificate[] = [
   {
+    title: "Postman API Fundamentals Student Expert",
+    issuer: "Postman",
+    issuedDate: "Mar 29, 2025",
+    url: "https://badgr.com/public/assertions/_-7Dj-ndTi-jAojojkabWQ",
+  },
+  {
     title: "Responsive Web Design",
     issuer: "FreeCodeCamp",
     issuedDate: "February 23, 2021",
