@@ -1,200 +1,216 @@
-export const developmentEnvironment = [
+export interface UseItemI {
+  name: string;
+  description: string;
+  url?: string;
+}
+
+export const hardware: UseItemI[] = [
   {
-    name: "Operating System",
-    description: "EndeavourOS Ganymede (KDE)",
+    name: "Lenovo ThinkPad T480",
+    description: "my reliable portable workstation",
+  },
+  {
+    name: 'ViewSonic VA2732-H 27" FHD IPS',
+    description: "secondary monitor for multitasking",
+  },
+  {
+    name: 'ViewSonic VA1655 Portable 16" FHD USB-C',
+    description: "on-the-go second display",
+  },
+  {
+    name: "Moto g51 5G (RisingOS)",
+    description: "daily driver smartphone",
+  },
+  {
+    name: "Soundcore R50i",
+    description: "bang for the buck earbuds",
+  },
+];
+
+export const developmentEnvironment: UseItemI[] = [
+  {
+    name: "EndeavourOS (KDE)",
+    description: "lightweight and minimal OS of choice",
     url: "https://endeavouros.com",
   },
   {
-    name: "Shell",
-    description: "fish",
+    name: "fish",
+    description: "intuitive shell with smart completions",
     url: "https://fishshell.com",
   },
   {
-    name: "Prompt",
-    description: "Starship",
+    name: "Starship",
+    description: "blazing fast command prompt",
     url: "https://starship.rs",
   },
   {
-    name: "IDE",
-    description: "Zed, Antigravity",
+    name: "Zed",
+    description: "my primary code editor",
     url: "https://zed.dev",
   },
   {
-    name: "AI Pair Programmer",
-    description: "GitHub Copilot",
+    name: "Antigravity",
+    description: "the Agent-first IDE",
+    url: "https://antigravity.google",
+  },
+  {
+    name: "GitHub Copilot",
+    description: "AI pair programmer for faster development",
     url: "https://copilot.github.com",
   },
   {
-    name: "API Testing",
-    description: "Postman",
+    name: "Postman",
+    description: "API testing and debugging",
     url: "https://www.postman.com",
   },
-] as const;
+];
 
-export const hardware = [
+export const softwaresList: UseItemI[] = [
   {
-    name: "Laptop",
-    description: "Lenovo ThinkPad T480",
-    extra: "i5-8350U, 24GB DDR4, 500GB NVMe SSD",
+    name: "Zen Browser",
+    description: "as my primary browser",
+    url: "https://zen-browser.app",
   },
   {
-    name: "Secondary Monitor",
-    description: 'ViewSonic VA2732-H 27" FHD IPS',
-    extra: undefined,
+    name: "Brave Nightly",
+    description: "secondary browser for testing",
+    url: "https://brave.com",
   },
   {
-    name: "Portable Monitor",
-    description: 'ViewSonic VA1655 Portable 16" FHD USB-C Monitor ',
-    extra: undefined,
+    name: "uBlock Origin",
+    description: "essential ad blocker",
+    url: "https://ublockorigin.com",
   },
   {
-    name: "Smartphone",
-    description: "Moto g51 5G (RisingOS)",
-    extra: undefined,
+    name: "Bitwarden",
+    description: "secure password management",
+    url: "https://bitwarden.com",
   },
   {
-    name: "External HDD",
-    description: "Transcend StoreJet 25H3 1TB External HDD",
-    extra: undefined,
+    name: "Ente Auth",
+    description: "two-factor authentication",
+    url: "https://ente.io/auth/",
   },
-] as const;
+  {
+    name: "Obsidian",
+    description: "for digital note taking",
+    url: "https://obsidian.md",
+  },
+  {
+    name: "Notion",
+    description: "all-in-one workspace",
+    url: "https://notion.so",
+  },
+  {
+    name: "Telegram",
+    description: "messaging and cloud storage",
+    url: "https://telegram.org",
+  },
+  {
+    name: "YouTube Music",
+    description: "my main music streaming service",
+    url: "https://music.youtube.com",
+  },
+  {
+    name: "Spotify",
+    description: "alternate music library",
+    url: "https://spotify.com",
+  },
+  {
+    name: "Jellyfin",
+    description: "self-hosted media server",
+    url: "https://jellyfin.org",
+  },
+  {
+    name: "Trakt.tv",
+    description: "track movies and TV shows",
+    url: "https://trakt.tv/users/nandiyalive",
+  },
+  {
+    name: "Simkl",
+    description: "entertainment tracking and stats",
+    url: "https://simkl.com/6590831/stats/",
+  },
+];
 
-export const softwaresList = [
+export const techStack: UseItemI[] = [
   {
-    name: "Main Browser",
-    softwares: [{ name: "Zen Browser", url: "https://zen-browser.app" }],
+    name: "JavaScript, TypeScript, Python, Golang",
+    description: "programming languages I work with",
   },
   {
-    name: "Secondary Browser",
-    softwares: [{ name: "Brave Nightly", url: "https://brave.com" }],
+    name: "React, Next.js, Astro",
+    description: "frontend frameworks of choice",
   },
   {
-    name: "Ad Blocker",
-    softwares: [{ name: "uBlock Origin", url: "https://ublockorigin.com" }],
+    name: "React Native, Expo",
+    description: "mobile development stack",
   },
   {
-    name: "Password Manager",
-    softwares: [{ name: "Bitwarden", url: "https://bitwarden.com" }],
+    name: "Tailwind CSS, shadcn/ui",
+    description: "UI libraries and styling solutions",
   },
   {
-    name: "2FA",
-    softwares: [{ name: "Ente Auth", url: "https://ente.io/auth/" }],
+    name: "Zustand, TanStack Query",
+    description: "state management tools",
   },
   {
-    name: "Note Taking",
-    softwares: [
-      { name: "Obsidian", url: "https://obsidian.md" },
-      { name: "Notion", url: "https://notion.so" },
-    ],
+    name: "Node.js, Express, Flask, Fiber",
+    description: "backend frameworks",
   },
   {
-    name: "Messaging + Cloud Storage",
-    softwares: [{ name: "Telegram", url: "https://telegram.org" }],
+    name: "PostgreSQL, MySQL, MongoDB",
+    description: "database solutions",
   },
   {
-    name: "Music",
-    softwares: [
-      {
-        name: "YouTube Music",
-        url: "https://music.youtube.com/playlist?list=PLBUnyHiK2RvTqssxVQ2a8wLGn6Ktny2O_&si=DR2o9kPOsNnge6wv",
-      },
-      {
-        name: "Spotify",
-        url: "https://open.spotify.com/playlist/4oKjrCt8bfJCLQxL635Ftq",
-      },
-    ],
+    name: "Supabase, Firebase",
+    description: "backend-as-a-service platforms",
   },
   {
-    name: "Media Server",
-    softwares: [{ name: "Jellyfin", url: "https://jellyfin.org" }],
+    name: "AWS, GCP, Heroku",
+    description: "cloud platforms",
   },
   {
-    name: "Movies & TV Shows Tracker",
-    softwares: [
-      { name: "Trakt.tv", url: "https://trakt.tv/users/nandiyalive" },
-      { name: "Simkl", url: "https://simkl.com/6590831/stats/" },
-    ],
+    name: "Vercel, Cloudflare",
+    description: "deployment and hosting services",
   },
-] as const;
+  {
+    name: "Docker, Linux",
+    description: "containerization and infrastructure",
+  },
+  {
+    name: "Git, GitHub",
+    description: "version control",
+  },
+  {
+    name: "Figma",
+    description: "design tool",
+  },
+];
 
-export const techStack = [
+export const websiteStack: UseItemI[] = [
   {
-    name: "Programming Languages",
-    items: "JavaScript, TypeScript, Python, Golang",
+    name: "Next.js",
+    description: "react framework powering this site",
   },
   {
-    name: "Frontend Frameworks",
-    items: "React, Next.js, Astro",
+    name: "Tailwind CSS",
+    description: "utility-first styling",
   },
   {
-    name: "Mobile Development",
-    items: "React Native, Expo",
+    name: "Vercel",
+    description: "hosting and deployment",
   },
   {
-    name: "UI Libraries & Styling",
-    items: "Tailwind CSS, shadcn/ui",
+    name: "Vercel Analytics",
+    description: "performance monitoring",
   },
   {
-    name: "State Management",
-    items: "Zustand, TanStack Query",
+    name: "Cloudflare",
+    description: "CDN and security",
   },
   {
-    name: "Backend Frameworks",
-    items: "Node.js, Express, Flask, Fiber",
+    name: "Inter + JetBrains Mono",
+    description: "Google Fonts typography",
   },
-  {
-    name: "Databases",
-    items: "PostgreSQL, MySQL, MongoDB",
-  },
-  {
-    name: "Backend-as-a-Service",
-    items: "Supabase, Firebase",
-  },
-  {
-    name: "Cloud Platforms",
-    items: "AWS, GCP, Heroku",
-  },
-  {
-    name: "Deployment & Hosting",
-    items: "Vercel, Cloudflare",
-  },
-  {
-    name: "DevOps & Containerization",
-    items: "Docker, Linux",
-  },
-  {
-    name: "Version Control",
-    items: "Git, GitHub",
-  },
-  {
-    name: "Design Tools",
-    items: "Figma",
-  },
-] as const;
-
-export const websiteStack = [
-  {
-    name: "Framework",
-    items: "Next.js",
-  },
-  {
-    name: "Styling",
-    items: "Tailwind CSS",
-  },
-  {
-    name: "Deployment",
-    items: "Vercel",
-  },
-  {
-    name: "Analytics",
-    items: "Vercel Analytics",
-  },
-  {
-    name: "Icons",
-    items: "Iconify",
-  },
-  {
-    name: "Fonts",
-    items: "Inter + JetBrains Mono (Google Fonts)",
-  },
-] as const;
+];
