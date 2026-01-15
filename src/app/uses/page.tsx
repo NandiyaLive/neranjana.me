@@ -1,5 +1,4 @@
 import { LinkText } from "@/components/link-text";
-import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 import {
   developmentEnvironment,
   hardware,
@@ -7,187 +6,76 @@ import {
   techStack,
   websiteStack,
 } from "@/data/uses";
-import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
+import { UseItems } from "./component/use-items";
 
 export const metadata: Metadata = {
   title: "Uses",
-  description:
-    "A detailed list of my development environment, hardware, software, and tech stack.",
+  description: "Tools, software, and tech stack I use for development",
 };
 
-const Page = () => (
-  <main className="container mx-auto max-w-7xl pt-24 pb-16">
-    <p className="mb-8 text-lg leading-relaxed">
-      Here&apos;s a list of hardware, software, and tools I use on a daily basis
-      for work and personal projects. Inspired by
-      <LinkText
-        text="uses.tech"
-        href="https://uses.tech/"
-        className="ml-1"
-        external
-      />
-      .
-    </p>
-    <section className="mb-16">
-      <h2 className="mb-6 text-3xl font-bold uppercase">
-        Development Environment
-      </h2>
+export default function UsesPage() {
+  return (
+    <main className="container mx-auto max-w-7xl pt-24 pb-16">
+      <p className="mb-4 text-lg leading-relaxed">
+        A comprehensive look at the hardware, software, and technologies that
+        power my development workflow. Everything I use to build, create, and
+        innovate. Inspired by Wes Bos&apos;s{" "}
+        <LinkText text="/uses" href="https://uses.tech/" external />.
+      </p>
 
-      <div className="overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-800">
-        <Table className="w-full table-auto">
-          <TableBody>
-            {developmentEnvironment.map((item, index) => (
-              <TableRow
-                key={index}
-                className={cn(
-                  index !== developmentEnvironment.length - 1 &&
-                    "border-b border-neutral-200 dark:border-neutral-800",
-                )}
-              >
-                <TableCell className="w-1/3 px-6 py-4 align-top font-semibold">
-                  {item.name}
-                </TableCell>
-                <TableCell className="px-6 py-4 align-top">
-                  <a
-                    href={item.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline-offset-4 opacity-90 transition-colors hover:text-yellow-500 hover:underline hover:opacity-100"
-                  >
-                    {item.description}
-                  </a>
-                </TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
+      <div className="mt-8">
+        <div className="mb-4 space-y-2">
+          <h2 className="text-3xl font-bold">Hardware Setup</h2>
+          <p className="text-muted-foreground">
+            Devices and peripherals that power my workspace.
+          </p>
+        </div>
+        <UseItems items={hardware} />
       </div>
-    </section>
 
-    <section className="mb-16">
-      <h2 className="mb-6 text-3xl font-bold uppercase">Hardware</h2>
+      <div className="mt-16">
+        <div className="mb-4 space-y-2">
+          <h2 className="text-3xl font-bold">Development Environment</h2>
+          <p className="text-muted-foreground">
+            Core tools and configurations for my dev setup.
+          </p>
+        </div>
 
-      <div className="overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-800">
-        <Table className="w-full table-auto">
-          <TableBody>
-            {hardware.map((item, index) => (
-              <TableRow
-                key={index}
-                className={cn(
-                  index !== hardware.length - 1 &&
-                    "border-b border-neutral-200 dark:border-neutral-800",
-                )}
-              >
-                <TableCell className="w-1/3 px-6 py-4 align-top font-semibold">
-                  {item.name}
-                </TableCell>
-                <TableCell className="px-6 py-4 align-top opacity-90 hover:opacity-100">
-                  {item.description}
-                  {item.extra && (
-                    <p className="mt-1 text-sm opacity-70">{item.extra}</p>
-                  )}
-                </TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
+        <UseItems items={developmentEnvironment} />
       </div>
-    </section>
 
-    <section className="mb-16">
-      <h2 className="mb-6 text-3xl font-bold uppercase">Software & Services</h2>
-
-      <div className="overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-800">
-        <Table className="w-full table-auto">
-          <TableBody>
-            {softwaresList.map((item, itemIndex) => (
-              <TableRow
-                key={itemIndex}
-                className={cn(
-                  itemIndex !== softwaresList.length - 1 &&
-                    "border-b border-neutral-200 dark:border-neutral-800",
-                )}
-              >
-                <TableCell className="w-1/3 px-6 py-4 align-top font-semibold">
-                  {item.name}
-                </TableCell>
-                <TableCell className="px-6 py-4 align-top">
-                  {item.softwares.map((software, softwareIndex) => (
-                    <span key={softwareIndex}>
-                      <a
-                        href={software.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="underline-offset-4 opacity-90 transition-colors hover:text-yellow-500 hover:underline hover:opacity-100"
-                      >
-                        {software.name}
-                      </a>
-                      {softwareIndex !== item.softwares.length - 1 && ", "}
-                    </span>
-                  ))}
-                </TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
+      <div className="mt-16">
+        <div className="mb-4 space-y-2">
+          <h2 className="text-3xl font-bold">Software & Services</h2>
+          <p className="text-muted-foreground">
+            Applications I rely on for productivity and entertainment.
+          </p>
+        </div>
+        <ul className="space-y-1">
+          <UseItems items={softwaresList} />
+        </ul>
       </div>
-    </section>
 
-    <section className="mb-16">
-      <h2 className="mb-6 text-3xl font-bold uppercase">Tech Stack</h2>
-
-      <div className="overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-800">
-        <Table className="w-full table-auto">
-          <TableBody>
-            {techStack.map((item, index) => (
-              <TableRow
-                key={index}
-                className={cn(
-                  index !== techStack.length - 1 &&
-                    "border-b border-neutral-200 dark:border-neutral-800",
-                )}
-              >
-                <TableCell className="w-1/3 px-6 py-4 align-top font-semibold">
-                  {item.name}
-                </TableCell>
-                <TableCell className="px-6 py-4 align-top opacity-90 hover:opacity-100">
-                  {item.items}
-                </TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
+      <div className="mt-16">
+        <div className="mb-4 space-y-2">
+          <h2 className="text-3xl font-bold">Tech Stack</h2>
+          <p className="text-muted-foreground">
+            Languages, frameworks, and technologies I work with.
+          </p>
+        </div>
+        <UseItems items={techStack} />
       </div>
-    </section>
 
-    <section>
-      <h2 className="mb-6 text-3xl font-bold uppercase">This Website</h2>
-
-      <div className="overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-800">
-        <Table className="w-full table-auto">
-          <TableBody>
-            {websiteStack.map((item, index) => (
-              <TableRow
-                key={index}
-                className={cn(
-                  index !== websiteStack.length - 1 &&
-                    "border-b border-neutral-200 dark:border-neutral-800",
-                )}
-              >
-                <TableCell className="w-1/3 px-6 py-4 align-top font-semibold">
-                  {item.name}
-                </TableCell>
-                <TableCell className="px-6 py-4 align-top opacity-90 hover:opacity-100">
-                  {item.items}
-                </TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
+      <div className="mt-16">
+        <div className="mb-4 space-y-2">
+          <h2 className="text-3xl font-bold">This Website</h2>
+          <p className="text-muted-foreground">
+            The stack used to build and host this site.
+          </p>
+        </div>
+        <UseItems items={websiteStack} />
       </div>
-    </section>
-  </main>
-);
-
-export default Page;
+    </main>
+  );
+}
