@@ -21,24 +21,21 @@ const Page = () => {
             Software Engineer
           </p>
         </div>
-        <div className="grid gap-2">
+        <div className="grid gap-4">
           <p>
-            I am a full-stack developer based in Kandy, Sri Lanka, and an IT
-            undergraduate at the University of Vavuniya. Since{" "}
-            <span className="font-medium">2022</span>, I have been building and
-            shipping modern web applications using{" "}
-            <span className="font-medium">React and Next.js</span>, with an
-            emphasis on performance, responsiveness, and intuitive user
-            experience.
+            I'm a software engineer based in Kandy, Sri Lanka. I started
+            making websites around <span className="font-medium">2011</span>
+            {" "}with WordPress, Joomla, and Blogger. That curiosity grew into
+            a career building web applications with{" "}
+            <span className="font-medium">React, Next.js, and Node.js</span>.
           </p>
           <p>
-            I enjoy translating complex ideas and designs into clean, scalable
-            interfaces using{" "}
+            I work with clients and product teams to turn a Figma handoff or a
+            rough idea into a working application. I use{" "}
             <span className="font-medium">
-              TypeScript, Tailwind CSS, and modern UI patterns
+              TypeScript, Tailwind CSS, and Node.js
             </span>
-            . I value maintainable code, thoughtful UI decisions, and
-            collaboration in both freelance and team-based environments.
+            {" "}to build responsive interfaces and the services behind them.
           </p>
           <p>
             Outside of development, I spend my time reading novels, listening to
@@ -49,8 +46,8 @@ const Page = () => {
             role, feel free to <LinkText text="reach out" href="/contact" />.
             You can also{" "}
             <LinkText
-              text="download my CV"
-              href="/docs/neranjana-ponnamperuma-cv.pdf"
+              text="download my resume"
+              href="/docs/neranjana-ponnamperuma-resume.pdf"
               external
             />{" "}
             for a more detailed overview of my experience and background.
