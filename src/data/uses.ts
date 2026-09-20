@@ -6,8 +6,8 @@ export interface UseItemI {
 
 export const hardware: UseItemI[] = [
   {
-    name: "Lenovo ThinkPad T480",
-    description: "my reliable portable workstation",
+    name: "MacBook Pro M4 Pro",
+    description: "primary laptop",
   },
   {
     name: 'ViewSonic VA2732-H 27" FHD IPS',
@@ -18,8 +18,12 @@ export const hardware: UseItemI[] = [
     description: "on-the-go second display",
   },
   {
-    name: "Moto g51 5G (RisingOS)",
-    description: "daily driver smartphone",
+    name: "Samsung Galaxy S20 FE",
+    description: "primary phone",
+  },
+  {
+    name: "Moto g51 5G",
+    description: "secondary phone",
   },
   {
     name: "Soundcore R50i",
@@ -29,9 +33,9 @@ export const hardware: UseItemI[] = [
 
 export const developmentEnvironment: UseItemI[] = [
   {
-    name: "EndeavourOS (KDE)",
-    description: "lightweight and minimal OS of choice",
-    url: "https://endeavouros.com",
+    name: "macOS Golden Gate",
+    description: "operating system",
+    url: "https://www.apple.com/macos/",
   },
   {
     name: "fish",
@@ -49,14 +53,14 @@ export const developmentEnvironment: UseItemI[] = [
     url: "https://zed.dev",
   },
   {
-    name: "Antigravity",
-    description: "the Agent-first IDE",
-    url: "https://antigravity.google",
+    name: "Claude Code",
+    description: "AI coding assistant",
+    url: "https://www.anthropic.com/claude-code",
   },
   {
-    name: "GitHub Copilot",
-    description: "AI pair programmer for faster development",
-    url: "https://copilot.github.com",
+    name: "Codex",
+    description: "AI coding assistant",
+    url: "https://openai.com/codex/",
   },
   {
     name: "Postman",
@@ -72,9 +76,9 @@ export const softwaresList: UseItemI[] = [
     url: "https://zen-browser.app",
   },
   {
-    name: "Brave Nightly",
+    name: "Vivaldi",
     description: "secondary browser for testing",
-    url: "https://brave.com",
+    url: "https://vivaldi.com",
   },
   {
     name: "uBlock Origin",
@@ -112,9 +116,9 @@ export const softwaresList: UseItemI[] = [
     url: "https://music.youtube.com",
   },
   {
-    name: "Spotify",
-    description: "alternate music library",
-    url: "https://spotify.com",
+    name: "Stremio",
+    description: "media center",
+    url: "https://www.stremio.com",
   },
   {
     name: "Jellyfin",
