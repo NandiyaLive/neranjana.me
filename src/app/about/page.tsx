@@ -1,6 +1,7 @@
 import { LinkText } from "@/components/link-text";
 import { Metadata } from "next";
 import { Certifications } from "./components/certifications";
+import { Education } from "./components/education";
 import { Experience } from "./components/experience";
 import { Volunteering } from "./components/volunteering";
 
@@ -55,9 +56,10 @@ const Page = () => {
         </div>
       </section>
 
-      <section className="grid items-start gap-6 md:grid-cols-2">
+      <section className="grid gap-6 md:grid-cols-2">
         <Experience />
         <Certifications />
+        <Education />
         <Volunteering />
       </section>
     </main>
