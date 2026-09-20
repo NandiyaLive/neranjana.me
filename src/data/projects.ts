@@ -15,10 +15,10 @@ export const freelanceProjects: Project[] = [
     completed: true,
   },
   {
-    name: "KodeBay",
+    name: "The Teaholic",
     description:
-      "A full-stack web development studio that specializes in creating enterprise-ready web applications using Next.js.",
-    url: "kodebay.cc",
+      "The Teaholic designs and builds high-quality websites, web applications, and digital platforms from the first idea through launch and long-term support.",
+    url: "theteaholic.com",
     completed: true,
   },
 ];
