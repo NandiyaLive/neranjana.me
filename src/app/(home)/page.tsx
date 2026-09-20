@@ -26,10 +26,10 @@ const Page = () => {
         </div>
 
         <h1 className="animate-fade-in-up max-w-3xl text-5xl leading-tight font-bold">
-          IT Student by Day,
+          Software Engineer.
           <br />
           <span className="bg-linear-to-r from-yellow-500 to-orange-500 bg-clip-text text-transparent">
-            Web Dev by Night!
+            Serial Side-Project Starter.
           </span>
         </h1>
 
