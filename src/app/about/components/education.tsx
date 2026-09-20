@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { EDUCATION, Education } from "@/data/education";
+import { EDUCATION } from "@/data/education";
+import type { Education } from "@/data/education";
 
 export function Education() {
   return (
