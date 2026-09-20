@@ -48,6 +48,7 @@ const Page = () => (
         }
         url="hellodynamicbiz.com"
         completed={true}
+        active={false}
       />
     </div>
 
