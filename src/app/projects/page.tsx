@@ -39,6 +39,7 @@ const Page = () => (
       )}
 
       <ProjectCard
+        key="bynamic-biz"
         name="at DynamicBiz"
         description={
           <p className="text-muted-foreground">

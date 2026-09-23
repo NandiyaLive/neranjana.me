@@ -43,14 +43,14 @@ export const hobbyProjects: Project[] = [
     name: "Nextflix",
     description:
       "Every developer's first Next.js project. Just another Netflix clone built with Next.js, TailwindCSS and SupaBase.",
-    url: "nextflix.neranjana.tech",
+    url: "nextflix-supabase.vercel.app",
     completed: true,
   },
   {
     name: "News API",
     description:
       "A simple API to fetch English news from the website of AdaDerana, a major news network in Sri Lanka.",
-    url: "newsapi.neranjana.tech",
+    url: "adaderana.vercel.app",
     completed: true,
   },
 ];

@@ -20,8 +20,8 @@ export default function UsesPage() {
       <p className="mb-4 text-lg leading-relaxed">
         A comprehensive look at the hardware, software, and technologies that
         power my development workflow. Everything I use to build, create, and
-        innovate. Inspired by Wes Bos&apos;s{" "}
-        <LinkText text="/uses" href="https://uses.tech/" external />.
+        innovate. Inspired by {" "}
+        <LinkText text="uses.tech" href="https://uses.tech/" external />.
       </p>
 
       <div className="mt-8">
