@@ -53,14 +53,14 @@ export const developmentEnvironment: UseItemI[] = [
     url: "https://zed.dev",
   },
   {
-    name: "Claude Code",
-    description: "AI coding assistant",
-    url: "https://www.anthropic.com/claude-code",
-  },
-  {
     name: "Codex",
     description: "AI coding assistant",
     url: "https://openai.com/codex/",
+  },
+  {
+    name: "Claude Code",
+    description: "AI coding assistant",
+    url: "https://www.anthropic.com/claude-code",
   },
   {
     name: "Postman",
