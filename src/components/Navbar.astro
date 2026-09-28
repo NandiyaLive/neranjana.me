@@ -1,0 +1,51 @@
+---
+import { Button } from '@/ui/button';
+import { Menu, Moon, Sun } from '@lucide/astro';
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+const home = path === '/';
+const items = ['About','Projects','Contact','Uses','Blog'];
+---
+<nav aria-label="Main navigation" class:list={['site-nav container flex items-center gap-4 py-4', home ? 'justify-end' : 'justify-between']}>
+  {!home && <a href="/" class="flex items-center gap-4"><img transition:name="avatar" src="/avatar.jpg" alt="Neranjana Prasad" width="45" height="45" class="rounded-full" /><span class="hidden leading-tight md:block"><span class="block text-lg font-semibold">Neranjana Prasad</span><span class="font-mono text-xs opacity-80">@NandiyaLive</span></span></a>}
+  <div class="flex items-center gap-4">
+    <ul id="nav-links" class="nav-links" >{items.map(label => <li><a href={`/${label.toLowerCase()}`} aria-current={path.startsWith(`/${label.toLowerCase()}`) ? 'page' : undefined} class="block py-4 text-sm font-medium uppercase opacity-80 hover:opacity-100 md:py-0">{label}</a></li>)}</ul>
+    <div class="flex items-center">
+      <Button id="theme-toggle" size="icon" variant="ghost" aria-label="Toggle Theme"><Sun class="hidden dark:block size-4" /><Moon class="dark:hidden size-4" /></Button>
+      <Button id="nav-toggle" size="icon" variant="ghost" class="md:hidden" aria-label="Toggle Navigation" aria-controls="nav-links" aria-expanded="false"><Menu class="size-4" /></Button>
+    </div>
+  </div>
+</nav>
+<script>
+  import type { TransitionBeforeSwapEvent } from 'astro:transitions/client';
+
+  document.addEventListener('astro:before-swap', (event: TransitionBeforeSwapEvent) => {
+    const dark = document.documentElement.classList.contains('dark');
+    event.newDocument.documentElement.classList.toggle('dark', dark);
+    event.newDocument.documentElement.classList.toggle('light', !dark);
+  });
+
+  document.addEventListener('astro:page-load', () => {
+    const themeButton = document.querySelector<HTMLButtonElement>('#theme-toggle');
+    themeButton?.addEventListener('click', () => {
+      const dark = document.documentElement.classList.toggle('dark');
+      document.documentElement.classList.toggle('light', !dark);
+      try { localStorage.setItem('theme', dark ? 'dark' : 'light'); } catch {}
+    });
+    const toggle = document.querySelector<HTMLButtonElement>('#nav-toggle');
+    const links = document.querySelector<HTMLElement>('#nav-links');
+    const close = () => { toggle?.setAttribute('aria-expanded', 'false'); links?.classList.remove('is-open'); };
+    toggle?.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') !== 'true';
+      toggle.setAttribute('aria-expanded', String(open));
+      links?.classList.toggle('is-open', open);
+    });
+    const controller = new AbortController();
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && toggle?.getAttribute('aria-expanded') === 'true') {
+        close(); toggle.focus();
+      }
+    }, { signal: controller.signal });
+    document.addEventListener('astro:before-swap', () => controller.abort(), { once: true });
+    links?.querySelectorAll('a').forEach(link => link.addEventListener('click', close));
+  });
+</script>

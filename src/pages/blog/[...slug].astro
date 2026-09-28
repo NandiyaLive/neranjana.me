@@ -1,0 +1,15 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import { Badge } from '@/ui/badge';
+export async function getStaticPaths() { return (await getCollection('blog')).map(post => ({params: {slug: post.id}, props: {post}})); }
+interface Props { post: CollectionEntry<'blog'> }
+const {post} = Astro.props;
+const {Content} = await render(post);
+---
+<Layout title={post.data.title} description={post.data.description} image={post.data.image} article>
+  <main id="main-content" class="page-main container max-w-4xl pt-24 pb-16">
+    <a href="/blog" class="mb-8 inline-block hover:underline">← Back to Blog</a>
+    <article><header class="mb-10 space-y-4"><h1 class="text-4xl font-bold">{post.data.title}</h1><p class="text-muted-foreground"><time datetime={post.data.date.toISOString()}>{post.data.date.toLocaleDateString('en-US', {year:'numeric', month:'long', day:'numeric', timeZone: 'UTC'})}</time>{post.data.author && ` · By ${post.data.author}`}</p><div class="flex flex-wrap gap-2">{post.data.tags.map(tag => <Badge variant="secondary">{tag}</Badge>)}</div></header><div class="prose"><Content /></div></article>
+  </main>
+</Layout>

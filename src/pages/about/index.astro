@@ -1,0 +1,35 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import LinkText from '@/components/LinkText.astro';
+import Experience from './components/_Experience.astro';
+import Certifications from './components/_Certifications.astro';
+import Education from './components/_Education.astro';
+import Volunteering from './components/_Volunteering.astro';
+---
+<Layout title="About" description="Learn more about Neranjana Prasad Ponnamperuma.">
+<main id="main-content" class="page-main container mx-auto grid max-w-7xl gap-12 pt-24 pb-16">
+      <section class="space-y-1 text-lg leading-relaxed">
+        <div class="mb-4">
+          <h1 class="text-4xl font-bold tracking-tight sm:text-5xl">
+            Neranjana Prasad Ponnamperuma
+          </h1>
+          <p class="text-muted-foreground mt-2 text-lg">
+            Software Engineer
+          </p>
+        </div>
+        <div class="grid gap-4">
+          <p>I'm a software engineer based in Kandy, Sri Lanka. I started making websites around <span class="font-medium">2011</span> with WordPress, Joomla, and Blogger. That curiosity grew into a career building web applications with <span class="font-medium">React, Next.js, and Node.js</span>.</p>
+          <p>I work with clients and product teams to turn a Figma handoff or a rough idea into a working application. I use <span class="font-medium">TypeScript, Tailwind CSS, and Node.js</span> to build responsive interfaces and the services behind them.</p>
+          <p>Outside of development, I spend my time reading novels, listening to music and podcasts, and occasionally writing on my blog.</p>
+          <p>If you have a project in mind or would like to discuss a potential role, feel free to <LinkText text="reach out" href="/contact" />. You can also <LinkText text="download my resume" href="/docs/neranjana-ponnamperuma-resume.pdf" external /> for a more detailed overview of my experience and background.</p>
+        </div>
+      </section>
+
+      <section class="grid gap-6 md:grid-cols-2">
+        <Experience />
+        <Certifications />
+        <Education />
+        <Volunteering />
+      </section>
+    </main>
+</Layout>

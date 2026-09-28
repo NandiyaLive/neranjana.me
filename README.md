@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# neranjana.me
 
-## Getting Started
+Personal portfolio built with Astro, Tailwind CSS 4, and native bejamas/ui components. All pages are statically generated. Inter and JetBrains Mono are self-hosted in `public/fonts` and loaded with `astro-font`, including preloads and metric-adjusted fallback fonts.
 
-First, run the development server:
+## Development
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```sh
+bun install
+bun run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Validation and production
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+bun run check
+bun run build
+bun run preview
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Deploy the `dist` directory to a static host. No server adapter or environment variables are required. The canonical site URL is configured in `astro.config.mjs`.
 
-## Learn More
+## Editing content
 
-To learn more about Next.js, take a look at the following resources:
+- Page templates are in `src/pages`, with interior routes using `<page>/index.astro`.
+- Page-specific components stay in `src/pages/<page>/components`. Their filenames start with `_` so Astro does not generate routes for them.
+- Portfolio content is in `src/data`.
+- Shared layout and navigation are in `src/layouts` and `src/components`.
+- Copied Bejamas components are in `src/ui` and can be edited locally.
+- Public assets and the resume are in `public`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Add Markdown or MDX files to `src/content/blog`. The collection supports `title`, `date`, `description`, optional `author`, optional `tags`, and optional `image`. Filenames determine `/blog/<slug>` URLs. The blog is empty because the original site had no published posts.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```md
+---
+title: My first post
+date: 2026-09-28
+description: A short introduction.
+tags: [Astro]
+---
 
-## Deploy on Vercel
+Write the post here.
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Migration reference
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+See `MIGRATION.md` for the inspection and rebuild plan. The verified original source is in the ignored local folder `.reference/nextjs`. Hashes are in `.reference/sha256.json`, and `.reference/history.bundle` contains the original Git history. These files are excluded from production output and are not committed. Keep a separate copy if moving the workspace to another machine.
