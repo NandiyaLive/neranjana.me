@@ -1,0 +1,5 @@
+---
+import { socialLinks } from '@/data/social-links';
+import SocialIcon from './SocialIcon.astro';
+---
+<footer class="border-t border-border/40"><div class="container flex flex-col items-center justify-between gap-4 py-8 md:flex-row"><p class="text-sm text-muted-foreground">&copy; {new Date().getFullYear()} Neranjana Prasad. All rights reserved.</p><div class="flex gap-6">{socialLinks.map(social => <a href={social.link} target="_blank" rel="noopener noreferrer" aria-label={social.platform} class="text-muted-foreground hover:text-foreground"><SocialIcon platform={social.platform} /></a>)}</div></div></footer>

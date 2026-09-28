@@ -1,0 +1,48 @@
+---
+import '@/styles/globals.css';
+import { join } from 'node:path';
+import { AstroFont } from 'astro-font';
+import { ClientRouter } from 'astro:transitions';
+import Navbar from '@/components/Navbar.astro';
+import Footer from '@/components/Footer.astro';
+interface Props { title?: string; description?: string; image?: string; article?: boolean }
+const {title, description = 'a Freelance Web Developer with expertise in Next.js and TailwindCSS.', image = '/opengraph-image.jpg', article = false} = Astro.props;
+const pageTitle = title ? `${title} — Neranjana Prasad` : 'Neranjana Prasad';
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const home = Astro.url.pathname === '/';
+---
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <ClientRouter />
+  <AstroFont config={[
+    {
+      name: 'Inter',
+      src: [
+        { path: join(process.cwd(), 'public/fonts/inter-latin-variable.woff2'), weight: '100 900', style: 'normal' },
+        { path: join(process.cwd(), 'public/fonts/inter-latin-variable-italic.woff2'), weight: '100 900', style: 'italic' },
+      ],
+      preload: true,
+      display: 'swap',
+      fallback: 'sans-serif',
+      cssVariable: 'font-inter',
+    },
+    {
+      name: 'JetBrains Mono',
+      src: [{ path: join(process.cwd(), 'public/fonts/jetbrains-mono-latin-variable.woff2'), weight: '100 800', style: 'normal' }],
+      preload: true,
+      display: 'swap',
+      fallback: 'monospace',
+      cssVariable: 'font-jetbrains-mono',
+    },
+  ]} />
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{pageTitle}</title><meta name="description" content={description} /><link rel="canonical" href={canonical} />
+  <meta property="og:title" content={pageTitle} /><meta property="og:description" content={description} /><meta property="og:type" content={article ? 'article' : 'website'} /><meta property="og:url" content={canonical} /><meta property="og:image" content={new URL(image, Astro.site)} />
+  <meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content={pageTitle} /><meta name="twitter:description" content={description} /><meta name="twitter:image" content={new URL(image === '/opengraph-image.jpg' ? '/twitter-image.jpg' : image, Astro.site)} />
+  <link rel="icon" href="/favicon.ico" sizes="any" /><link rel="icon" href="/icon0.svg" type="image/svg+xml" /><link rel="apple-touch-icon" href="/apple-icon.png" /><link rel="manifest" href="/manifest.json" />
+  <meta name="generator" content={Astro.generator} />
+  <script is:inline data-astro-rerun>try { const theme = localStorage.getItem('theme'); const dark = theme !== 'light' && (theme !== 'system' || matchMedia('(prefers-color-scheme: dark)').matches); document.documentElement.classList.toggle('dark', dark); document.documentElement.classList.toggle('light', !dark); } catch {}</script>
+</head>
+<body class="flex min-h-svh flex-col"><a href="#main-content" class="skip-link">Skip to content</a><Navbar /><div class="flex-1"><slot /></div>{!home && <Footer />}</body>
+</html>

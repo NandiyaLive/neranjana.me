@@ -1,0 +1,5 @@
+---
+interface Props { text: string; href: string; external?: boolean; class?: string }
+const { text, href, external = false, class: className } = Astro.props;
+---
+<a href={href} target={external ? '_blank' : undefined} rel={external ? 'noopener noreferrer' : undefined} class:list={['underline decoration-yellow-500 underline-offset-4 hover:text-yellow-500', className]}>{text}</a>

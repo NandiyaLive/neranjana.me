@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://neranjana.me/sitemap-index.xml

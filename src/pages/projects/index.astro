@@ -1,0 +1,73 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import { freelanceProjects, hobbyProjects, universityProjects } from '@/data/projects';
+import ProjectCard from './components/_ProjectCard.astro';
+---
+<Layout title="Projects" description="My freelance work, hobby projects, and university assignments.">
+<main id="main-content" class="page-main container mx-auto max-w-7xl pt-24 pb-16">
+    <h1 class="mb-6 text-4xl font-bold">Projects</h1>
+    <p class="mb-8 text-lg leading-relaxed">
+      For the past years, I've been working with clients and teams from all
+      walks of life and getting the chance to get my hands on the latest
+      technologies and approaches. It's been an exciting journey, and
+      it's only getting better. Check out my projects to see what I've
+      been up to!
+    </p>
+
+    <h2 class="mt-8 text-3xl font-bold uppercase">Freelance</h2>
+
+    <div class="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      {freelanceProjects.map(
+        ({ name, description, url, completed, active }) => (
+          <ProjectCard
+            name={name}
+            description={description}
+            url={url}
+            completed={completed}
+            active={active}
+          />
+        ),
+      )}
+
+      <ProjectCard
+        name="at DynamicBiz"
+        description="6 Next.js Projects, 3 WordPress Projects"
+        url="hellodynamicbiz.com"
+        completed={true}
+        active={false}
+      />
+    </div>
+
+    <h2 class="mt-8 text-3xl font-bold uppercase">Hobby</h2>
+
+    <div class="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      {hobbyProjects.map(
+        ({ name, description, url, completed, active }) => (
+          <ProjectCard
+            name={name}
+            description={description}
+            url={url}
+            completed={completed}
+            active={active}
+          />
+        ),
+      )}
+    </div>
+
+    <h2 class="mt-8 text-3xl font-bold uppercase">University</h2>
+
+    <div class="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      {universityProjects.map(
+        ({ name, description, url, completed, active }) => (
+          <ProjectCard
+            name={name}
+            description={description}
+            url={url}
+            completed={completed}
+            active={active}
+          />
+        ),
+      )}
+    </div>
+  </main>
+</Layout>

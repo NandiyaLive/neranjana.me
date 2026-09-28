@@ -1,0 +1,7 @@
+---
+import LinkText from '@/components/LinkText.astro';
+import type { UseItemI } from '@/data/uses';
+interface Props { items: UseItemI[] }
+const { items } = Astro.props;
+---
+<ul class="ml-6 grid list-disc gap-2">{items.map(({ name, description, url }) => <li>{url ? <LinkText text={name} href={url} external class="text-foreground font-medium" /> : <span class="text-foreground font-medium">{name}</span>}<span class="text-muted-foreground">{' — '}{description}</span></li>)}</ul>

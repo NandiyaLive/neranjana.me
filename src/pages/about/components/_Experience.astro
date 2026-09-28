@@ -1,0 +1,47 @@
+---
+import { WORK_EXPERIENCE, type WorkExperience } from '@/data/work';
+import { Card, CardContent, CardHeader, CardTitle } from '@/ui/card';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/ui/accordion';
+import { Badge } from '@/ui/badge';
+---
+<Card class="border-border bg-card/40 gap-2 backdrop-blur-sm">
+      <CardHeader>
+        <CardTitle><h2 class="text-xl">Experience</h2></CardTitle>
+      </CardHeader>
+      <CardContent class="space-y-4 pt-0">
+        <Accordion
+          
+          collapsible
+          class="flex w-full flex-col gap-4"
+        >
+          {WORK_EXPERIENCE.map((work: WorkExperience) => (
+            <AccordionItem
+              value={work.id}
+              class="bg-card-900/50 border-border/70 rounded-md border px-4 last:border-b"
+            >
+              <AccordionTrigger class="hover:no-underline">
+                <div class="flex flex-col items-start">
+                  <p class="text-base font-medium">{work.company}</p>
+                  <p class="text-muted-foreground text-sm font-normal">
+                    {work.position} • {work.duration}
+                  </p>
+                </div>
+              </AccordionTrigger>
+              <AccordionContent class="px-0 pt-0 pb-4 ">
+                <ul class="list-disc space-y-2 pl-5 text-sm">
+                  {work.responsibilities.map((item) => (
+                    <li>{item}</li>
+                  ))}
+                </ul>
+
+                <div class="mt-4 flex items-center flex-wrap gap-2">
+                  {work.skills.map((skill) => (
+                    <Badge>{skill}</Badge>
+                  ))}
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </CardContent>
+    </Card>
