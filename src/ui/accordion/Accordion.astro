@@ -168,10 +168,5 @@ const rootDefaultValue = Array.isArray(defaultValue)
 <script>
   import { createAccordion } from "@data-slot/accordion";
 
-  document.addEventListener('astro:page-load', () => {
-    const accordions = Array.from(document.querySelectorAll('[data-slot="accordion"]'), el => createAccordion(el));
-    document.addEventListener('astro:before-swap', () => {
-      accordions.forEach(accordion => accordion.destroy());
-    }, { once: true });
-  });
+  document.querySelectorAll('[data-slot="accordion"]').forEach(el => createAccordion(el));
 </script>
