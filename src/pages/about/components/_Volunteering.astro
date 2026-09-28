@@ -1,0 +1,45 @@
+---
+import { VOLUNTEERING_EXPERIENCES, type VolunteeringExperience } from '@/data/volunteering';
+import { Card, CardContent, CardHeader, CardTitle } from '@/ui/card';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/ui/accordion';
+---
+<Card class="border-border bg-card/40 gap-2 backdrop-blur-sm">
+      <CardHeader>
+        <CardTitle><h2 class="text-xl">Volunteering</h2></CardTitle>
+      </CardHeader>
+      <CardContent class="space-y-4 pt-0">
+        <Accordion
+          
+          collapsible
+          class="flex w-full flex-col gap-4"
+        >
+          {VOLUNTEERING_EXPERIENCES.map(
+            (experience: VolunteeringExperience) => (
+              <AccordionItem
+                value={experience.organization}
+                class="bg-card-900/50 border-border/70 rounded-md border px-4 last:border-b"
+              >
+                <AccordionTrigger class="hover:no-underline">
+                  <div class="flex flex-col items-start">
+                    <p class="text-base font-medium">
+                      {experience.organization}
+                    </p>
+                    <p class="text-muted-foreground text-sm font-normal">
+                      {experience.role} • {experience.startDate} - 
+                      {experience.endDate}
+                    </p>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent class="px-0 pt-0 pb-4 ">
+                  <ul class="list-disc space-y-2 pl-5 text-sm">
+                    {experience.responsibilities.map((item) => (
+                      <li>{item}</li>
+                    ))}
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
+            ),
+          )}
+        </Accordion>
+      </CardContent>
+    </Card>

@@ -1,0 +1,65 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import LinkText from '@/components/LinkText.astro';
+import { developmentEnvironment, hardware, softwaresList, techStack, websiteStack } from '@/data/uses';
+import UseItems from './components/_UseItems.astro';
+---
+<Layout title="Uses" description="Tools, software, and tech stack I use for development">
+<main id="main-content" class="page-main container mx-auto max-w-7xl pt-24 pb-16">
+      <h1 class="mb-6 text-4xl font-bold">Uses</h1>
+    <p class="mb-4 text-lg leading-relaxed">A comprehensive look at the hardware, software, and technologies that power my development workflow. Everything I use to build, create, and innovate. Inspired by <LinkText text="uses.tech" href="https://uses.tech/" external />.</p>
+
+      <div class="mt-8">
+        <div class="mb-4 space-y-2">
+          <h2 class="text-3xl font-bold">Hardware Setup</h2>
+          <p class="text-muted-foreground">
+            Devices and peripherals that power my workspace.
+          </p>
+        </div>
+        <UseItems items={hardware} />
+      </div>
+
+      <div class="mt-16">
+        <div class="mb-4 space-y-2">
+          <h2 class="text-3xl font-bold">Development Environment</h2>
+          <p class="text-muted-foreground">
+            Core tools and configurations for my dev setup.
+          </p>
+        </div>
+
+        <UseItems items={developmentEnvironment} />
+      </div>
+
+      <div class="mt-16">
+        <div class="mb-4 space-y-2">
+          <h2 class="text-3xl font-bold">Software & Services</h2>
+          <p class="text-muted-foreground">
+            Applications I rely on for productivity and entertainment.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <UseItems items={softwaresList} />
+        </div>
+      </div>
+
+      <div class="mt-16">
+        <div class="mb-4 space-y-2">
+          <h2 class="text-3xl font-bold">Tech Stack</h2>
+          <p class="text-muted-foreground">
+            Languages, frameworks, and technologies I work with.
+          </p>
+        </div>
+        <UseItems items={techStack} />
+      </div>
+
+      <div class="mt-16">
+        <div class="mb-4 space-y-2">
+          <h2 class="text-3xl font-bold">This Website</h2>
+          <p class="text-muted-foreground">
+            The stack used to build and host this site.
+          </p>
+        </div>
+        <UseItems items={websiteStack} />
+      </div>
+    </main>
+</Layout>

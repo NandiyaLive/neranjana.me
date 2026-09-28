@@ -1,0 +1,19 @@
+---
+import { EDUCATION, type Education } from '@/data/education';
+import { Card, CardContent, CardHeader, CardTitle } from '@/ui/card';
+---
+<Card class="border-border bg-card/40 gap-2 backdrop-blur-sm">
+      <CardHeader>
+        <CardTitle><h2 class="text-xl">Education</h2></CardTitle>
+      </CardHeader>
+      <CardContent class="space-y-4">
+        {EDUCATION.map((education: Education) => (
+          <div>
+            <p class="font-medium">{education.institution}</p>
+            <p class="text-muted-foreground text-sm">
+              {education.degree} • {education.duration}
+            </p>
+          </div>
+        ))}
+      </CardContent>
+    </Card>

@@ -193,9 +193,10 @@ export const techStack: UseItemI[] = [
 ];
 
 export const websiteStack: UseItemI[] = [
+  { name: "bejamas/ui", description: "native Astro UI components", url: "https://ui.bejamas.com/" },
   {
-    name: "Next.js",
-    description: "react framework powering this site",
+    name: "Astro",
+    description: "static framework powering this site",
   },
   {
     name: "Tailwind CSS",
@@ -215,6 +216,6 @@ export const websiteStack: UseItemI[] = [
   },
   {
     name: "Inter + JetBrains Mono",
-    description: "Google Fonts typography",
+    description: "self-hosted typography",
   },
 ];

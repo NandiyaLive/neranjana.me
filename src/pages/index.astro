@@ -1,0 +1,21 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import LinkText from '@/components/LinkText.astro';
+import SocialIcon from '@/components/SocialIcon.astro';
+import { socialLinks } from '@/data/social-links';
+import { Button } from '@/ui/button';
+---
+<Layout>
+  <main id="main-content" class="home-main page-main relative flex items-end overflow-hidden py-8">
+    <div class="home-background" aria-hidden="true"></div>
+    <div class="container space-y-8">
+      <div class="relative mb-10 w-fit">
+        <img transition:name="avatar" src="/avatar.jpg" alt="Neranjana's Avatar" width="150" height="150" fetchpriority="high" class="rounded-full border-4 border-yellow-500/30 dark:border-yellow-500/20" />
+        <div class="absolute -bottom-4 left-1/2 flex -translate-x-1/2 gap-4 rounded-full bg-yellow-500 px-4 py-2 text-black">{socialLinks.map(social => <a href={social.link} target="_blank" rel="noopener noreferrer" aria-label={social.platform} class="transition-transform hover:scale-110"><SocialIcon platform={social.platform} /></a>)}</div>
+      </div>
+      <h1 class="max-w-3xl text-4xl leading-tight font-bold sm:text-5xl">Software Engineer.<br /><span class="bg-linear-to-r from-yellow-500 to-orange-500 bg-clip-text text-transparent">Serial Side-Project Starter.</span></h1>
+      <p class="max-w-2xl text-lg leading-relaxed opacity-90">Hey, I'm Neranjana. I'm a Web Developer who builds fast, interactive, and user-friendly websites, with expertise in <LinkText text="Next.js" href="https://nextjs.org" external /> and <LinkText text="TailwindCSS" href="https://tailwindcss.com/" external />.</p>
+      <div><Button as="a" href="/contact" class="rounded-full px-8"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500 blur-[1px]"></span>Open For Hiring</Button></div>
+    </div>
+  </main>
+</Layout>
