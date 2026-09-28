@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+import avatar from '@/assets/avatar.jpg';
 import { Button } from '@/ui/button';
 import { Menu, Moon, Sun } from '@lucide/astro';
 const path = Astro.url.pathname.replace(/\/$/, '') || '/';
@@ -6,7 +8,7 @@ const home = path === '/';
 const items = ['About','Projects','Contact','Uses','Blog'];
 ---
 <nav aria-label="Main navigation" class:list={['site-nav container flex items-center gap-4 py-4', home ? 'justify-end' : 'justify-between']}>
-  {!home && <a href="/" class="flex items-center gap-4"><img transition:name="avatar" src="/avatar.jpg" alt="Neranjana Prasad" width="45" height="45" class="rounded-full" /><span class="hidden leading-tight md:block"><span class="block text-lg font-semibold">Neranjana Prasad</span><span class="font-mono text-xs opacity-80">@NandiyaLive</span></span></a>}
+  {!home && <a href="/" class="flex items-center gap-4"><Image transition:name="avatar" src={avatar} alt="Neranjana Prasad" width={45} height={45} loading="eager" class="rounded-full" /><span class="hidden leading-tight md:block"><span class="block text-lg font-semibold">Neranjana Prasad</span><span class="font-mono text-xs opacity-80">@NandiyaLive</span></span></a>}
   <div class="flex items-center gap-4">
     <ul id="nav-links" class="nav-links" >{items.map(label => <li><a href={`/${label.toLowerCase()}`} aria-current={path.startsWith(`/${label.toLowerCase()}`) ? 'page' : undefined} class="block py-4 text-sm font-medium uppercase opacity-80 hover:opacity-100 md:py-0">{label}</a></li>)}</ul>
     <div class="flex items-center">

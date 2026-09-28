@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+import avatar from '@/assets/avatar.jpg';
 import Layout from '@/layouts/Layout.astro';
 import LinkText from '@/components/LinkText.astro';
 import SocialIcon from '@/components/SocialIcon.astro';
@@ -10,7 +12,7 @@ import { Button } from '@/ui/button';
     <div class="home-background" aria-hidden="true"></div>
     <div class="container space-y-8">
       <div class="relative mb-10 w-fit">
-        <img transition:name="avatar" src="/avatar.jpg" alt="Neranjana's Avatar" width="150" height="150" fetchpriority="high" class="rounded-full border-4 border-yellow-500/30 dark:border-yellow-500/20" />
+        <Image transition:name="avatar" src={avatar} alt="Neranjana's Avatar" width={150} height={150} loading="eager" fetchpriority="high" class="rounded-full border-4 border-yellow-500/30 dark:border-yellow-500/20" />
         <div class="absolute -bottom-4 left-1/2 flex -translate-x-1/2 gap-4 rounded-full bg-yellow-500 px-4 py-2 text-black">{socialLinks.map(social => <a href={social.link} target="_blank" rel="noopener noreferrer" aria-label={social.platform} class="transition-transform hover:scale-110"><SocialIcon platform={social.platform} /></a>)}</div>
       </div>
       <h1 class="max-w-3xl text-4xl leading-tight font-bold sm:text-5xl">Software Engineer.<br /><span class="bg-linear-to-r from-yellow-500 to-orange-500 bg-clip-text text-transparent">Serial Side-Project Starter.</span></h1>
