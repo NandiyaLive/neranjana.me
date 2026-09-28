@@ -19,6 +19,12 @@ bun run preview
 
 Deploy the `dist` directory to a static host. No server adapter or environment variables are required. The canonical site URL is configured in `astro.config.mjs`.
 
+## Page loading
+
+Avatar images include 1x, 1.5x, 2x, and 3x WebP variants without changing their display size. The small site stylesheet is inlined into each page to avoid a render-blocking CSS request. This increases each HTML response and means the stylesheet is not cached separately between pages.
+
+Navigation uses regular browser page loads with native view transitions and a shared avatar transition. Browsers without cross-document view transitions use normal navigation. Reduced motion disables these transitions. Theme preferences are restored before rendering, and menu and accordion scripts initialize on each document load.
+
 ## Editing content
 
 - Page templates are in `src/pages`, with interior routes using `<page>/index.astro`.

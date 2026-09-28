@@ -7,6 +7,8 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://neranjana.me',
   integrations: [mdx(), sitemap()],
+  // Deliver the small site stylesheet with the HTML to avoid a blocking request.
+  build: { inlineStylesheets: 'always' },
   vite: { plugins: [tailwindcss()] },
   markdown: { shikiConfig: { themes: { light: 'github-light', dark: 'github-dark' } } },
 });
