@@ -7,7 +7,7 @@ export interface Education {
 export const EDUCATION: Education[] = [
   {
     degree: "BSc Honours in Information Technology",
-    institution: "University of Vavuniya",
+    institution: "University of Jaffna",
     duration: "2022 - 2026",
   },
 ];
