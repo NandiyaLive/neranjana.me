@@ -4,6 +4,7 @@ import { Clock, CircleQuestionMark, Mail } from '@lucide/astro';
 import { FAQS } from '@/data/faq';
 import { socialLinks } from '@/data/social-links';
 import SocialIcon from '@/components/SocialIcon.astro';
+import WhatsAppContact from '@/components/WhatsAppContact.astro';
 ---
 <Layout title="Contact" description="Get in touch with me for freelance work or any inquiries you may have.">
 <main id="main-content" class="page-main container mx-auto max-w-7xl pt-24 pb-16">
@@ -31,6 +32,8 @@ import SocialIcon from '@/components/SocialIcon.astro';
               </a>
             </div>
           </div>
+
+          <WhatsAppContact />
 
           {socialLinks.map((social) => {
             

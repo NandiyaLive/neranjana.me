@@ -1,0 +1,70 @@
+---
+import { MessageCircle } from '@lucide/astro';
+
+const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
+---
+<div class="flex items-start gap-4" data-whatsapp data-sitekey={siteKey}>
+  <div class="rounded-lg bg-yellow-500/10 p-3 text-yellow-500">
+    <MessageCircle class="h-6 w-6" />
+  </div>
+  <div>
+    <h3 class="font-semibold">WhatsApp</h3>
+    <div data-turnstile></div>
+    <button
+      type="button"
+      data-whatsapp-button
+      class="opacity-80 transition-colors hover:text-yellow-500 hover:opacity-100 disabled:cursor-wait disabled:opacity-40"
+    >
+      Open WhatsApp chat
+    </button>
+    <p class="mt-1 text-sm text-red-600 dark:text-red-500" data-whatsapp-error hidden>
+      Verification failed. Reload the page and try again.
+    </p>
+  </div>
+</div>
+
+<script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
+<script is:inline>
+  const root = document.querySelector('[data-whatsapp]');
+  const button = root.querySelector('[data-whatsapp-button]');
+  const error = root.querySelector('[data-whatsapp-error]');
+  const container = root.querySelector('[data-turnstile]');
+  let widgetId;
+
+  const getToken = () =>
+    new Promise((resolve, reject) => {
+      const options = {
+        sitekey: root.dataset.sitekey,
+        appearance: 'interaction-only',
+        callback: resolve,
+        'error-callback': reject,
+      };
+      if (widgetId !== undefined) turnstile.remove(widgetId);
+      widgetId = turnstile.render(container, options);
+    });
+
+  button.addEventListener('click', async () => {
+    button.disabled = true;
+    error.hidden = true;
+    // Open the tab synchronously so popup blockers see the click, then point it at the link.
+    const tab = window.open('', '_blank');
+    if (tab) tab.opener = null;
+    try {
+      const token = await getToken();
+      const res = await fetch('/api/whatsapp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ token }),
+      });
+      if (!res.ok) throw new Error();
+      const { url } = await res.json();
+      if (tab) tab.location.href = url;
+      else window.location.href = url;
+    } catch {
+      tab?.close();
+      error.hidden = false;
+    } finally {
+      button.disabled = false;
+    }
+  });
+</script>
