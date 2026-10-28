@@ -35,7 +35,7 @@ export const hobbyProjects: Project[] = [
     name: "Quoteflare",
     description:
       "A self-hosted invoicing app for one-person businesses. A public pricing calculator, quotes, invoices, email and reminders on Cloudflare's free tier.",
-    url: "/apps/quoteflare",
+    url: "/projects/quoteflare",
     completed: true,
   },
   {
@@ -50,7 +50,7 @@ export const hobbyProjects: Project[] = [
     name: "Nextflix",
     description:
       "Every developer's first Next.js project. Just another Netflix clone built with Next.js, TailwindCSS and SupaBase.",
-    url: "nxtfx.neranjana.tech",
+    url: "nextflix-supabase.vercel.app",
     completed: true,
   },
   {
