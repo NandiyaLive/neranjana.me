@@ -97,7 +97,11 @@ const cardVariants = cva(
   {...rest}
   data-slot="card"
   data-variant={variant}
-  class={cn("ring-foreground/10 bg-card border-none text-card-foreground gap-6 overflow-hidden rounded-xl py-6 text-sm shadow-sm ring-1 has-[>img:first-child]:pt-0 data-[size=sm]:gap-4 data-[size=sm]:py-4 *:[img:first-child]:rounded-t-xl *:[img:last-child]:rounded-b-xl border border-border shadow-lg", cardVariants({ variant }), className)}
+  class={cn(
+    "ring-foreground/10 bg-card border-none text-card-foreground gap-6 overflow-hidden rounded-xl py-6 text-sm shadow-sm ring-1 has-[>img:first-child]:pt-0 data-[size=sm]:gap-4 data-[size=sm]:py-4 *:[img:first-child]:rounded-t-xl *:[img:last-child]:rounded-b-xl border border-border shadow-lg",
+    cardVariants({ variant }),
+    className,
+  )}
 >
   <slot />
 </div>

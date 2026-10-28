@@ -7,7 +7,7 @@
  *
  * @preview
  *
- * <Accordion class="w-full max-w-[420px] self-start mt-10" defaultValue="accordion-item-1">
+ * <Accordion class="w-full max-w-105 self-start mt-10" defaultValue="accordion-item-1">
  *   <AccordionItem value="accordion-item-1">
  *     <AccordionTrigger>
  *       Is it accessible?
@@ -33,7 +33,7 @@
  * import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@bejamas/ui/components/accordion';
  * ---
  *
- * <Accordion class="w-full max-w-[420px] self-start" defaultValue="accordion-item-1">
+ * <Accordion class="w-full max-w-105 self-start" defaultValue="accordion-item-1">
  *   <AccordionItem value="accordion-item-1">
  *     <AccordionTrigger>
  *       Is it accessible?
@@ -102,7 +102,7 @@
  *
  * ### Multiple choice accordion
  *
- * <Accordion class="w-full max-w-[420px] self-start" multiple defaultValue={["accordion-item-1"]}>
+ * <Accordion class="w-full max-w-105 self-start" multiple defaultValue={["accordion-item-1"]}>
  *   <AccordionItem value="accordion-item-1">
  *     <AccordionTrigger>
  *       Is it accessible?
@@ -168,10 +168,17 @@ const rootDefaultValue = Array.isArray(defaultValue)
 <script>
   import { createAccordion } from "@data-slot/accordion";
 
-  document.addEventListener('astro:page-load', () => {
-    const accordions = Array.from(document.querySelectorAll('[data-slot="accordion"]'), el => createAccordion(el));
-    document.addEventListener('astro:before-swap', () => {
-      accordions.forEach(accordion => accordion.destroy());
-    }, { once: true });
+  document.addEventListener("astro:page-load", () => {
+    const accordions = Array.from(
+      document.querySelectorAll('[data-slot="accordion"]'),
+      (el) => createAccordion(el),
+    );
+    document.addEventListener(
+      "astro:before-swap",
+      () => {
+        accordions.forEach((accordion) => accordion.destroy());
+      },
+      { once: true },
+    );
   });
 </script>

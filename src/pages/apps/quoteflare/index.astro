@@ -1,0 +1,182 @@
+---
+import { Code } from "astro:components";
+import { ArrowLeft, Scale } from "@lucide/astro";
+import Layout from "@/layouts/Layout.astro";
+import SocialIcon from "@/components/SocialIcon.astro";
+import Cover from "./components/_Cover.astro";
+import { Badge } from "@/ui/badge";
+import { Button } from "@/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/ui/card";
+const repoUrl = "https://github.com/NandiyaLive/quoteflare";
+const tags = ["Cloudflare Workers", "D1", "TanStack Start", "React"];
+const parts = [
+  {
+    title: "Pricing calculator",
+    text: "A visitor picks services, options and quantities. The server recomputes the total from current prices, so the client cannot change it.",
+  },
+  {
+    title: "Quotes to invoices",
+    text: "A submitted quote becomes an invoice numbered like INV-2026-0001. Advance payments are supported.",
+  },
+  {
+    title: "Email",
+    text: "Invoices go out through Resend with a link to a public page. A webhook records delivery, bounces and complaints.",
+  },
+  {
+    title: "Reminders",
+    text: "A daily job marks unpaid invoices overdue and can email clients before and after the due date.",
+  },
+  {
+    title: "Recurring invoices",
+    text: "Schedules create, and optionally send, invoices weekly, monthly, quarterly or yearly.",
+  },
+  {
+    title: "Admin dashboard",
+    text: "Clients, services, packages, quotes, invoices and settings, behind Cloudflare Access.",
+  },
+];
+const quickStart = `git clone ${repoUrl}.git
+cd quoteflare
+bun install
+cp .dev.vars.example .dev.vars
+bun run db:migrate:local
+bun run db:seed
+bun run dev`;
+---
+
+<Layout
+  title="Quoteflare"
+  image="/apps/quoteflare/og.png"
+  description="A self-hosted invoicing app for one-person businesses, running on Cloudflare's free tier."
+>
+  <main id="main-content" class="page-main container max-w-4xl pt-24 pb-16">
+    <Button as="a" href="/projects" variant="outline" size="sm" class="mb-8">
+      <ArrowLeft />
+      Back to Projects
+    </Button>
+    <article>
+      <Cover />
+
+      <header class="my-10 space-y-4">
+        <h1 class="space-y-4">
+          <span class="block text-4xl font-bold">Quoteflare</span>
+        </h1>
+        <p class="text-muted-foreground text-lg">
+          Quotes and invoices for a one-person business, running on Cloudflare's
+          free tier.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          {tags.map((tag) => (
+            <Badge variant="secondary">{tag}</Badge>
+          ))}
+        </div>
+        <div class="flex flex-wrap items-center gap-3 pt-2">
+          <Button
+            as="a"
+            href={repoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="rounded-full px-6"
+          >
+            <SocialIcon platform="GitHub" class="size-4" />
+            View on GitHub
+          </Button>
+          <Button
+            as="a"
+            href={`${repoUrl}/blob/main/LICENSE`}
+            target="_blank"
+            rel="noopener noreferrer"
+            variant="secondary"
+            class="rounded-full px-6"
+          >
+            <Scale class="size-4" />
+            MIT License
+          </Button>
+        </div>
+      </header>
+
+      <div class="prose">
+        <p>
+          Quoteflare is a self-hosted invoicing app for a single owner. Visitors
+          build a quote with a public pricing calculator. You turn the quote
+          into an invoice, email it to the client, and let the app chase late
+          payments.
+        </p>
+        <p>
+          It runs as one Cloudflare Worker with a D1 database and an R2 bucket,
+          so a small business can host it without paying for servers. It does
+          not take payments. Invoices carry a status that you set yourself.
+        </p>
+        <h2>What it does</h2>
+      </div>
+
+      <div class="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2">
+        {parts.map(({ title, text }) => (
+          <Card class="border-border bg-card/40 gap-2 shadow-none backdrop-blur-sm">
+            <CardHeader>
+              <CardTitle>
+                <h3 class="text-xl">{title}</h3>
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p class="text-muted-foreground">{text}</p>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+
+      <div class="prose mt-8">
+        <p>
+          Behind the calculator sits a service catalogue with categories, fixed
+          or custom pricing, weekly to yearly billing, option groups, required
+          services and packages. You can import a whole catalogue from JSON.
+        </p>
+
+        <h2>How it is built</h2>
+        <p>
+          The app uses TanStack Start and React 19 on Cloudflare Workers, with
+          D1 through Drizzle ORM and R2 for the logo. A small Hono app at{" "}
+          <code>/api</code> handles the Resend webhook and the public JSON
+          endpoints. Emails are React Email templates, the UI is Tailwind CSS 4
+          with shadcn/ui on Base UI, and Vitest runs the tests.
+        </p>
+        <p>
+          The admin area sits behind Cloudflare Access with a one-time PIN. The
+          Worker verifies the login again on its own, so a request that skips
+          Access still gets a 401.
+        </p>
+
+        <h2>Run it locally</h2>
+        <p>
+          You need Node.js 22.12 or newer and{" "}
+          <a href="https://bun.sh" target="_blank" rel="noopener noreferrer">
+            Bun
+          </a>
+          .
+        </p>
+        <Code
+          code={quickStart}
+          lang="bash"
+          themes={{ light: "github-light", dark: "github-dark" }}
+        />
+        <p>
+          The app runs at <code>http://localhost:3000</code>. Use{" "}
+          <code>bun run dev</code>, not <code>bun --bun run dev</code>, which
+          breaks the Cloudflare plugin. The example env file uses Cloudflare's
+          always-pass Turnstile test keys, so add a <code>RESEND_API_KEY</code>{" "}
+          to send real email.
+        </p>
+
+        <h2>Source</h2>
+        <p>
+          Quoteflare is released under the MIT License. The code, the deploy
+          steps and a full guide are on{" "}
+          <a href={repoUrl} target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
+          . Issues and pull requests are welcome.
+        </p>
+      </div>
+    </article>
+  </main>
+</Layout>

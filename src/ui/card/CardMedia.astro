@@ -7,10 +7,7 @@ interface Props extends HTMLAttributes<"div"> {
   class?: string;
 }
 
-const {
-  class: className = "",
-  ...rest
-} = Astro.props as Props;
+const { class: className = "", ...rest } = Astro.props as Props;
 
 const mediaVariants = cva(
   "z-0 rounded-lg overflow-hidden [&_img]:size-full [&_img]:object-cover",
@@ -24,4 +21,3 @@ const mediaVariants = cva(
 >
   <slot />
 </div>
-

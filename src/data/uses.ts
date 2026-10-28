@@ -193,7 +193,11 @@ export const techStack: UseItemI[] = [
 ];
 
 export const websiteStack: UseItemI[] = [
-  { name: "bejamas/ui", description: "native Astro UI components", url: "https://ui.bejamas.com/" },
+  {
+    name: "bejamas/ui",
+    description: "native Astro UI components",
+    url: "https://ui.bejamas.com/",
+  },
   {
     name: "Astro",
     description: "static framework powering this site",
