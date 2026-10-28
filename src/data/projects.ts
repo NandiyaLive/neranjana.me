@@ -25,6 +25,13 @@ export const freelanceProjects: Project[] = [
 
 export const hobbyProjects: Project[] = [
   {
+    name: "Quoteflare",
+    description:
+      "A self-hosted invoicing app for one-person businesses. A public pricing calculator, quotes, invoices, email and reminders on Cloudflare's free tier.",
+    url: "/apps/quoteflare",
+    completed: true,
+  },
+  {
     name: "xIGDLBot",
     description:
       "A Telegram bot that allows users to download Instagram photos, videos, reels, and IGTV videos directly from Telegram.",
