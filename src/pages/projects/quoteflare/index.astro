@@ -163,18 +163,103 @@ bun run dev`;
           services and packages. You can import a whole catalogue from JSON.
         </p>
 
-        <h2>How it is built</h2>
+        <h2>Tech stack</h2>
+        <ul>
+          <li>
+            <strong>TanStack Start</strong> — React 19 framework and routing.
+          </li>
+          <li>
+            <strong>Cloudflare Workers</strong> — Runs the app and the daily
+            cron.
+          </li>
+          <li>
+            <strong>Cloudflare D1</strong> — Database, queried with Drizzle ORM.
+          </li>
+          <li>
+            <strong>Cloudflare R2</strong> — Stores the logo.
+          </li>
+          <li>
+            <strong>Hono</strong> — Serves <code>/api</code>.
+          </li>
+          <li>
+            <strong>Resend</strong> — Sends email and reports delivery.
+          </li>
+          <li>
+            <strong>React Email</strong> — Renders email templates.
+          </li>
+          <li>
+            <strong>Cloudflare Access</strong> — One-time PIN login for{" "}
+            <code>/admin</code>.
+          </li>
+          <li>
+            <strong>Tailwind CSS 4 and shadcn/ui</strong> — Styling and
+            components.
+          </li>
+          <li>
+            <strong>Vitest</strong> — Runs the tests.
+          </li>
+        </ul>
+
+        <h2>Design notes</h2>
+        <ul>
+          <li>
+            The browser sends only the choices a visitor made. The server reads
+            current prices from D1 and computes the total, and Turnstile checks
+            the submit.
+          </li>
+          <li>
+            Money is stored in cents and percentages in basis points, so every
+            amount is an integer.
+          </li>
+          <li>
+            One daily cron run does three jobs in order. It marks overdue
+            invoices, sends reminders, then creates recurring invoices.
+          </li>
+        </ul>
+
+        <h2>Limits</h2>
+        <ul>
+          <li>It has one owner. Access allows a single email.</li>
+          <li>It takes no payments. You set each invoice's status yourself.</li>
+          <li>Reminders stay off until you turn them on in settings.</li>
+          <li>Sending email needs a domain verified in Resend.</li>
+          <li>
+            The Cloudflare free plan allows 100,000 Worker requests, 5 million
+            D1 rows read and 100,000 D1 rows written per day.
+          </li>
+          <li>
+            A daily run handles at most 5 recurring schedules to stay within the
+            free plan's subrequest limit. The rest wait for the next day.
+          </li>
+        </ul>
+
+        <h2>Deploy it</h2>
         <p>
-          The app uses TanStack Start and React 19 on Cloudflare Workers, with
-          D1 through Drizzle ORM and R2 for the logo. A small Hono app at{" "}
-          <code>/api</code> handles the Resend webhook and the public JSON
-          endpoints. Emails are React Email templates, the UI is Tailwind CSS 4
-          with shadcn/ui on Base UI, and Vitest runs the tests.
+          The Deploy to Cloudflare button above copies the repository to your
+          GitHub account, creates the D1 database and R2 bucket, and deploys the
+          Worker to <code>workers.dev</code>. It asks for the secrets listed in{" "}
+          <code>.dev.vars.example</code>. Then:
         </p>
+        <ol>
+          <li>
+            Run <code>bunx wrangler d1 migrations apply DB --remote</code> from
+            a clone of your copy.
+          </li>
+          <li>
+            Set <code>ACCESS_TEAM_DOMAIN</code>, <code>TURNSTILE_SITE_KEY</code>
+            , <code>EMAIL_FROM</code>, <code>APP_ORIGIN</code> and{" "}
+            <code>ALLOWED_ORIGINS</code> in <code>wrangler.toml</code> and push.
+          </li>
+          <li>
+            Create a Cloudflare Access application for <code>/admin/*</code>{" "}
+            with one allow policy for your email, then set{" "}
+            <code>ACCESS_AUD</code> to its audience tag.
+          </li>
+        </ol>
         <p>
-          The admin area sits behind Cloudflare Access with a one-time PIN. The
-          Worker verifies the login again on its own, so a request that skips
-          Access still gets a 401.
+          Until the third step is done, <code>/admin</code> rejects every
+          request. The GitHub guide covers deploying by hand, the email webhook
+          and backups.
         </p>
 
         <h2>Run it locally</h2>
