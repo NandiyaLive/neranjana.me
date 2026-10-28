@@ -1,6 +1,16 @@
 ---
 import { Code } from "astro:components";
-import { ArrowLeft, Scale } from "@lucide/astro";
+import {
+  ArrowLeft,
+  BellRing,
+  Calculator,
+  CloudUpload,
+  ExternalLink,
+  FileText,
+  LayoutDashboard,
+  Mail,
+  Repeat,
+} from "@lucide/astro";
 import Layout from "@/layouts/Layout.astro";
 import SocialIcon from "@/components/SocialIcon.astro";
 import Cover from "./components/_Cover.astro";
@@ -8,30 +18,38 @@ import { Badge } from "@/ui/badge";
 import { Button } from "@/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/ui/card";
 const repoUrl = "https://github.com/NandiyaLive/quoteflare";
+const demoUrl = "https://invoices.neranjana.me";
+const deployUrl = `https://deploy.workers.cloudflare.com/?url=${repoUrl}`;
 const tags = ["Cloudflare Workers", "D1", "TanStack Start", "React"];
 const parts = [
   {
     title: "Pricing calculator",
+    icon: Calculator,
     text: "A visitor picks services, options and quantities. The server recomputes the total from current prices, so the client cannot change it.",
   },
   {
     title: "Quotes to invoices",
+    icon: FileText,
     text: "A submitted quote becomes an invoice numbered like INV-2026-0001. Advance payments are supported.",
   },
   {
     title: "Email",
+    icon: Mail,
     text: "Invoices go out through Resend with a link to a public page. A webhook records delivery, bounces and complaints.",
   },
   {
     title: "Reminders",
+    icon: BellRing,
     text: "A daily job marks unpaid invoices overdue and can email clients before and after the due date.",
   },
   {
     title: "Recurring invoices",
+    icon: Repeat,
     text: "Schedules create, and optionally send, invoices weekly, monthly, quarterly or yearly.",
   },
   {
     title: "Admin dashboard",
+    icon: LayoutDashboard,
     text: "Clients, services, packages, quotes, invoices and settings, behind Cloudflare Access.",
   },
 ];
@@ -83,14 +101,24 @@ bun run dev`;
           </Button>
           <Button
             as="a"
-            href={`${repoUrl}/blob/main/LICENSE`}
+            href={demoUrl}
             target="_blank"
             rel="noopener noreferrer"
             variant="secondary"
             class="rounded-full px-6"
           >
-            <Scale class="size-4" />
-            MIT License
+            <ExternalLink class="size-4" />
+            Live Demo
+          </Button>
+          <Button
+            as="a"
+            href={deployUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="rounded-full bg-[#fd6503] px-6 text-white hover:bg-[#e35a02]"
+          >
+            <CloudUpload class="size-4" />
+            Deploy to Cloudflare
           </Button>
         </div>
       </header>
@@ -111,11 +139,14 @@ bun run dev`;
       </div>
 
       <div class="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2">
-        {parts.map(({ title, text }) => (
+        {parts.map(({ title, icon: Icon, text }) => (
           <Card class="border-border bg-card/40 gap-2 shadow-none backdrop-blur-sm">
             <CardHeader>
               <CardTitle>
-                <h3 class="text-xl">{title}</h3>
+                <h3 class="flex items-center gap-2 text-xl">
+                  <Icon class="text-muted-foreground size-5 shrink-0" />
+                  {title}
+                </h3>
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -169,8 +200,10 @@ bun run dev`;
 
         <h2>Source</h2>
         <p>
-          Quoteflare is released under the MIT License. The code, the deploy
-          steps and a full guide are on{" "}
+          Quoteflare is an open source project released under the MIT License.
+          It is an independent project and is not affiliated with, endorsed by
+          or sponsored by Cloudflare. The code, the deploy steps and a full
+          guide are on{" "}
           <a href={repoUrl} target="_blank" rel="noopener noreferrer">
             GitHub
           </a>
