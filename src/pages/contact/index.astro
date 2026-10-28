@@ -1,20 +1,27 @@
 ---
-import Layout from '@/layouts/Layout.astro';
-import { Clock, CircleQuestionMark, Mail } from '@lucide/astro';
-import { FAQS } from '@/data/faq';
-import { socialLinks } from '@/data/social-links';
-import SocialIcon from '@/components/SocialIcon.astro';
-import WhatsAppContact from '@/components/WhatsAppContact.astro';
+import Layout from "@/layouts/Layout.astro";
+import { Clock, CircleQuestionMark, Mail } from "@lucide/astro";
+import { FAQS } from "@/data/faq";
+import { socialLinks } from "@/data/social-links";
+import SocialIcon from "@/components/SocialIcon.astro";
+import WhatsAppContact from "@/components/WhatsAppContact.astro";
 ---
-<Layout title="Contact" description="Get in touch with me for freelance work or any inquiries you may have.">
-<main id="main-content" class="page-main container mx-auto max-w-7xl pt-24 pb-16">
+
+<Layout
+  title="Contact"
+  description="Get in touch with me for freelance work or any inquiries you may have."
+>
+  <main
+    id="main-content"
+    class="page-main container mx-auto max-w-7xl pt-24 pb-16"
+  >
     <div class="grid grid-cols-1 gap-12 md:grid-cols-2">
       <section>
         <h1 class="mb-6 text-4xl font-bold">Let's Work Together</h1>
         <p class="mb-8 text-lg leading-relaxed opacity-90">
-          I'm currently available for freelance work. If you're
-          interested in working with me, feel free to reach out via email or
-          through any of my social channels.
+          I'm currently available for freelance work. If you're interested in
+          working with me, feel free to reach out via email or through any of my
+          social channels.
         </p>
 
         <div class="space-y-6">
@@ -36,7 +43,6 @@ import WhatsAppContact from '@/components/WhatsAppContact.astro';
           <WhatsAppContact />
 
           {socialLinks.map((social) => {
-            
             return (
               <div class="flex items-center gap-4">
                 <div class="rounded-lg bg-yellow-500/10 p-3 text-yellow-500">
@@ -63,7 +69,13 @@ import WhatsAppContact from '@/components/WhatsAppContact.astro';
             <Clock class="h-5 w-5" />
             Availability
           </h3>
-          <p class="opacity-80">I'm currently <span class="font-semibold text-green-600 dark:text-green-500">available</span> for new projects. Expected response time: 24-48 hours.</p>
+          <p class="opacity-80">
+            I'm currently{" "}
+            <span class="font-semibold text-green-600 dark:text-green-500">
+              available
+            </span>{" "}
+            for new projects. Expected response time: 24-48 hours.
+          </p>
         </div>
       </section>
 
@@ -72,9 +84,7 @@ import WhatsAppContact from '@/components/WhatsAppContact.astro';
 
         <div class="space-y-6">
           {FAQS.map((faq) => (
-            <div
-              class="rounded-xl border border-neutral-200 p-6 select-none dark:border-neutral-800"
-            >
+            <div class="rounded-xl border border-neutral-200 p-6 select-none dark:border-neutral-800">
               <h3 class="mb-2 flex items-start gap-2 font-semibold">
                 <CircleQuestionMark class="mt-0.5 h-5 w-5 text-yellow-500" />
                 {faq.question}

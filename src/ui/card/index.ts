@@ -7,4 +7,3 @@ export { default as CardAction } from "./CardAction.astro";
 export { default as CardContent } from "./CardContent.astro";
 export { default as CardFooter } from "./CardFooter.astro";
 export { default as CardOverlay } from "./CardOverlay.astro";
-

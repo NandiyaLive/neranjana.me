@@ -21,6 +21,13 @@ export const freelanceProjects: Project[] = [
     url: "theteaholic.com",
     completed: true,
   },
+  {
+    name: "DOSS",
+    description:
+      "Department Of Streetwear Supplies, is a streetwear label that focuses on providing unique and quality streetwear to the Sri Lankan market.",
+    url: "dosswebsite.vercel.app",
+    completed: true,
+  },
 ];
 
 export const hobbyProjects: Project[] = [
@@ -40,24 +47,17 @@ export const hobbyProjects: Project[] = [
     active: false,
   },
   {
-    name: "DOSS",
-    description:
-      "Department Of Streetwear Supplies, is a streetwear label that focuses on providing unique and quality streetwear to the Sri Lankan market.",
-    url: "dosswebsite.vercel.app",
-    completed: true,
-  },
-  {
     name: "Nextflix",
     description:
       "Every developer's first Next.js project. Just another Netflix clone built with Next.js, TailwindCSS and SupaBase.",
-    url: "nextflix-supabase.vercel.app",
+    url: "nxtfx.neranjana.tech",
     completed: true,
   },
   {
     name: "News API",
     description:
       "A simple API to fetch English news from the website of AdaDerana, a major news network in Sri Lanka.",
-    url: "adaderana.vercel.app",
+    url: "news-api.neranjana.tech",
     completed: true,
   },
 ];

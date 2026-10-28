@@ -7,10 +7,7 @@ interface Props extends HTMLAttributes<"div"> {
   class?: string;
 }
 
-const {
-  class: className = "",
-  ...rest
-} = Astro.props as Props;
+const { class: className = "", ...rest } = Astro.props as Props;
 
 const actionVariants = cva(
   "col-start-2 row-span-2 row-start-1 self-start justify-self-end",

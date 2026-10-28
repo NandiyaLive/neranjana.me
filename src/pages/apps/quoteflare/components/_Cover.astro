@@ -1,0 +1,46 @@
+---
+const tags = ["Cloudflare Workers", "D1", "TanStack Start"];
+---
+
+<figure
+  class="@container relative m-0 aspect-1200/630 overflow-hidden rounded-2xl border border-border bg-neutral-950 text-card-foreground"
+  aria-label="Quoteflare cover"
+>
+  <div class="absolute top-[5.5cqw] left-[5cqw] z-20 w-[38cqw]">
+    <img
+      src="/apps/quoteflare/logo.svg"
+      alt="Quoteflare"
+      width="360"
+      height="58"
+      class="block h-auto w-[20cqw] dark:hidden"
+    />
+    <img
+      src="/apps/quoteflare/logo-light.svg"
+      alt=""
+      width="360"
+      height="58"
+      class="hidden h-auto w-[20cqw] dark:block"
+    />
+    <p class="mt-[4cqw] text-[3.7cqw] leading-[1.15] font-bold tracking-tight">
+      Quotes and invoices for a one-person business.
+    </p>
+    <p class="mt-[1.6cqw] text-[1.6cqw] leading-snug text-muted-foreground">
+      Self-hosted on Cloudflare's free tier.
+    </p>
+    <ul class="mt-[2.6cqw] flex list-none flex-wrap gap-[0.8cqw] p-0">
+      {tags.map((tag) => (
+        <li class="rounded-full bg-secondary px-[1.4cqw] py-[0.5cqw] text-[1.25cqw] text-secondary-foreground">
+          {tag}
+        </li>
+      ))}
+    </ul>
+  </div>
+
+  <img
+    src="/apps/quoteflare/screenshot.png"
+    alt="The Quoteflare admin dashboard"
+    width="3600"
+    height="2168"
+    class="absolute top-[16cqw] left-[46cqw] z-10 block h-auto w-[62cqw] border"
+  />
+</figure>
