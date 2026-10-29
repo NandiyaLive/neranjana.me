@@ -1,4 +1,7 @@
 ---
+import { Image } from "astro:assets";
+import screenshot from "./screenshot.png";
+
 const tags = ["Cloudflare Workers", "D1", "TanStack Start"];
 ---
 
@@ -7,14 +10,14 @@ const tags = ["Cloudflare Workers", "D1", "TanStack Start"];
   aria-label="Quoteflare cover"
 >
   <div class="absolute top-[5.5cqw] left-[5cqw] z-20 w-[38cqw]">
-    <img
+    <Image
       src="/projects/quoteflare/logo.svg"
       alt="Quoteflare"
       width="360"
       height="58"
       class="block h-auto w-[20cqw] dark:hidden"
     />
-    <img
+    <Image
       src="/projects/quoteflare/logo-light.svg"
       alt=""
       width="360"
@@ -36,8 +39,8 @@ const tags = ["Cloudflare Workers", "D1", "TanStack Start"];
     </ul>
   </div>
 
-  <img
-    src="/projects/quoteflare/screenshot.png"
+  <Image
+    src={screenshot}
     alt="The Quoteflare admin dashboard"
     width="3600"
     height="2168"
