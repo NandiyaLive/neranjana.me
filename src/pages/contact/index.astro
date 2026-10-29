@@ -1,10 +1,11 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import { Clock, CircleQuestionMark, Mail } from "@lucide/astro";
+import { Clock, CircleQuestionMark, FileText, Mail } from "@lucide/astro";
 import { FAQS } from "@/data/faq";
 import { socialLinks } from "@/data/social-links";
 import SocialIcon from "@/components/SocialIcon.astro";
 import WhatsAppContact from "@/components/WhatsAppContact.astro";
+import { Button } from "@/ui/button";
 ---
 
 <Layout
@@ -64,11 +65,7 @@ import WhatsAppContact from "@/components/WhatsAppContact.astro";
           })}
         </div>
 
-        <div class="mt-12 rounded-xl border border-neutral-200 p-6 dark:border-neutral-800">
-          <h3 class="mb-2 flex items-center gap-2 font-semibold">
-            <Clock class="h-5 w-5" />
-            Availability
-          </h3>
+        <div class="mt-8">
           <p class="opacity-80">
             I'm currently{" "}
             <span class="font-semibold text-green-600 dark:text-green-500">
@@ -76,6 +73,26 @@ import WhatsAppContact from "@/components/WhatsAppContact.astro";
             </span>{" "}
             for new projects. Expected response time: 24-48 hours.
           </p>
+        </div>
+
+        <div class="mt-8 rounded-xl border border-neutral-200 p-6 dark:border-neutral-800">
+          <h3 class="mb-2 flex items-center gap-2 font-semibold">
+            <FileText class="h-5 w-5" />
+            Need a quote?
+          </h3>
+          <p class="opacity-80">
+            Describe your project and get a price estimate without writing an
+            email first.
+          </p>
+          <Button
+            as="a"
+            href="https://quote.neranjana.me"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-4 rounded-full px-8"
+          >
+            Get a Quote
+          </Button>
         </div>
       </section>
 

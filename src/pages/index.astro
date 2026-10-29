@@ -54,10 +54,20 @@ import { Button } from "@/ui/button";
         <LinkText text="TailwindCSS" href="https://tailwindcss.com/" external />
         .
       </p>
-      <div>
+      <div class="flex flex-wrap items-center gap-3">
         <Button as="a" href="/contact" class="rounded-full px-8">
           <span class="h-2 w-2 animate-pulse rounded-full bg-green-500 blur-[1px]"></span>
           Open For Hiring
+        </Button>
+        <Button
+          as="a"
+          href="https://quote.neranjana.me"
+          target="_blank"
+          rel="noopener noreferrer"
+          variant="outline"
+          class="rounded-full px-8"
+        >
+          Get a Quote
         </Button>
       </div>
     </div>
